@@ -27,9 +27,6 @@ namespace LetsBloob_2
                     c.TabStop = false;
                 }
             }
-
-
-            
         }
 
         private void bt_cadastros_Click(object sender, EventArgs e)
