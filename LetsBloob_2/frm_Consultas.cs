@@ -28,7 +28,7 @@ namespace LetsBloob_2
         {
             ComandosBD contatoDao = new ComandosBD();
             DataSet ds = contatoDao.GetDoadores();
-            dataGridView1.DataSource = ds.Tables["doador"];
+            dataGridView1.DataSource = ds.Tables["medico"];
             dataGridView1.Refresh();
         }
 

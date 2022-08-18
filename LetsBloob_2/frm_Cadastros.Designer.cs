@@ -131,7 +131,7 @@
             this.MaximizeBox = false;
             this.Name = "frm_Cadastros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Menu de Cadastros";
+            this.Text = "+";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

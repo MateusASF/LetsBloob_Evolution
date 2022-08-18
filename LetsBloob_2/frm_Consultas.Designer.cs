@@ -36,6 +36,7 @@
             this.bt_consultar_med = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lb_voltar = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +59,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(113, 71);
+            this.dataGridView1.Size = new System.Drawing.Size(282, 475);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -122,6 +123,15 @@
             this.lb_voltar.Text = "VOLTAR";
             this.lb_voltar.Click += new System.EventHandler(this.lb_voltar_Click);
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(706, 12);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(257, 344);
+            this.listBox1.TabIndex = 12;
+            // 
             // frm_Consultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -130,6 +140,7 @@
             this.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_brancos_forms;
             this.ClientSize = new System.Drawing.Size(1000, 515);
             this.ControlBox = false;
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.lb_voltar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bt_consultar_hospital);
@@ -160,5 +171,6 @@
         private Button bt_consultar_med;
         private PictureBox pictureBox1;
         private Label lb_voltar;
+        private ListBox listBox1;
     }
 }

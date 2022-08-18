@@ -31,7 +31,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bt_cadastros = new System.Windows.Forms.Button();
             this.bt_consultas = new System.Windows.Forms.Button();
-            this.bt_deletes = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informaçõesDeDoaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,19 +80,6 @@
             this.bt_consultas.UseVisualStyleBackColor = false;
             this.bt_consultas.Click += new System.EventHandler(this.bt_consultas_Click);
             // 
-            // bt_deletes
-            // 
-            this.bt_deletes.BackColor = System.Drawing.Color.IndianRed;
-            this.bt_deletes.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bt_deletes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bt_deletes.Location = new System.Drawing.Point(302, 433);
-            this.bt_deletes.Name = "bt_deletes";
-            this.bt_deletes.Size = new System.Drawing.Size(236, 60);
-            this.bt_deletes.TabIndex = 3;
-            this.bt_deletes.Text = "Deletes?";
-            this.bt_deletes.UseVisualStyleBackColor = false;
-            this.bt_deletes.Click += new System.EventHandler(this.bt_deletes_Click);
-            // 
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -133,7 +119,7 @@
             this.lb_sair.AutoSize = true;
             this.lb_sair.BackColor = System.Drawing.Color.Transparent;
             this.lb_sair.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb_sair.Location = new System.Drawing.Point(740, 526);
+            this.lb_sair.Location = new System.Drawing.Point(740, 428);
             this.lb_sair.Name = "lb_sair";
             this.lb_sair.Size = new System.Drawing.Size(43, 20);
             this.lb_sair.TabIndex = 17;
@@ -144,7 +130,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::LetsBlood_2.Properties.Resources.tl__1__removebg_preview;
-            this.pictureBox2.Location = new System.Drawing.Point(704, 463);
+            this.pictureBox2.Location = new System.Drawing.Point(704, 365);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(125, 62);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -171,12 +157,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
-            this.ClientSize = new System.Drawing.Size(841, 554);
+            this.ClientSize = new System.Drawing.Size(841, 462);
             this.ControlBox = false;
             this.Controls.Add(this.bt_editar);
             this.Controls.Add(this.lb_sair);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.bt_deletes);
             this.Controls.Add(this.bt_consultas);
             this.Controls.Add(this.bt_cadastros);
             this.Controls.Add(this.pictureBox1);
@@ -200,7 +185,6 @@
         private PictureBox pictureBox1;
         private Button bt_cadastros;
         private Button bt_consultas;
-        private Button bt_deletes;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem sobreToolStripMenuItem;
         private ToolStripMenuItem informaçõesDeDoaçãoToolStripMenuItem;
