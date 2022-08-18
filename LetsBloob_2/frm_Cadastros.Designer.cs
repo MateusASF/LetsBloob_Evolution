@@ -28,38 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.bt_cadast_med = new System.Windows.Forms.Button();
+            this.bt_cadast_doador = new System.Windows.Forms.Button();
+            this.bt_cadast_bolsa = new System.Windows.Forms.Button();
             this.lb_titulo_cadastro = new System.Windows.Forms.Label();
+            this.bt_cadast_hospital = new System.Windows.Forms.Button();
+            this.lb_voltar = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // bt_cadast_med
             // 
-            this.button1.Location = new System.Drawing.Point(339, 181);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(323, 73);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.bt_cadast_med.Location = new System.Drawing.Point(336, 135);
+            this.bt_cadast_med.Name = "bt_cadast_med";
+            this.bt_cadast_med.Size = new System.Drawing.Size(323, 73);
+            this.bt_cadast_med.TabIndex = 0;
+            this.bt_cadast_med.Text = "Cadastrar Médico";
+            this.bt_cadast_med.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // bt_cadast_doador
             // 
-            this.button2.Location = new System.Drawing.Point(338, 271);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(323, 73);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.bt_cadast_doador.Location = new System.Drawing.Point(335, 225);
+            this.bt_cadast_doador.Name = "bt_cadast_doador";
+            this.bt_cadast_doador.Size = new System.Drawing.Size(323, 73);
+            this.bt_cadast_doador.TabIndex = 1;
+            this.bt_cadast_doador.Text = "Cadastrar Doador";
+            this.bt_cadast_doador.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // bt_cadast_bolsa
             // 
-            this.button3.Location = new System.Drawing.Point(339, 366);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(323, 73);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.bt_cadast_bolsa.Location = new System.Drawing.Point(336, 320);
+            this.bt_cadast_bolsa.Name = "bt_cadast_bolsa";
+            this.bt_cadast_bolsa.Size = new System.Drawing.Size(323, 73);
+            this.bt_cadast_bolsa.TabIndex = 2;
+            this.bt_cadast_bolsa.Text = "Cadastrar Bolsa";
+            this.bt_cadast_bolsa.UseVisualStyleBackColor = true;
             // 
             // lb_titulo_cadastro
             // 
@@ -72,6 +76,39 @@
             this.lb_titulo_cadastro.TabIndex = 3;
             this.lb_titulo_cadastro.Text = "Cadastros";
             // 
+            // bt_cadast_hospital
+            // 
+            this.bt_cadast_hospital.Location = new System.Drawing.Point(336, 415);
+            this.bt_cadast_hospital.Name = "bt_cadast_hospital";
+            this.bt_cadast_hospital.Size = new System.Drawing.Size(323, 73);
+            this.bt_cadast_hospital.TabIndex = 4;
+            this.bt_cadast_hospital.Text = "Cadastrar Hospital";
+            this.bt_cadast_hospital.UseVisualStyleBackColor = true;
+            // 
+            // lb_voltar
+            // 
+            this.lb_voltar.AutoSize = true;
+            this.lb_voltar.BackColor = System.Drawing.Color.Transparent;
+            this.lb_voltar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lb_voltar.Location = new System.Drawing.Point(868, 481);
+            this.lb_voltar.Name = "lb_voltar";
+            this.lb_voltar.Size = new System.Drawing.Size(66, 20);
+            this.lb_voltar.TabIndex = 13;
+            this.lb_voltar.Text = "VOLTAR";
+            this.lb_voltar.Click += new System.EventHandler(this.lb_voltar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::LetsBlood_2.Properties.Resources.voltar;
+            this.pictureBox1.Location = new System.Drawing.Point(837, 426);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(125, 62);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // frm_Cadastros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -79,14 +116,19 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_brancos_forms;
             this.ClientSize = new System.Drawing.Size(1000, 515);
+            this.ControlBox = false;
+            this.Controls.Add(this.lb_voltar);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.bt_cadast_hospital);
             this.Controls.Add(this.lb_titulo_cadastro);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bt_cadast_bolsa);
+            this.Controls.Add(this.bt_cadast_doador);
+            this.Controls.Add(this.bt_cadast_med);
             this.MaximizeBox = false;
             this.Name = "frm_Cadastros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu de Cadastros";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,9 +136,12 @@
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button bt_cadast_med;
+        private Button bt_cadast_doador;
+        private Button bt_cadast_bolsa;
         private Label lb_titulo_cadastro;
+        private Button bt_cadast_hospital;
+        private Label lb_voltar;
+        private PictureBox pictureBox1;
     }
 }

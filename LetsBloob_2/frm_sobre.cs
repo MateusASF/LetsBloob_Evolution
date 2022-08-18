@@ -8,16 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LetsBloob_2
+
+namespace LetsBlood_2
 {
-    public partial class frm_Cadastros : Form
+    public partial class frm_sobre : Form
     {
-        public frm_Cadastros()
+        public frm_sobre()
         {
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
         }

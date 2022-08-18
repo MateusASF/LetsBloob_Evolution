@@ -16,5 +16,15 @@ namespace LetsBloob_2
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void lb_voltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
