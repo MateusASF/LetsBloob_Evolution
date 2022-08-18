@@ -46,6 +46,14 @@ namespace LetsBloob_2
             this.Show();
         }
 
+        private void bt_editar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_editarCadastros form = new frm_editarCadastros();
+            form.ShowDialog();
+            this.Show();
+        }
+
         private void bt_deletes_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -112,5 +120,7 @@ máximo de 3 doações no período de 12 meses.";
                                          MessageBoxButtons.OK,
                                          MessageBoxIcon.Asterisk);
         }
+
+
     }
 }
