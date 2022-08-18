@@ -33,13 +33,14 @@
             this.bt_consultas = new System.Windows.Forms.Button();
             this.bt_deletes = new System.Windows.Forms.Button();
             this.bt_informacoes = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::LetsBloob_2.Properties.Resources.LOGO;
+            this.pictureBox1.Image = global::LetsBlood_2.Properties.Resources.LOGO;
             this.pictureBox1.Location = new System.Drawing.Point(257, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(327, 165);
@@ -99,18 +100,29 @@
             this.bt_informacoes.UseVisualStyleBackColor = false;
             this.bt_informacoes.Click += new System.EventHandler(this.bt_informacoes_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(841, 28);
+            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
             // frm_Menu_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackgroundImage = global::LetsBloob_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
+            this.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
             this.ClientSize = new System.Drawing.Size(841, 533);
             this.Controls.Add(this.bt_informacoes);
             this.Controls.Add(this.bt_deletes);
             this.Controls.Add(this.bt_consultas);
             this.Controls.Add(this.bt_cadastros);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "frm_Menu_Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -118,6 +130,7 @@
             this.Load += new System.EventHandler(this.frm_Menu_Principal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -128,5 +141,6 @@
         private Button bt_consultas;
         private Button bt_deletes;
         private Button bt_informacoes;
+        private MenuStrip menuStrip1;
     }
 }

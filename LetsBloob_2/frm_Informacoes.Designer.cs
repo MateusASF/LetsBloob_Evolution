@@ -69,7 +69,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackgroundImage = global::LetsBloob_2.Properties.Resources.fundo_brancos_forms;
+            this.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_brancos_forms;
             this.ClientSize = new System.Drawing.Size(1000, 515);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
