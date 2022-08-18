@@ -46,6 +46,7 @@
             this.bt_cadast_med.TabIndex = 0;
             this.bt_cadast_med.Text = "Cadastrar Médico";
             this.bt_cadast_med.UseVisualStyleBackColor = true;
+            this.bt_cadast_med.Click += new System.EventHandler(this.bt_cadast_med_Click);
             // 
             // bt_cadast_doador
             // 
@@ -55,6 +56,7 @@
             this.bt_cadast_doador.TabIndex = 1;
             this.bt_cadast_doador.Text = "Cadastrar Doador";
             this.bt_cadast_doador.UseVisualStyleBackColor = true;
+            this.bt_cadast_doador.Click += new System.EventHandler(this.bt_cadast_doador_Click);
             // 
             // bt_cadast_bolsa
             // 
@@ -64,6 +66,7 @@
             this.bt_cadast_bolsa.TabIndex = 2;
             this.bt_cadast_bolsa.Text = "Cadastrar Bolsa";
             this.bt_cadast_bolsa.UseVisualStyleBackColor = true;
+            this.bt_cadast_bolsa.Click += new System.EventHandler(this.bt_cadast_bolsa_Click);
             // 
             // lb_titulo_cadastro
             // 
@@ -84,6 +87,7 @@
             this.bt_cadast_hospital.TabIndex = 4;
             this.bt_cadast_hospital.Text = "Cadastrar Hospital";
             this.bt_cadast_hospital.UseVisualStyleBackColor = true;
+            this.bt_cadast_hospital.Click += new System.EventHandler(this.bt_cadast_hospital_Click);
             // 
             // lb_voltar
             // 

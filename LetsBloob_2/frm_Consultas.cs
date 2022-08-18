@@ -26,7 +26,7 @@ namespace LetsBloob_2
 
         private void CarregarDataGridView()
         {
-            Class1 contatoDao = new Class1();
+            ComandosBD contatoDao = new ComandosBD();
             DataSet ds = contatoDao.GetDoadores();
             dataGridView1.DataSource = ds.Tables["doador"];
             dataGridView1.Refresh();

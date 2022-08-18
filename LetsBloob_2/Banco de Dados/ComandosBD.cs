@@ -10,7 +10,7 @@ using LetsBloob_2.Banco_de_Dados;
 
 namespace LetsBloob_2.Banco_de_Dados
 {
-    internal class Class1
+    internal class ComandosBD
     {
 
         public DataSet GetDoadores()
@@ -27,6 +27,12 @@ namespace LetsBloob_2.Banco_de_Dados
             //Da pra fazer com data reader ai usuaria o tipo DataTable ==> pesquise
             //DbDataReader reader = DAOUtils.GetDataReader(comando); //recupera os dados trazidos pela exec do comando
             //...
+        }
+
+        public void CadastrarDoadores()
+        {
+            //fazer
+
         }
 
         //public void Excluir(int id)
