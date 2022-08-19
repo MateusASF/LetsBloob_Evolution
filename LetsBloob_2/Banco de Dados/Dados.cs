@@ -8,7 +8,10 @@ namespace LetsBlood_2.Banco_de_Dados
 {
     public static class Dados
     {
-        public static List<Doador> listaDoadores = new List<Doador>();
+        public static List<Doador> listaDoadores = new List<Doador>()
+        {
+        
+        };
 
         public static List<Bolsa> listaBolsas = new List<Bolsa>();
 

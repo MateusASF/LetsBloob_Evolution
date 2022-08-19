@@ -18,11 +18,13 @@ namespace LetsBlood_2.Editar
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnProcurar_Click(object sender, EventArgs e)
         {
+            
+            
             foreach (Doador x in Dados.listaDoadores)
             {
-                listBox1.Items.Add(x);
+                ltbResultado.Items.Add(x);
             }
         }
     }
