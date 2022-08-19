@@ -47,16 +47,23 @@
             this.label4 = new System.Windows.Forms.Label();
             this.tb_HospitalDestino = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.lb_Resultado = new System.Windows.Forms.Label();
+            this.lb_voltar = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pb_resultado = new System.Windows.Forms.PictureBox();
+            this.bt_limpar = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.bt_cadastrar = new System.Windows.Forms.Button();
             this.gb_TipoSanguineo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_resultado)).BeginInit();
             this.SuspendLayout();
             // 
             // dTp_DataColeta
             // 
             this.dTp_DataColeta.Location = new System.Drawing.Point(65, 37);
             this.dTp_DataColeta.Name = "dTp_DataColeta";
-            this.dTp_DataColeta.Size = new System.Drawing.Size(250, 27);
+            this.dTp_DataColeta.Size = new System.Drawing.Size(317, 27);
             this.dTp_DataColeta.TabIndex = 0;
             // 
             // label1
@@ -73,7 +80,7 @@
             this.tb_Observacao.Location = new System.Drawing.Point(66, 294);
             this.tb_Observacao.Multiline = true;
             this.tb_Observacao.Name = "tb_Observacao";
-            this.tb_Observacao.Size = new System.Drawing.Size(250, 56);
+            this.tb_Observacao.Size = new System.Drawing.Size(316, 56);
             this.tb_Observacao.TabIndex = 6;
             // 
             // label2
@@ -95,7 +102,7 @@
             this.gb_TipoSanguineo.Controls.Add(this.radioButton3);
             this.gb_TipoSanguineo.Controls.Add(this.radioButton2);
             this.gb_TipoSanguineo.Controls.Add(this.radioButton1);
-            this.gb_TipoSanguineo.Location = new System.Drawing.Point(367, 27);
+            this.gb_TipoSanguineo.Location = new System.Drawing.Point(413, 27);
             this.gb_TipoSanguineo.Name = "gb_TipoSanguineo";
             this.gb_TipoSanguineo.Size = new System.Drawing.Size(144, 264);
             this.gb_TipoSanguineo.TabIndex = 8;
@@ -203,7 +210,7 @@
             // 
             this.tb_NomeMedico.Location = new System.Drawing.Point(66, 103);
             this.tb_NomeMedico.Name = "tb_NomeMedico";
-            this.tb_NomeMedico.Size = new System.Drawing.Size(249, 27);
+            this.tb_NomeMedico.Size = new System.Drawing.Size(316, 27);
             this.tb_NomeMedico.TabIndex = 10;
             // 
             // mTb_CpfDoador
@@ -211,7 +218,7 @@
             this.mTb_CpfDoador.Location = new System.Drawing.Point(66, 165);
             this.mTb_CpfDoador.Mask = "000-000-000-00";
             this.mTb_CpfDoador.Name = "mTb_CpfDoador";
-            this.mTb_CpfDoador.Size = new System.Drawing.Size(250, 27);
+            this.mTb_CpfDoador.Size = new System.Drawing.Size(316, 27);
             this.mTb_CpfDoador.TabIndex = 12;
             // 
             // label4
@@ -225,45 +232,114 @@
             // 
             // tb_HospitalDestino
             // 
-            this.tb_HospitalDestino.Location = new System.Drawing.Point(66, 236);
+            this.tb_HospitalDestino.Location = new System.Drawing.Point(65, 229);
             this.tb_HospitalDestino.Name = "tb_HospitalDestino";
-            this.tb_HospitalDestino.Size = new System.Drawing.Size(249, 27);
+            this.tb_HospitalDestino.Size = new System.Drawing.Size(317, 27);
             this.tb_HospitalDestino.TabIndex = 14;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(65, 213);
+            this.label5.Location = new System.Drawing.Point(64, 206);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(141, 20);
             this.label5.TabIndex = 13;
             this.label5.Text = "Hospital de Destino";
             // 
-            // button1
+            // lb_voltar
             // 
-            this.button1.Location = new System.Drawing.Point(438, 321);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.lb_voltar.AutoSize = true;
+            this.lb_voltar.BackColor = System.Drawing.Color.Transparent;
+            this.lb_voltar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lb_voltar.Location = new System.Drawing.Point(64, 414);
+            this.lb_voltar.Name = "lb_voltar";
+            this.lb_voltar.Size = new System.Drawing.Size(66, 20);
+            this.lb_voltar.TabIndex = 18;
+            this.lb_voltar.Text = "VOLTAR";
+            this.lb_voltar.Click += new System.EventHandler(this.lb_voltar_Click);
             // 
-            // lb_Resultado
+            // pictureBox1
             // 
-            this.lb_Resultado.AutoSize = true;
-            this.lb_Resultado.Location = new System.Drawing.Point(266, 380);
-            this.lb_Resultado.Name = "lb_Resultado";
-            this.lb_Resultado.Size = new System.Drawing.Size(0, 20);
-            this.lb_Resultado.TabIndex = 16;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::LetsBlood_2.Properties.Resources.voltar;
+            this.pictureBox1.Location = new System.Drawing.Point(33, 359);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(125, 62);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pb_resultado
+            // 
+            this.pb_resultado.Image = global::LetsBlood_2.Properties.Resources.bolsaCadastrada;
+            this.pb_resultado.Location = new System.Drawing.Point(151, 356);
+            this.pb_resultado.Name = "pb_resultado";
+            this.pb_resultado.Size = new System.Drawing.Size(231, 78);
+            this.pb_resultado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_resultado.TabIndex = 19;
+            this.pb_resultado.TabStop = false;
+            // 
+            // bt_limpar
+            // 
+            this.bt_limpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bt_limpar.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bt_limpar.Location = new System.Drawing.Point(601, 280);
+            this.bt_limpar.Name = "bt_limpar";
+            this.bt_limpar.Size = new System.Drawing.Size(203, 62);
+            this.bt_limpar.TabIndex = 28;
+            this.bt_limpar.Text = "LIMPAR";
+            this.bt_limpar.UseVisualStyleBackColor = false;
+            this.bt_limpar.Click += new System.EventHandler(this.bt_limpar_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button3.Location = new System.Drawing.Point(601, 200);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(203, 62);
+            this.button3.TabIndex = 27;
+            this.button3.Text = "EXCLUIR";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.Location = new System.Drawing.Point(601, 117);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(203, 62);
+            this.button2.TabIndex = 26;
+            this.button2.Text = "EDITAR";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // bt_cadastrar
+            // 
+            this.bt_cadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bt_cadastrar.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bt_cadastrar.Location = new System.Drawing.Point(601, 37);
+            this.bt_cadastrar.Name = "bt_cadastrar";
+            this.bt_cadastrar.Size = new System.Drawing.Size(203, 62);
+            this.bt_cadastrar.TabIndex = 25;
+            this.bt_cadastrar.Text = "CADASTRAR";
+            this.bt_cadastrar.UseVisualStyleBackColor = false;
+            this.bt_cadastrar.Click += new System.EventHandler(this.bt_cadastrar_Click);
             // 
             // frm_cadastrarBolsa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(630, 447);
-            this.Controls.Add(this.lb_Resultado);
-            this.Controls.Add(this.button1);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(842, 457);
+            this.ControlBox = false;
+            this.Controls.Add(this.bt_limpar);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.bt_cadastrar);
+            this.Controls.Add(this.pb_resultado);
+            this.Controls.Add(this.lb_voltar);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tb_HospitalDestino);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.mTb_CpfDoador);
@@ -276,9 +352,13 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dTp_DataColeta);
             this.Name = "frm_cadastrarBolsa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_cadastrarBolsa";
+            this.Load += new System.EventHandler(this.frm_cadastrarBolsa_Load);
             this.gb_TipoSanguineo.ResumeLayout(false);
             this.gb_TipoSanguineo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_resultado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,7 +385,12 @@
         private Label label4;
         private TextBox tb_HospitalDestino;
         private Label label5;
-        private Button button1;
-        private Label lb_Resultado;
+        private Label lb_voltar;
+        private PictureBox pictureBox1;
+        private PictureBox pb_resultado;
+        private Button bt_limpar;
+        private Button button3;
+        private Button button2;
+        private Button bt_cadastrar;
     }
 }

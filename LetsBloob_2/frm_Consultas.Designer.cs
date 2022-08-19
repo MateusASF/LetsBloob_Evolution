@@ -33,45 +33,52 @@
             this.bt_consultar_doador = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lb_voltar = new System.Windows.Forms.Label();
+            this.lb_sair = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // lb_titulo_consulta
             // 
             this.lb_titulo_consulta.AutoSize = true;
             this.lb_titulo_consulta.BackColor = System.Drawing.Color.Transparent;
-            this.lb_titulo_consulta.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb_titulo_consulta.Location = new System.Drawing.Point(373, 9);
+            this.lb_titulo_consulta.Font = new System.Drawing.Font("Sitka Banner", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lb_titulo_consulta.Location = new System.Drawing.Point(196, 26);
             this.lb_titulo_consulta.Name = "lb_titulo_consulta";
-            this.lb_titulo_consulta.Size = new System.Drawing.Size(255, 67);
+            this.lb_titulo_consulta.Size = new System.Drawing.Size(227, 72);
             this.lb_titulo_consulta.TabIndex = 4;
             this.lb_titulo_consulta.Text = "Consultas";
             // 
             // bt_consultar_bolsa
             // 
-            this.bt_consultar_bolsa.Location = new System.Drawing.Point(336, 296);
+            this.bt_consultar_bolsa.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bt_consultar_bolsa.Font = new System.Drawing.Font("Sitka Text", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bt_consultar_bolsa.Location = new System.Drawing.Point(175, 222);
             this.bt_consultar_bolsa.Name = "bt_consultar_bolsa";
-            this.bt_consultar_bolsa.Size = new System.Drawing.Size(323, 73);
+            this.bt_consultar_bolsa.Size = new System.Drawing.Size(270, 53);
             this.bt_consultar_bolsa.TabIndex = 8;
             this.bt_consultar_bolsa.Text = "Consultar Bolsa";
-            this.bt_consultar_bolsa.UseVisualStyleBackColor = true;
+            this.bt_consultar_bolsa.UseVisualStyleBackColor = false;
             this.bt_consultar_bolsa.Click += new System.EventHandler(this.bt_consultar_bolsa_Click);
             // 
             // bt_consultar_doador
             // 
-            this.bt_consultar_doador.Location = new System.Drawing.Point(335, 201);
+            this.bt_consultar_doador.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bt_consultar_doador.Font = new System.Drawing.Font("Sitka Text", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bt_consultar_doador.Location = new System.Drawing.Point(175, 151);
             this.bt_consultar_doador.Name = "bt_consultar_doador";
-            this.bt_consultar_doador.Size = new System.Drawing.Size(323, 73);
+            this.bt_consultar_doador.Size = new System.Drawing.Size(270, 53);
             this.bt_consultar_doador.TabIndex = 7;
             this.bt_consultar_doador.Text = "Consultar Doador";
-            this.bt_consultar_doador.UseVisualStyleBackColor = true;
+            this.bt_consultar_doador.UseVisualStyleBackColor = false;
             this.bt_consultar_doador.Click += new System.EventHandler(this.bt_consultar_doador_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::LetsBlood_2.Properties.Resources.voltar;
-            this.pictureBox1.Location = new System.Drawing.Point(838, 402);
+            this.pictureBox1.Location = new System.Drawing.Point(175, 316);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(125, 62);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -84,21 +91,47 @@
             this.lb_voltar.AutoSize = true;
             this.lb_voltar.BackColor = System.Drawing.Color.Transparent;
             this.lb_voltar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb_voltar.Location = new System.Drawing.Point(869, 457);
+            this.lb_voltar.Location = new System.Drawing.Point(207, 379);
             this.lb_voltar.Name = "lb_voltar";
             this.lb_voltar.Size = new System.Drawing.Size(66, 20);
             this.lb_voltar.TabIndex = 11;
             this.lb_voltar.Text = "VOLTAR";
             this.lb_voltar.Click += new System.EventHandler(this.lb_voltar_Click);
             // 
+            // lb_sair
+            // 
+            this.lb_sair.AutoSize = true;
+            this.lb_sair.BackColor = System.Drawing.Color.Transparent;
+            this.lb_sair.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lb_sair.Location = new System.Drawing.Point(350, 379);
+            this.lb_sair.Name = "lb_sair";
+            this.lb_sair.Size = new System.Drawing.Size(43, 20);
+            this.lb_sair.TabIndex = 21;
+            this.lb_sair.Text = "SAIR";
+            this.lb_sair.Click += new System.EventHandler(this.lb_sair_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::LetsBlood_2.Properties.Resources.tl__1__removebg_preview;
+            this.pictureBox2.Location = new System.Drawing.Point(314, 316);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(125, 62);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 20;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // frm_Consultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_brancos_forms;
-            this.ClientSize = new System.Drawing.Size(1000, 515);
+            this.BackgroundImage = global::LetsBlood_2.Properties.Resources.ee18e8e53852cf399b3b52c022d31d6d;
+            this.ClientSize = new System.Drawing.Size(621, 438);
             this.ControlBox = false;
+            this.Controls.Add(this.lb_sair);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lb_voltar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bt_consultar_bolsa);
@@ -110,6 +143,7 @@
             this.Text = "Menu de Consultas";
             this.Load += new System.EventHandler(this.frm_Consultas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -122,5 +156,7 @@
         private Button bt_consultar_doador;
         private PictureBox pictureBox1;
         private Label lb_voltar;
+        private Label lb_sair;
+        private PictureBox pictureBox2;
     }
 }

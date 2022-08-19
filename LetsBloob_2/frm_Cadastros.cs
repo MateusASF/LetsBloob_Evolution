@@ -45,5 +45,28 @@ namespace LetsBloob_2
             this.Show();
         }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            ProtegerSaida();
+        }
+
+        private void lb_sair_Click(object sender, EventArgs e)
+        {
+            ProtegerSaida();
+        }
+
+        private void ProtegerSaida()
+        {
+            const string message = "Tem certeza que deseja fechar o programa?";
+            const string caption = "Fechar";
+            var result = MessageBox.Show(message, caption,
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

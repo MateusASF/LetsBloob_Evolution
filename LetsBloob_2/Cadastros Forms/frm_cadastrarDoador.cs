@@ -20,7 +20,7 @@ namespace LetsBlood_2.Cadastros_Forms
 
         private void frm_cadastrarDoador_Load(object sender, EventArgs e)
         {
-            
+            pb_resultado.Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -35,7 +35,35 @@ namespace LetsBlood_2.Cadastros_Forms
 
             Dados.listaDoadores.Add(doa);
 
-            lb_Resultado.Text = "Doador Cadastrado";
+            pb_resultado.Visible = true;
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void lb_voltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+        private void limparCampos()
+        {
+            tb_Nome_Doador.Clear();
+            mTb_Cpf.Clear();
+            //dTp_Nascimento
+            mTb_Telefone.Clear();
+            tb_Email.Clear();
+            tb_Obs.Clear();
+            pb_resultado.Visible = false;
+        }
+
+        private void bt_limpar_Click(object sender, EventArgs e)
+        {
+            limparCampos();
         }
     }
 }

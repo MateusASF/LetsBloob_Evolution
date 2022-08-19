@@ -35,7 +35,15 @@ namespace LetsBloob_2
             this.Hide();
             frm_Cadastros form = new frm_Cadastros();
             form.ShowDialog();
-            this.Show();
+            try
+            {
+                this.Show();
+            }
+            catch (System.ObjectDisposedException)
+            {
+                Application.Exit();
+            } 
+            
         }
 
         private void bt_consultas_Click(object sender, EventArgs e)
@@ -43,35 +51,13 @@ namespace LetsBloob_2
             this.Hide();
             frm_Consultas form = new frm_Consultas();
             form.ShowDialog();
-            this.Show();
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            const string message ="Tem certeza que deseja fechar o programa?";
-            const string caption = "Fechar";
-            var result = MessageBox.Show(message, caption,
-                                         MessageBoxButtons.YesNo,
-                                         MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes)
+            try
             {
-                this.Close();
+                this.Show();
             }
-
-        }
-
-        private void lb_sair_Click(object sender, EventArgs e)
-        {
-            const string message = "Tem certeza que deseja fechar o programa?";
-            const string caption = "Fechar";
-            var result = MessageBox.Show(message, caption,
-                                         MessageBoxButtons.YesNo,
-                                         MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes)
+            catch (System.ObjectDisposedException)
             {
-                this.Close();
+                Application.Exit();
             }
         }
 
@@ -80,7 +66,14 @@ namespace LetsBloob_2
             this.Hide();
             frm_sobre form = new frm_sobre();
             form.ShowDialog();
-            this.Show();
+            try
+            {
+                this.Show();
+            }
+            catch (System.ObjectDisposedException)
+            {
+                ProtegerSaida();
+            }
         }
 
         private void informaçõesDeDoaçãoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -103,6 +96,30 @@ máximo de 3 doações no período de 12 meses.";
             var result = MessageBox.Show(message, caption,
                                          MessageBoxButtons.OK,
                                          MessageBoxIcon.Asterisk);
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            ProtegerSaida();
+        }
+
+        private void lb_sair_Click(object sender, EventArgs e)
+        {
+            ProtegerSaida();
+        }
+
+        private void ProtegerSaida ()
+        {
+            const string message = "Tem certeza que deseja fechar o programa?";
+            const string caption = "Fechar";
+            var result = MessageBox.Show(message, caption,
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit ();
+            }
         }
 
 

@@ -63,6 +63,56 @@ namespace LetsBlood_2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap background_branco_1 {
+            get {
+                object obj = ResourceManager.GetObject("background-branco-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bolsaCadastrada {
+            get {
+                object obj = ResourceManager.GetObject("bolsaCadastrada", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap doadorCadastrado {
+            get {
+                object obj = ResourceManager.GetObject("doadorCadastrado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap doadorCadastrado1 {
+            get {
+                object obj = ResourceManager.GetObject("doadorCadastrado1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ee18e8e53852cf399b3b52c022d31d6d {
+            get {
+                object obj = ResourceManager.GetObject("ee18e8e53852cf399b3b52c022d31d6d", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fundo_branco_abstrato_23_2148810353 {
             get {
                 object obj = ResourceManager.GetObject("fundo-branco-abstrato_23-2148810353", resourceCulture);
@@ -83,9 +133,9 @@ namespace LetsBlood_2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap LOGO {
+        internal static System.Drawing.Bitmap Let_s_Bl_od__1__removebg_preview__1_ {
             get {
-                object obj = ResourceManager.GetObject("LOGO", resourceCulture);
+                object obj = ResourceManager.GetObject("Let_s_Bl_od__1_-removebg-preview (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +143,9 @@ namespace LetsBlood_2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap LOGO1 {
+        internal static System.Drawing.Bitmap LOGO {
             get {
-                object obj = ResourceManager.GetObject("LOGO1", resourceCulture);
+                object obj = ResourceManager.GetObject("LOGO", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

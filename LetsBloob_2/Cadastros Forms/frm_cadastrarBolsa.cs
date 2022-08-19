@@ -66,7 +66,64 @@ namespace LetsBlood_2.Cadastros_Forms
 
             Dados.listaBolsas.Add(bolsa);
 
-            lb_Resultado.Text = "Bolsa Cadastrada";
+            pb_resultado.Visible = true;
+            
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void lb_voltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frm_cadastrarBolsa_Load(object sender, EventArgs e)
+        {
+            pb_resultado.Visible = false;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bt_cadastrar_Click(object sender, EventArgs e)
+        {
+            Bolsa bolsa = new Bolsa();
+
+            var checkedButton = gb_TipoSanguineo.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
+
+            bolsa.DataColeta = dTp_DataColeta.Value;
+            bolsa.NomeMedico = tb_NomeMedico.Text;
+            bolsa.CpfDoador = mTb_CpfDoador.Text;
+            bolsa.HospitalDestino = tb_HospitalDestino.Text;
+            bolsa.ObservacaoBolsa = tb_Observacao.Text;
+            bolsa.TipoSanguineo = checkedButton.Text;
+
+
+            Dados.listaBolsas.Add(bolsa);
+
+            pb_resultado.Visible = true;
+        }
+
+        private void bt_limpar_Click(object sender, EventArgs e)
+        {
+            limparCampos();
+        }
+
+        private void limparCampos()
+        {
+            //dTp_DataColeta.Clear();
+            tb_NomeMedico.Clear();
+            mTb_CpfDoador.Clear();
+            tb_HospitalDestino.Clear();
+            tb_Observacao.Clear();
+            pb_resultado.Visible = false;
+        }
+
+
     }
 }
