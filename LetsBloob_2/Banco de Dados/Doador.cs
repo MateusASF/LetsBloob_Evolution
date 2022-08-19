@@ -8,18 +8,20 @@ namespace LetsBlood_2.Banco_de_Dados
 {
     public class Doador
     {
-        //public Doador(string NomeDoador, string CpfDoador, DateTimePicker Nascimento, string Telefone, string Email, string Observacao)
-        //{
-        //    this.NomeDoador = NomeDoador;
-        //    this.CpfDoador = CpfDoador;
-        //    this.Nascimento = Nascimento;
-        //    this.Telefone = Telefone;
-        //    this.Email = Email;
-        //    this.Observacao = Observacao;
-        //}
+        public Doador() { }
+
+        public Doador(string NomeDoador, string CpfDoador, DateTime Nascimento, string Telefone, string Email, string Observacao)
+        {
+            this.NomeDoador = NomeDoador;
+            this.CpfDoador = CpfDoador;
+            this.Nascimento = Nascimento;
+            this.Telefone = Telefone;
+            this.Email = Email;
+            this.Observacao = Observacao;
+        }
         public string NomeDoador { get; set; }
         public string CpfDoador { get; set; }
-        public DateTimePicker Nascimento { get; set; }
+        public DateTime Nascimento { get; set; }
         public string Telefone { get; set; }
         public string Email { get; set; }
         public string Observacao { get; set; }
