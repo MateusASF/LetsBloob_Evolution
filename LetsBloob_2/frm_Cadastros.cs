@@ -29,14 +29,6 @@ namespace LetsBloob_2
             this.Close();
         }
 
-        private void bt_cadast_med_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            frm_cadastrarMedico form = new frm_cadastrarMedico();
-            form.ShowDialog();
-            this.Show();
-        }
-
         private void bt_cadast_doador_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -53,12 +45,5 @@ namespace LetsBloob_2
             this.Show();
         }
 
-        private void bt_cadast_hospital_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            frm_cadastrarHospital form = new frm_cadastrarHospital();
-            form.ShowDialog();
-            this.Show();
-        }
     }
 }

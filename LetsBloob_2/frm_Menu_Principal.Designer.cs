@@ -37,7 +37,6 @@
             this.informaçõesDoProgramaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lb_sair = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.bt_editar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -59,7 +58,7 @@
             this.bt_cadastros.BackColor = System.Drawing.Color.IndianRed;
             this.bt_cadastros.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bt_cadastros.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bt_cadastros.Location = new System.Drawing.Point(302, 228);
+            this.bt_cadastros.Location = new System.Drawing.Point(317, 289);
             this.bt_cadastros.Name = "bt_cadastros";
             this.bt_cadastros.Size = new System.Drawing.Size(236, 60);
             this.bt_cadastros.TabIndex = 1;
@@ -72,7 +71,7 @@
             this.bt_consultas.BackColor = System.Drawing.Color.IndianRed;
             this.bt_consultas.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bt_consultas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bt_consultas.Location = new System.Drawing.Point(302, 297);
+            this.bt_consultas.Location = new System.Drawing.Point(317, 358);
             this.bt_consultas.Name = "bt_consultas";
             this.bt_consultas.Size = new System.Drawing.Size(236, 60);
             this.bt_consultas.TabIndex = 2;
@@ -138,19 +137,6 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // bt_editar
-            // 
-            this.bt_editar.BackColor = System.Drawing.Color.IndianRed;
-            this.bt_editar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bt_editar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bt_editar.Location = new System.Drawing.Point(302, 365);
-            this.bt_editar.Name = "bt_editar";
-            this.bt_editar.Size = new System.Drawing.Size(236, 60);
-            this.bt_editar.TabIndex = 18;
-            this.bt_editar.Text = "Editar Cadastros";
-            this.bt_editar.UseVisualStyleBackColor = false;
-            this.bt_editar.Click += new System.EventHandler(this.bt_editar_Click);
-            // 
             // frm_Menu_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -159,7 +145,6 @@
             this.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
             this.ClientSize = new System.Drawing.Size(841, 462);
             this.ControlBox = false;
-            this.Controls.Add(this.bt_editar);
             this.Controls.Add(this.lb_sair);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.bt_consultas);
@@ -191,6 +176,5 @@
         private ToolStripMenuItem informaçõesDoProgramaToolStripMenuItem;
         private Label lb_sair;
         private PictureBox pictureBox2;
-        private Button bt_editar;
     }
 }

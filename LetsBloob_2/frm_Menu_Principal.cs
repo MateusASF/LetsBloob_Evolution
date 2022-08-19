@@ -46,14 +46,6 @@ namespace LetsBloob_2
             this.Show();
         }
 
-        private void bt_editar_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            frm_editarCadastros form = new frm_editarCadastros();
-            form.ShowDialog();
-            this.Show();
-        }
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             const string message ="Tem certeza que deseja fechar o programa?";

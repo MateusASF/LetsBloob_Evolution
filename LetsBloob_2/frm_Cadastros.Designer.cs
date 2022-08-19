@@ -28,25 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.bt_cadast_med = new System.Windows.Forms.Button();
             this.bt_cadast_doador = new System.Windows.Forms.Button();
             this.bt_cadast_bolsa = new System.Windows.Forms.Button();
             this.lb_titulo_cadastro = new System.Windows.Forms.Label();
-            this.bt_cadast_hospital = new System.Windows.Forms.Button();
             this.lb_voltar = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // bt_cadast_med
-            // 
-            this.bt_cadast_med.Location = new System.Drawing.Point(336, 135);
-            this.bt_cadast_med.Name = "bt_cadast_med";
-            this.bt_cadast_med.Size = new System.Drawing.Size(323, 73);
-            this.bt_cadast_med.TabIndex = 0;
-            this.bt_cadast_med.Text = "Cadastrar Médico";
-            this.bt_cadast_med.UseVisualStyleBackColor = true;
-            this.bt_cadast_med.Click += new System.EventHandler(this.bt_cadast_med_Click);
             // 
             // bt_cadast_doador
             // 
@@ -78,16 +66,6 @@
             this.lb_titulo_cadastro.Size = new System.Drawing.Size(259, 67);
             this.lb_titulo_cadastro.TabIndex = 3;
             this.lb_titulo_cadastro.Text = "Cadastros";
-            // 
-            // bt_cadast_hospital
-            // 
-            this.bt_cadast_hospital.Location = new System.Drawing.Point(336, 415);
-            this.bt_cadast_hospital.Name = "bt_cadast_hospital";
-            this.bt_cadast_hospital.Size = new System.Drawing.Size(323, 73);
-            this.bt_cadast_hospital.TabIndex = 4;
-            this.bt_cadast_hospital.Text = "Cadastrar Hospital";
-            this.bt_cadast_hospital.UseVisualStyleBackColor = true;
-            this.bt_cadast_hospital.Click += new System.EventHandler(this.bt_cadast_hospital_Click);
             // 
             // lb_voltar
             // 
@@ -123,11 +101,9 @@
             this.ControlBox = false;
             this.Controls.Add(this.lb_voltar);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.bt_cadast_hospital);
             this.Controls.Add(this.lb_titulo_cadastro);
             this.Controls.Add(this.bt_cadast_bolsa);
             this.Controls.Add(this.bt_cadast_doador);
-            this.Controls.Add(this.bt_cadast_med);
             this.MaximizeBox = false;
             this.Name = "frm_Cadastros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -139,12 +115,9 @@
         }
 
         #endregion
-
-        private Button bt_cadast_med;
         private Button bt_cadast_doador;
         private Button bt_cadast_bolsa;
         private Label lb_titulo_cadastro;
-        private Button bt_cadast_hospital;
         private Label lb_voltar;
         private PictureBox pictureBox1;
     }
