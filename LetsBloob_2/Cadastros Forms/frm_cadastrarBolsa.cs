@@ -89,8 +89,78 @@ namespace LetsBlood_2.Cadastros_Forms
             tb_HospitalDestino.Clear();
             tb_Observacao.Clear();
             pb_resultado.Visible = false;
+            var checkedButton = gb_TipoSanguineo.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
+            if (checkedButton != null)
+            {
+                checkedButton.Checked = false;
+            }
+            ltbResultado.Items.Clear();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void btnConsulta_Click(object sender, EventArgs e)
+        {
+            ltbResultado.Items.Clear();
+            var bolsas = Dados.listaBolsas.Where(bolsa => bolsa.CpfDoador == mTb_CpfDoador.Text);
+            ltbResultado.Items.AddRange(bolsas.ToArray());
+        }
+
+        private void btnConsultaMedico_Click(object sender, EventArgs e)
+        {
+            ltbResultado.Items.Clear();
+            var bolsas = Dados.listaBolsas.Where(bolsa => bolsa.NomeMedico == tb_NomeMedico.Text);
+            ltbResultado.Items.AddRange(bolsas.ToArray());
+        }
+
+        private void btnConsultaHospital_Click(object sender, EventArgs e)
+        {
+            ltbResultado.Items.Clear();
+            var bolsas = Dados.listaBolsas.Where(bolsa => bolsa.HospitalDestino == tb_HospitalDestino.Text);
+            ltbResultado.Items.AddRange(bolsas.ToArray());
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            ltbResultado.Items.Clear();
+            var checkedButton = gb_TipoSanguineo.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
+            var bolsas = Dados.listaBolsas.Where(bolsa => bolsa.TipoSanguineo == checkedButton.Text);
+            ltbResultado.Items.AddRange(bolsas.ToArray());
+        }
+
+        private void ltbResultado_DoubleClick(object sender, EventArgs e)
+        {
+            //foreach (var item in ltbResultado.Items)
+            //{
+
+            //    if (item.Selected)
+            //    {
+
+            //        Message.Text += item.Text + "<br />";
+
+            //    }
+
+            //}
+            //var index = ltbResultado.SelectedIndex;
+            //dTp_DataColeta.Text = Dados.listaBolsas.NomeMedico;
+            //tb_NomeMedico.Clear();
+            //mTb_CpfDoador.Clear();
+            //tb_HospitalDestino.Clear();
+            //tb_Observacao.Clear();
+            //pb_resultado.Visible = false;
+            //var checkedButton = gb_TipoSanguineo.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
+            //if (checkedButton != null)
+            //{
+            //    checkedButton.Checked = false;
+            //}
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //ltbResultado.Items;
+        }
     }
 }
