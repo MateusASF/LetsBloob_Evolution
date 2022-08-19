@@ -22,47 +22,14 @@ namespace LetsBlood_2.Cadastros_Forms
         {
             Bolsa bolsa = new Bolsa();
 
-            string tipo = "";
-            if (radioButton1.Checked)
-            {
-                tipo = radioButton1.Text;
-            }
-            else if (radioButton2.Checked)
-            {
-                tipo = radioButton2.Text;
-            }
-            else if (radioButton3.Checked)
-            {
-                tipo = radioButton3.Text;
-            }
-            else if (radioButton4.Checked)
-            {
-                tipo = radioButton4.Text;
-            }
-            else if (radioButton5.Checked)
-            {
-                tipo = radioButton5.Text;
-            }
-            else if (radioButton6.Checked)
-            {
-                tipo = radioButton6.Text;
-            }
-            else if (radioButton7.Checked)
-            {
-                tipo = radioButton7.Text;
-            }
-            else 
-            {
-                tipo = radioButton8.Text;
-            }
+            var checkedButton = gb_TipoSanguineo.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
 
             bolsa.DataColeta = dTp_DataColeta.Value;
             bolsa.NomeMedico = tb_NomeMedico.Text;
             bolsa.CpfDoador = mTb_CpfDoador.Text;
             bolsa.HospitalDestino = tb_HospitalDestino.Text;
             bolsa.ObservacaoBolsa = tb_Observacao.Text;
-            bolsa.TipoSanguineo = tipo;
-
+            bolsa.TipoSanguineo = checkedButton.Text;
 
             Dados.listaBolsas.Add(bolsa);
 
