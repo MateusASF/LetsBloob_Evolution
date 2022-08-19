@@ -127,7 +127,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackgroundImage = global::LetsBlood_2.Properties.Resources.ee18e8e53852cf399b3b52c022d31d6d;
+            this.BackgroundImage = global::LetsBlood_2.Properties.Resources._2198948_verde_hortela_gradiente_aquarela_fundo_vetor;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(621, 438);
             this.ControlBox = false;
             this.Controls.Add(this.lb_sair);

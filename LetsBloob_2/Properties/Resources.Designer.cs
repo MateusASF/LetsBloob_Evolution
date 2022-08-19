@@ -63,6 +63,26 @@ namespace LetsBlood_2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2198948_verde_hortela_gradiente_aquarela_fundo_vetor {
+            get {
+                object obj = ResourceManager.GetObject("2198948-verde-hortela-gradiente-aquarela-fundo-vetor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _964fa0ed6eb25f231069df340aa2d46b {
+            get {
+                object obj = ResourceManager.GetObject("964fa0ed6eb25f231069df340aa2d46b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap background_branco_1 {
             get {
                 object obj = ResourceManager.GetObject("background-branco-1", resourceCulture);
@@ -126,6 +146,16 @@ namespace LetsBlood_2.Properties {
         internal static System.Drawing.Bitmap fundo_brancos_forms {
             get {
                 object obj = ResourceManager.GetObject("fundo_brancos_forms", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_1004961356_170667a {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-1004961356-170667a", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

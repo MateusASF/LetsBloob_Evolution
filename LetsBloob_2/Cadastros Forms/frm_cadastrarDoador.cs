@@ -11,13 +11,13 @@ using System.Windows.Forms;
 
 namespace LetsBlood_2.Cadastros_Forms
 {
+
     public partial class frm_cadastrarDoador : Form
     {
         public frm_cadastrarDoador()
         {
             InitializeComponent();
         }
-
         private void frm_cadastrarDoador_Load(object sender, EventArgs e)
         {
             pb_resultado.Visible = false;
@@ -32,11 +32,11 @@ namespace LetsBlood_2.Cadastros_Forms
             doa.Telefone = mTb_Telefone.Text;
             doa.Email = tb_Email.Text;
             doa.Observacao = tb_Obs.Text;
+            pb_resultado.Visible = true;
 
             Dados.listaDoadores.Add(doa);
 
-            pb_resultado.Visible = true;
-
+            limparCampos();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -52,18 +52,22 @@ namespace LetsBlood_2.Cadastros_Forms
 
         private void limparCampos()
         {
+            Thread.Sleep(2000);
             tb_Nome_Doador.Clear();
             mTb_Cpf.Clear();
             //dTp_Nascimento
             mTb_Telefone.Clear();
             tb_Email.Clear();
             tb_Obs.Clear();
-            pb_resultado.Visible = false;
+            //pb_resultado.Visible = false;
         }
 
         private void bt_limpar_Click(object sender, EventArgs e)
         {
             limparCampos();
         }
+
     }
+
+
 }
