@@ -41,7 +41,7 @@ namespace LetsBloob_2
             }
             catch (System.ObjectDisposedException)
             {
-                Application.Exit();
+                ProtegerSaida();
             } 
             
         }
@@ -57,7 +57,7 @@ namespace LetsBloob_2
             }
             catch (System.ObjectDisposedException)
             {
-                Application.Exit();
+                ProtegerSaida();
             }
         }
 

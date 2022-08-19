@@ -35,8 +35,6 @@ namespace LetsBlood_2.Cadastros_Forms
             pb_resultado.Visible = true;
 
             Dados.listaDoadores.Add(doa);
-
-            limparCampos();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -52,14 +50,13 @@ namespace LetsBlood_2.Cadastros_Forms
 
         private void limparCampos()
         {
-            Thread.Sleep(2000);
             tb_Nome_Doador.Clear();
             mTb_Cpf.Clear();
             //dTp_Nascimento
             mTb_Telefone.Clear();
             tb_Email.Clear();
             tb_Obs.Clear();
-            //pb_resultado.Visible = false;
+            pb_resultado.Visible = false;
         }
 
         private void bt_limpar_Click(object sender, EventArgs e)
