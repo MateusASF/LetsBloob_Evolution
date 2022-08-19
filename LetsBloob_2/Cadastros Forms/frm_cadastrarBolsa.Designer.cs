@@ -69,7 +69,7 @@
             this.dTp_DataColeta.Font = new System.Drawing.Font("Sitka Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dTp_DataColeta.Location = new System.Drawing.Point(25, 39);
             this.dTp_DataColeta.Name = "dTp_DataColeta";
-            this.dTp_DataColeta.Size = new System.Drawing.Size(317, 23);
+            this.dTp_DataColeta.Size = new System.Drawing.Size(317, 26);
             this.dTp_DataColeta.TabIndex = 0;
             // 
             // label1
@@ -79,7 +79,7 @@
             this.label1.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(25, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 18);
+            this.label1.Size = new System.Drawing.Size(98, 21);
             this.label1.TabIndex = 5;
             this.label1.Text = "Data da Coleta";
             // 
@@ -99,7 +99,7 @@
             this.label2.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(26, 285);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 18);
+            this.label2.Size = new System.Drawing.Size(81, 21);
             this.label2.TabIndex = 7;
             this.label2.Text = "Observação";
             // 
@@ -127,7 +127,7 @@
             this.radioButton8.AutoSize = true;
             this.radioButton8.Location = new System.Drawing.Point(27, 246);
             this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(38, 22);
+            this.radioButton8.Size = new System.Drawing.Size(46, 25);
             this.radioButton8.TabIndex = 7;
             this.radioButton8.TabStop = true;
             this.radioButton8.Text = "O-";
@@ -138,7 +138,7 @@
             this.radioButton7.AutoSize = true;
             this.radioButton7.Location = new System.Drawing.Point(27, 212);
             this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(41, 22);
+            this.radioButton7.Size = new System.Drawing.Size(50, 25);
             this.radioButton7.TabIndex = 6;
             this.radioButton7.TabStop = true;
             this.radioButton7.Text = "O+";
@@ -149,7 +149,7 @@
             this.radioButton6.AutoSize = true;
             this.radioButton6.Location = new System.Drawing.Point(27, 181);
             this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(44, 22);
+            this.radioButton6.Size = new System.Drawing.Size(54, 25);
             this.radioButton6.TabIndex = 5;
             this.radioButton6.TabStop = true;
             this.radioButton6.Text = "AB-";
@@ -160,7 +160,7 @@
             this.radioButton5.AutoSize = true;
             this.radioButton5.Location = new System.Drawing.Point(27, 153);
             this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(47, 22);
+            this.radioButton5.Size = new System.Drawing.Size(58, 25);
             this.radioButton5.TabIndex = 4;
             this.radioButton5.TabStop = true;
             this.radioButton5.Text = "AB+";
@@ -171,7 +171,7 @@
             this.radioButton4.AutoSize = true;
             this.radioButton4.Location = new System.Drawing.Point(27, 122);
             this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(37, 22);
+            this.radioButton4.Size = new System.Drawing.Size(45, 25);
             this.radioButton4.TabIndex = 3;
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "B-";
@@ -182,7 +182,7 @@
             this.radioButton3.AutoSize = true;
             this.radioButton3.Location = new System.Drawing.Point(27, 90);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(40, 22);
+            this.radioButton3.Size = new System.Drawing.Size(49, 25);
             this.radioButton3.TabIndex = 2;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "B+";
@@ -193,7 +193,7 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(27, 59);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(37, 22);
+            this.radioButton2.Size = new System.Drawing.Size(45, 25);
             this.radioButton2.TabIndex = 1;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "A-";
@@ -204,7 +204,7 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(27, 27);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(40, 22);
+            this.radioButton1.Size = new System.Drawing.Size(49, 25);
             this.radioButton1.TabIndex = 0;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "A+";
@@ -217,7 +217,7 @@
             this.label3.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(25, 84);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 18);
+            this.label3.Size = new System.Drawing.Size(111, 21);
             this.label3.TabIndex = 9;
             this.label3.Text = "Nome do Médico";
             // 
@@ -226,7 +226,7 @@
             this.tb_NomeMedico.Font = new System.Drawing.Font("Sitka Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tb_NomeMedico.Location = new System.Drawing.Point(26, 108);
             this.tb_NomeMedico.Name = "tb_NomeMedico";
-            this.tb_NomeMedico.Size = new System.Drawing.Size(316, 23);
+            this.tb_NomeMedico.Size = new System.Drawing.Size(316, 26);
             this.tb_NomeMedico.TabIndex = 10;
             // 
             // mTb_CpfDoador
@@ -235,7 +235,7 @@
             this.mTb_CpfDoador.Location = new System.Drawing.Point(26, 173);
             this.mTb_CpfDoador.Mask = "000-000-000-00";
             this.mTb_CpfDoador.Name = "mTb_CpfDoador";
-            this.mTb_CpfDoador.Size = new System.Drawing.Size(316, 23);
+            this.mTb_CpfDoador.Size = new System.Drawing.Size(316, 26);
             this.mTb_CpfDoador.TabIndex = 12;
             // 
             // label4
@@ -245,7 +245,7 @@
             this.label4.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(26, 149);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 18);
+            this.label4.Size = new System.Drawing.Size(100, 21);
             this.label4.TabIndex = 11;
             this.label4.Text = "CPF do Doador";
             // 
@@ -254,7 +254,7 @@
             this.tb_HospitalDestino.Font = new System.Drawing.Font("Sitka Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tb_HospitalDestino.Location = new System.Drawing.Point(25, 240);
             this.tb_HospitalDestino.Name = "tb_HospitalDestino";
-            this.tb_HospitalDestino.Size = new System.Drawing.Size(317, 23);
+            this.tb_HospitalDestino.Size = new System.Drawing.Size(317, 26);
             this.tb_HospitalDestino.TabIndex = 14;
             // 
             // label5
@@ -264,7 +264,7 @@
             this.label5.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.Location = new System.Drawing.Point(24, 216);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 18);
+            this.label5.Size = new System.Drawing.Size(129, 21);
             this.label5.TabIndex = 13;
             this.label5.Text = "Hospital de Destino";
             // 
@@ -275,7 +275,7 @@
             this.lb_voltar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lb_voltar.Location = new System.Drawing.Point(69, 452);
             this.lb_voltar.Name = "lb_voltar";
-            this.lb_voltar.Size = new System.Drawing.Size(51, 15);
+            this.lb_voltar.Size = new System.Drawing.Size(66, 20);
             this.lb_voltar.TabIndex = 18;
             this.lb_voltar.Text = "VOLTAR";
             this.lb_voltar.Click += new System.EventHandler(this.lb_voltar_Click);
@@ -354,10 +354,10 @@
             // 
             this.ltbResultado.Font = new System.Drawing.Font("Sitka Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltbResultado.FormattingEnabled = true;
-            this.ltbResultado.ItemHeight = 18;
+            this.ltbResultado.ItemHeight = 21;
             this.ltbResultado.Location = new System.Drawing.Point(38, 474);
             this.ltbResultado.Name = "ltbResultado";
-            this.ltbResultado.Size = new System.Drawing.Size(899, 166);
+            this.ltbResultado.Size = new System.Drawing.Size(899, 151);
             this.ltbResultado.TabIndex = 29;
             this.ltbResultado.DoubleClick += new System.EventHandler(this.ltbResultado_DoubleClick);
             // 
@@ -365,7 +365,7 @@
             // 
             this.btnConsulta.Location = new System.Drawing.Point(348, 173);
             this.btnConsulta.Name = "btnConsulta";
-            this.btnConsulta.Size = new System.Drawing.Size(75, 23);
+            this.btnConsulta.Size = new System.Drawing.Size(75, 32);
             this.btnConsulta.TabIndex = 30;
             this.btnConsulta.Text = "button1";
             this.btnConsulta.UseVisualStyleBackColor = true;
@@ -375,7 +375,7 @@
             // 
             this.btnConsultaHospital.Location = new System.Drawing.Point(348, 240);
             this.btnConsultaHospital.Name = "btnConsultaHospital";
-            this.btnConsultaHospital.Size = new System.Drawing.Size(75, 23);
+            this.btnConsultaHospital.Size = new System.Drawing.Size(75, 26);
             this.btnConsultaHospital.TabIndex = 31;
             this.btnConsultaHospital.Text = "button1";
             this.btnConsultaHospital.UseVisualStyleBackColor = true;
@@ -385,7 +385,7 @@
             // 
             this.btnConsultaMedico.Location = new System.Drawing.Point(348, 106);
             this.btnConsultaMedico.Name = "btnConsultaMedico";
-            this.btnConsultaMedico.Size = new System.Drawing.Size(75, 23);
+            this.btnConsultaMedico.Size = new System.Drawing.Size(75, 38);
             this.btnConsultaMedico.TabIndex = 32;
             this.btnConsultaMedico.Text = "button1";
             this.btnConsultaMedico.UseVisualStyleBackColor = true;
@@ -403,7 +403,7 @@
             // 
             // frm_cadastrarBolsa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::LetsBlood_2.Properties.Resources.istockphoto_1004961356_170667a;
