@@ -15,35 +15,8 @@ namespace LetsBlood_2.Cadastros_Forms
     {
         public frm_cadastrarBolsa()
         {
-            InitializeComponent();
-                        
-            foreach (Bolsa p in Dados.listaBolsas)
-            {
-                ltbResultado.Items.Add(p);
-                Console.WriteLine();                
-            }
-                       
+            InitializeComponent();                     
         }
-
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-        //    //?
-        //    Bolsa bolsa = new Bolsa();
-
-        //    var checkedButton = gb_TipoSanguineo.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
-
-        //    bolsa.DataColeta = dTp_DataColeta.Text;
-        //    bolsa.NomeMedico = tb_NomeMedico.Text;
-        //    bolsa.CpfDoador = mTb_CpfDoador.Text;
-        //    bolsa.HospitalDestino = tb_HospitalDestino.Text;
-        //    bolsa.ObservacaoBolsa = tb_Observacao.Text;
-        //    bolsa.TipoSanguineo = checkedButton.Text;
-
-        //    Dados.listaBolsas.Add(bolsa);
-
-        //    pb_resultado.Visible = true;
-
-        //}
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -57,13 +30,9 @@ namespace LetsBlood_2.Cadastros_Forms
 
         private void frm_cadastrarBolsa_Load(object sender, EventArgs e)
         {
+
             pb_resultado.Visible = true;            
         }
-
-        //private void button5_Click(object sender, EventArgs e)
-        //{
-        //    //?
-        //}
 
         private void bt_cadastrar_Click(object sender, EventArgs e)
         {
@@ -103,11 +72,11 @@ namespace LetsBlood_2.Cadastros_Forms
             bolsa.ObservacaoBolsa = tb_Observacao.Text;
             bolsa.TipoSanguineo = checkedButton.Text;
 
-            Dados.listaBolsas.Add(bolsa);                       
+            Dados.listaBolsas.Add(bolsa);  
 
             Listar();
 
-            bt_limpar_Click(bt_limpar, EventArgs.Empty);
+            //limparCampos();
         }
 
         private void bt_limpar_Click(object sender, EventArgs e)
@@ -144,11 +113,6 @@ namespace LetsBlood_2.Cadastros_Forms
             }
         }
 
-
-        //private void button2_Click(object sender, EventArgs e)
-        //{
-
-        //}
 
         private void btnConsulta_Click(object sender, EventArgs e)
         {
@@ -188,18 +152,12 @@ namespace LetsBlood_2.Cadastros_Forms
             mTb_CpfDoador.Text = bolsa.CpfDoador;
             tb_HospitalDestino.Text = bolsa.HospitalDestino;
             tb_Observacao.Text = bolsa.ObservacaoBolsa;           
-            var checkedButton = gb_TipoSanguineo.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
+            var checkedButton = gb_TipoSanguineo.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Text == bolsa.TipoSanguineo);
             if (checkedButton != null)
             {
                 checkedButton.Checked = true;
             }
-            //ver o que esta errado que não fica selecionado
         }
-
-        //private void button3_Click(object sender, EventArgs e)
-        //{
-        //    //ltbResultado.Items;
-        //}
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
@@ -213,9 +171,13 @@ namespace LetsBlood_2.Cadastros_Forms
             }                        
         }
 
-        private void ltbResultado_SelectedIndexChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            foreach (Bolsa p in Dados.listaBolsas)
+            {
+                ltbResultado.Items.Add(p);
+                Console.WriteLine();
+            }
         }
     }
 }

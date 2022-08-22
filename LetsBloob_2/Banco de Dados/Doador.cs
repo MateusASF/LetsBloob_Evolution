@@ -10,7 +10,7 @@ namespace LetsBlood_2.Banco_de_Dados
     {
         public Doador() { }
 
-        public Doador(string NomeDoador, string CpfDoador, DateTime Nascimento, string Telefone, string Email, string Observacao)
+        public Doador(string NomeDoador, string CpfDoador, string Nascimento, string Telefone, string Email, string Observacao)
         {
             this.NomeDoador = NomeDoador;
             this.CpfDoador = CpfDoador;
@@ -21,7 +21,7 @@ namespace LetsBlood_2.Banco_de_Dados
         }
         public string NomeDoador { get; set; }
         public string CpfDoador { get; set; }
-        public DateTime Nascimento { get; set; }
+        public string Nascimento { get; set; }
         public string Telefone { get; set; }
         public string Email { get; set; }
         public string Observacao { get; set; }

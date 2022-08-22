@@ -45,10 +45,13 @@
             this.lb_voltar = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pb_resultado = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.bt_ListaCompleta = new System.Windows.Forms.Button();
+            this.bt_excluir = new System.Windows.Forms.Button();
             this.bt_limpar = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_resultado)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +67,7 @@
             // dTp_Nascimento
             // 
             this.dTp_Nascimento.Font = new System.Drawing.Font("Sitka Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dTp_Nascimento.Location = new System.Drawing.Point(43, 159);
+            this.dTp_Nascimento.Location = new System.Drawing.Point(43, 165);
             this.dTp_Nascimento.Name = "dTp_Nascimento";
             this.dTp_Nascimento.Size = new System.Drawing.Size(479, 26);
             this.dTp_Nascimento.TabIndex = 3;
@@ -174,7 +177,7 @@
             // 
             this.bt_cadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.bt_cadastrar.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bt_cadastrar.Location = new System.Drawing.Point(573, 33);
+            this.bt_cadastrar.Location = new System.Drawing.Point(628, 32);
             this.bt_cadastrar.Name = "bt_cadastrar";
             this.bt_cadastrar.Size = new System.Drawing.Size(203, 49);
             this.bt_cadastrar.TabIndex = 15;
@@ -226,33 +229,35 @@
             this.pb_resultado.TabIndex = 21;
             this.pb_resultado.TabStop = false;
             // 
-            // button2
+            // bt_ListaCompleta
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button2.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(573, 95);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(203, 47);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "EDITAR";
-            this.button2.UseVisualStyleBackColor = false;
+            this.bt_ListaCompleta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bt_ListaCompleta.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bt_ListaCompleta.Location = new System.Drawing.Point(627, 243);
+            this.bt_ListaCompleta.Name = "bt_ListaCompleta";
+            this.bt_ListaCompleta.Size = new System.Drawing.Size(203, 47);
+            this.bt_ListaCompleta.TabIndex = 22;
+            this.bt_ListaCompleta.Text = "base";
+            this.bt_ListaCompleta.UseVisualStyleBackColor = false;
+            this.bt_ListaCompleta.Click += new System.EventHandler(this.bt_ListaCompleta_Click);
             // 
-            // button3
+            // bt_excluir
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button3.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(573, 159);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(203, 47);
-            this.button3.TabIndex = 23;
-            this.button3.Text = "EXCLUIR";
-            this.button3.UseVisualStyleBackColor = false;
+            this.bt_excluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bt_excluir.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bt_excluir.Location = new System.Drawing.Point(627, 95);
+            this.bt_excluir.Name = "bt_excluir";
+            this.bt_excluir.Size = new System.Drawing.Size(203, 47);
+            this.bt_excluir.TabIndex = 23;
+            this.bt_excluir.Text = "EXCLUIR";
+            this.bt_excluir.UseVisualStyleBackColor = false;
+            this.bt_excluir.Click += new System.EventHandler(this.bt_excluir_Click);
             // 
             // bt_limpar
             // 
             this.bt_limpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.bt_limpar.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bt_limpar.Location = new System.Drawing.Point(573, 220);
+            this.bt_limpar.Location = new System.Drawing.Point(627, 156);
             this.bt_limpar.Name = "bt_limpar";
             this.bt_limpar.Size = new System.Drawing.Size(203, 47);
             this.bt_limpar.TabIndex = 24;
@@ -265,10 +270,38 @@
             this.listBox1.Font = new System.Drawing.Font("Sitka Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 21;
-            this.listBox1.Location = new System.Drawing.Point(544, 286);
+            this.listBox1.Location = new System.Drawing.Point(46, 482);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(232, 172);
+            this.listBox1.Size = new System.Drawing.Size(784, 130);
             this.listBox1.TabIndex = 30;
+            this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(528, 32);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 29);
+            this.button1.TabIndex = 31;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(528, 89);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(94, 29);
+            this.button4.TabIndex = 32;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(251, 92);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(59, 29);
+            this.button5.TabIndex = 33;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // frm_cadastrarDoador
             // 
@@ -277,12 +310,15 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::LetsBlood_2.Properties.Resources.istockphoto_1004961356_170667a;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(842, 480);
+            this.ClientSize = new System.Drawing.Size(842, 631);
             this.ControlBox = false;
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.bt_limpar);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.bt_excluir);
+            this.Controls.Add(this.bt_ListaCompleta);
             this.Controls.Add(this.pb_resultado);
             this.Controls.Add(this.lb_voltar);
             this.Controls.Add(this.pictureBox1);
@@ -330,9 +366,12 @@
         private Label lb_voltar;
         private PictureBox pictureBox1;
         private PictureBox pb_resultado;
-        private Button button2;
-        private Button button3;
+        private Button bt_ListaCompleta;
+        private Button bt_excluir;
         private Button bt_limpar;
         private ListBox listBox1;
+        private Button button1;
+        private Button button4;
+        private Button button5;
     }
 }

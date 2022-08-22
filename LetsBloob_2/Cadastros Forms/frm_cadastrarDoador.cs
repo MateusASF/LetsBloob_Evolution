@@ -28,13 +28,40 @@ namespace LetsBlood_2.Cadastros_Forms
             Doador doa = new Doador();
             doa.NomeDoador = tb_Nome_Doador.Text;
             doa.CpfDoador = mTb_Cpf.Text;
-            doa.Nascimento = dTp_Nascimento.Value;
+            doa.Nascimento = dTp_Nascimento.Text;
             doa.Telefone = mTb_Telefone.Text;
             doa.Email = tb_Email.Text;
             doa.Observacao = tb_Obs.Text;
             pb_resultado.Visible = true;
 
+            int index = -1;
+            foreach (Doador item in Dados.listaDoadores)
+            {
+                if (item.NomeDoador == tb_Nome_Doador.Text)
+                {
+                    index = Dados.listaDoadores.IndexOf(item);
+                }
+            }
+
+            if (mTb_Cpf.Text == "   -   -   -")
+            {
+                MessageBox.Show("Preencha o campo CPF.");
+                mTb_Cpf.Focus();
+                return;
+            }
+
+            if (mTb_Telefone.Text == "(  )      -")
+            {
+                MessageBox.Show("Preencha o campo telefone.");
+                mTb_Telefone.Focus();
+                return;
+            }
+
             Dados.listaDoadores.Add(doa);
+
+            Listar();
+
+            //limparCampos();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -64,6 +91,48 @@ namespace LetsBlood_2.Cadastros_Forms
             limparCampos();
         }
 
+        private void Listar()
+        {
+            listBox1.Items.Clear();
+
+            foreach (Doador p in Dados.listaDoadores)
+            {
+                listBox1.Items.Add(p);
+                Console.WriteLine();
+            }
+        }
+
+        private void bt_excluir_Click(object sender, EventArgs e)
+        {
+            int index = listBox1.SelectedIndex;
+            DialogResult resp = MessageBox.Show("Você deseja mesmo excluir o doador?", "Exluir", MessageBoxButtons.YesNo);
+            if (resp == DialogResult.Yes)
+            {
+                Dados.listaDoadores.RemoveAt(index);
+                Console.WriteLine("Doador excluido com sucesso!");
+                Listar();
+            }
+        }
+
+        private void bt_ListaCompleta_Click(object sender, EventArgs e)
+        {
+            foreach (Doador p in Dados.listaDoadores)
+            {
+                listBox1.Items.Add(p);
+                Console.WriteLine();
+            }
+        }
+
+        private void listBox1_DoubleClick(object sender, EventArgs e)
+        {
+            var index = listBox1.SelectedIndex;
+            Doador doador = Dados.listaDoadores[index];
+            dTp_Nascimento.Text = doador.Nascimento;
+            tb_Nome_Doador.Text = doador.NomeDoador;
+            mTb_Cpf.Text = doador.CpfDoador;
+            mTb_Telefone.Text = doador.Telefone;
+            tb_Obs.Text = doador.Observacao;
+        }
     }
 
 
