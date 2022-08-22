@@ -75,20 +75,16 @@ namespace LetsBlood_2.Cadastros_Forms
         }
 
 
-        private void limparCampos()
+        private async Task limparCampos()
         {
             Listar();
-
-            Task.Delay(500).Wait();
             tb_Nome_Doador.Clear();
             mTb_Cpf.Clear();
             //dTp_Nascimento
             mTb_Telefone.Clear();
             tb_Email.Clear();
             tb_Obs.Clear();
-            pb_resultado.Visible = false;
-
-            Task.Delay(3000).Wait();
+            await Task.Delay(800);
             pb_resultado.Visible = false;
         }
 

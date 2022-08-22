@@ -85,11 +85,10 @@ namespace LetsBlood_2.Cadastros_Forms
             tb_NomeMedico.Focus();
         }
 
-        private void limparCampos()
+        private async Task limparCampos()
         {
             Listar();
 
-            Task.Delay(600).Wait();
             dTp_DataColeta.Text = "";
             tb_NomeMedico.Clear();
             mTb_CpfDoador.Clear();
@@ -101,7 +100,7 @@ namespace LetsBlood_2.Cadastros_Forms
                 checkedButton.Checked = false;
             }
 
-            Task.Delay(2000).Wait();
+            await Task.Delay(800);
             pb_resultado.Visible = false;
         }
 
