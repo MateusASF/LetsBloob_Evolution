@@ -24,15 +24,15 @@ namespace LetsBlood_2.Banco_de_Dados
 
         public static List<Bolsa> listaBolsas = new List<Bolsa>()
         {
-            new Bolsa(Convert.ToDateTime("2022-10-25"),"Marcelo Lima","12345678900","Sírio Libanês","AB+","Diabetes"),
-            new Bolsa(Convert.ToDateTime("2022-10-30"),"Ana Cristina","98765432100","Sírio Libanês","B+","Saudável"),
-            new Bolsa(Convert.ToDateTime("2022-12-07"),"Marcelo Lima","11932124578","Sírio Libanês","AB-","Colesterol"),
-            new Bolsa(Convert.ToDateTime("2022-12-07"),"Marcelo Lima","84043292066","Sírio Libanês","A-","Colesterol"),
-            new Bolsa(Convert.ToDateTime("2022-11-16"),"Ana Cristina","82522790072","Sírio Libanês","O+","Saudável"),
-            new Bolsa(Convert.ToDateTime("2022-12-02"),"Ana Cristina","31779827083","Sírio Libanês","AB+","Diabetes"),
-            new Bolsa(Convert.ToDateTime("2022-12-02"),"Marcelo Lima","63262031046","Sírio Libanês","A+","Saudável"),
-            new Bolsa(Convert.ToDateTime("2022-07-22"),"Ana Cristina","85278227095","Sírio Libanês","O-","Colesterol"),
-            new Bolsa(Convert.ToDateTime("2022-04-12"),"Marcelo Lima","29902202080","Sírio Libanês","B-","Saudável"),
+            new Bolsa("10/10/2022","Marcelo Lima","12345678900","Sírio Libanês","AB+","Diabetes"),
+            new Bolsa("05/01/2022","Ana Cristina","98765432100","Sírio Libanês","B+","Saudável"),
+            new Bolsa("18/05/2022","Marcelo Lima","11932124578","Sírio Libanês","AB-","Colesterol"),
+            new Bolsa("25/01/2022","Marcelo Lima","84043292066","Sírio Libanês","A-","Colesterol"),
+            new Bolsa("19/02/2022","Ana Cristina","82522790072","Sírio Libanês","O+","Saudável"),
+            new Bolsa("28/03/2022","Ana Cristina","31779827083","Sírio Libanês","AB+","Diabetes"),
+            new Bolsa("04/07/2022","Marcelo Lima","63262031046","Sírio Libanês","A+","Saudável"),
+            new Bolsa("02/09/2022","Ana Cristina","85278227095","Sírio Libanês","O-","Colesterol"),
+            new Bolsa("10/08/2022","Marcelo Lima","29902202080","Sírio Libanês","B-","Saudável"),
 
         };
 

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LetsBloob_2.Banco_de_Dados;
+using LetsBlood_2.Cadastros_Forms;
 
 namespace LetsBloob_2
 {
@@ -33,7 +34,7 @@ namespace LetsBloob_2
         private void bt_cadastros_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frm_Cadastros form = new frm_Cadastros();
+            frm_cadastrarBolsa form = new frm_cadastrarBolsa();
             form.ShowDialog();
             try
             {
@@ -49,7 +50,7 @@ namespace LetsBloob_2
         private void bt_consultas_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frm_Consultas form = new frm_Consultas();
+            frm_cadastrarDoador form = new frm_cadastrarDoador();
             form.ShowDialog();
             try
             {

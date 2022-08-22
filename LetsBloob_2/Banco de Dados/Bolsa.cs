@@ -9,7 +9,7 @@ namespace LetsBlood_2.Banco_de_Dados
     public class Bolsa
     {
         public Bolsa() { }
-        public Bolsa(DateTime DataColeta, string NomeMedico, string CpfDoador, string HospitalDestino, string TipoSanguineo, string ObservacaoBolsa)
+        public Bolsa(string DataColeta, string NomeMedico, string CpfDoador, string HospitalDestino, string TipoSanguineo, string ObservacaoBolsa)
         {
             this.DataColeta = DataColeta;
             this.NomeMedico = NomeMedico;
@@ -19,7 +19,7 @@ namespace LetsBlood_2.Banco_de_Dados
             this.ObservacaoBolsa = ObservacaoBolsa;
         }
 
-        public DateTime DataColeta { get; set; }
+        public string DataColeta { get; set; }
         public string NomeMedico { get; set; }
         public string CpfDoador { get; set; }
         public string HospitalDestino { get; set; }
@@ -28,7 +28,7 @@ namespace LetsBlood_2.Banco_de_Dados
 
         public override string ToString()
         {
-            return $"Data da Coleta: {DataColeta} | Nome Medico: {NomeMedico} | CPF Doador: {CpfDoador} | Hospital de Destino: {HospitalDestino} | Observação: {ObservacaoBolsa} | Tipo Sanguíneo: {TipoSanguineo}";
+            return $"Data da Coleta: {DataColeta} | Nome Medico: {NomeMedico} | CPF Doador: {CpfDoador} | Hospital de Destino: {HospitalDestino} | Obs: {ObservacaoBolsa} | Tipo Sanguíneo: {TipoSanguineo}";
         }
     }
 }

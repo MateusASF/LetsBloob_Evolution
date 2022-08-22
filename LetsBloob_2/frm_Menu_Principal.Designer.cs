@@ -47,9 +47,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::LetsBlood_2.Properties.Resources.LOGO;
-            this.pictureBox1.Location = new System.Drawing.Point(237, 43);
+            this.pictureBox1.Location = new System.Drawing.Point(207, 32);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(327, 165);
+            this.pictureBox1.Size = new System.Drawing.Size(286, 124);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -59,11 +60,12 @@
             this.bt_cadastros.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bt_cadastros.Font = new System.Drawing.Font("Sitka Text", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bt_cadastros.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bt_cadastros.Location = new System.Drawing.Point(282, 277);
+            this.bt_cadastros.Location = new System.Drawing.Point(247, 208);
+            this.bt_cadastros.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_cadastros.Name = "bt_cadastros";
-            this.bt_cadastros.Size = new System.Drawing.Size(236, 52);
+            this.bt_cadastros.Size = new System.Drawing.Size(206, 39);
             this.bt_cadastros.TabIndex = 1;
-            this.bt_cadastros.Text = "Cadastros";
+            this.bt_cadastros.Text = "Bolsa";
             this.bt_cadastros.UseVisualStyleBackColor = false;
             this.bt_cadastros.Click += new System.EventHandler(this.bt_cadastros_Click);
             // 
@@ -72,11 +74,12 @@
             this.bt_consultas.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bt_consultas.Font = new System.Drawing.Font("Sitka Text", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bt_consultas.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bt_consultas.Location = new System.Drawing.Point(283, 351);
+            this.bt_consultas.Location = new System.Drawing.Point(248, 263);
+            this.bt_consultas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_consultas.Name = "bt_consultas";
-            this.bt_consultas.Size = new System.Drawing.Size(236, 52);
+            this.bt_consultas.Size = new System.Drawing.Size(206, 39);
             this.bt_consultas.TabIndex = 2;
-            this.bt_consultas.Text = "Consultas";
+            this.bt_consultas.Text = "Doador";
             this.bt_consultas.UseVisualStyleBackColor = false;
             this.bt_consultas.Click += new System.EventHandler(this.bt_consultas_Click);
             // 
@@ -89,7 +92,8 @@
             this.sobreToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 31);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(700, 27);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -99,20 +103,20 @@
             this.informaçõesDeDoaçãoToolStripMenuItem,
             this.informaçõesDoProgramaToolStripMenuItem});
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(62, 27);
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(52, 23);
             this.sobreToolStripMenuItem.Text = "Sobre";
             // 
             // informaçõesDeDoaçãoToolStripMenuItem
             // 
             this.informaçõesDeDoaçãoToolStripMenuItem.Name = "informaçõesDeDoaçãoToolStripMenuItem";
-            this.informaçõesDeDoaçãoToolStripMenuItem.Size = new System.Drawing.Size(265, 28);
+            this.informaçõesDeDoaçãoToolStripMenuItem.Size = new System.Drawing.Size(212, 24);
             this.informaçõesDeDoaçãoToolStripMenuItem.Text = "Informações de Doação";
             this.informaçõesDeDoaçãoToolStripMenuItem.Click += new System.EventHandler(this.informaçõesDeDoaçãoToolStripMenuItem_Click);
             // 
             // informaçõesDoProgramaToolStripMenuItem
             // 
             this.informaçõesDoProgramaToolStripMenuItem.Name = "informaçõesDoProgramaToolStripMenuItem";
-            this.informaçõesDoProgramaToolStripMenuItem.Size = new System.Drawing.Size(265, 28);
+            this.informaçõesDoProgramaToolStripMenuItem.Size = new System.Drawing.Size(212, 24);
             this.informaçõesDoProgramaToolStripMenuItem.Text = "Informações do Programa";
             this.informaçõesDoProgramaToolStripMenuItem.Click += new System.EventHandler(this.informaçõesDoProgramaToolStripMenuItem_Click);
             // 
@@ -121,9 +125,9 @@
             this.lb_sair.AutoSize = true;
             this.lb_sair.BackColor = System.Drawing.Color.Transparent;
             this.lb_sair.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb_sair.Location = new System.Drawing.Point(374, 487);
+            this.lb_sair.Location = new System.Drawing.Point(327, 365);
             this.lb_sair.Name = "lb_sair";
-            this.lb_sair.Size = new System.Drawing.Size(43, 20);
+            this.lb_sair.Size = new System.Drawing.Size(34, 15);
             this.lb_sair.TabIndex = 17;
             this.lb_sair.Text = "SAIR";
             this.lb_sair.Click += new System.EventHandler(this.lb_sair_Click);
@@ -132,9 +136,10 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::LetsBlood_2.Properties.Resources.tl__1__removebg_preview;
-            this.pictureBox2.Location = new System.Drawing.Point(338, 424);
+            this.pictureBox2.Location = new System.Drawing.Point(296, 318);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(125, 62);
+            this.pictureBox2.Size = new System.Drawing.Size(109, 46);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 16;
             this.pictureBox2.TabStop = false;
@@ -145,19 +150,19 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Sitka Banner", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(283, 218);
+            this.label1.Location = new System.Drawing.Point(248, 164);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(234, 49);
+            this.label1.Size = new System.Drawing.Size(184, 39);
             this.label1.TabIndex = 18;
             this.label1.Text = "Menu Principal";
             // 
             // frm_Menu_Principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::LetsBlood_2.Properties.Resources._964fa0ed6eb25f231069df340aa2d46b;
-            this.ClientSize = new System.Drawing.Size(800, 516);
+            this.ClientSize = new System.Drawing.Size(700, 387);
             this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lb_sair);
@@ -166,6 +171,7 @@
             this.Controls.Add(this.bt_cadastros);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "frm_Menu_Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
