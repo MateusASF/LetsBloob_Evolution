@@ -54,14 +54,21 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.bt_cadastrar = new System.Windows.Forms.Button();
             this.ltbResultado = new System.Windows.Forms.ListBox();
-            this.btnConsultaCPF = new System.Windows.Forms.Button();
-            this.btnConsultaHospital = new System.Windows.Forms.Button();
-            this.btnConsultaMedico = new System.Windows.Forms.Button();
-            this.btnPesquisarTipo = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.lupa_consultaHospital = new System.Windows.Forms.PictureBox();
+            this.lupa_consultaCPF = new System.Windows.Forms.PictureBox();
+            this.lupa_consultaMedico = new System.Windows.Forms.PictureBox();
+            this.lupa_consultaTipoSanguineo = new System.Windows.Forms.PictureBox();
+            this.lb_sair = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.gb_TipoSanguineo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_resultado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lupa_consultaHospital)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lupa_consultaCPF)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lupa_consultaMedico)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lupa_consultaTipoSanguineo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // dTp_DataColeta
@@ -274,7 +281,7 @@
             this.lb_voltar.AutoSize = true;
             this.lb_voltar.BackColor = System.Drawing.Color.Transparent;
             this.lb_voltar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb_voltar.Location = new System.Drawing.Point(69, 452);
+            this.lb_voltar.Location = new System.Drawing.Point(69, 442);
             this.lb_voltar.Name = "lb_voltar";
             this.lb_voltar.Size = new System.Drawing.Size(66, 20);
             this.lb_voltar.TabIndex = 18;
@@ -285,7 +292,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::LetsBlood_2.Properties.Resources.voltar;
-            this.pictureBox1.Location = new System.Drawing.Point(38, 394);
+            this.pictureBox1.Location = new System.Drawing.Point(38, 384);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(125, 65);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -353,46 +360,6 @@
             this.ltbResultado.TabIndex = 29;
             this.ltbResultado.DoubleClick += new System.EventHandler(this.ltbResultado_DoubleClick);
             // 
-            // btnConsultaCPF
-            // 
-            this.btnConsultaCPF.Location = new System.Drawing.Point(348, 173);
-            this.btnConsultaCPF.Name = "btnConsultaCPF";
-            this.btnConsultaCPF.Size = new System.Drawing.Size(75, 32);
-            this.btnConsultaCPF.TabIndex = 30;
-            this.btnConsultaCPF.Text = "pesquisar";
-            this.btnConsultaCPF.UseVisualStyleBackColor = true;
-            this.btnConsultaCPF.Click += new System.EventHandler(this.btnConsulta_Click);
-            // 
-            // btnConsultaHospital
-            // 
-            this.btnConsultaHospital.Location = new System.Drawing.Point(348, 240);
-            this.btnConsultaHospital.Name = "btnConsultaHospital";
-            this.btnConsultaHospital.Size = new System.Drawing.Size(75, 26);
-            this.btnConsultaHospital.TabIndex = 31;
-            this.btnConsultaHospital.Text = "pesquisar";
-            this.btnConsultaHospital.UseVisualStyleBackColor = true;
-            this.btnConsultaHospital.Click += new System.EventHandler(this.btnConsultaHospital_Click);
-            // 
-            // btnConsultaMedico
-            // 
-            this.btnConsultaMedico.Location = new System.Drawing.Point(348, 106);
-            this.btnConsultaMedico.Name = "btnConsultaMedico";
-            this.btnConsultaMedico.Size = new System.Drawing.Size(75, 38);
-            this.btnConsultaMedico.TabIndex = 32;
-            this.btnConsultaMedico.Text = "pesquisar";
-            this.btnConsultaMedico.UseVisualStyleBackColor = true;
-            this.btnConsultaMedico.Click += new System.EventHandler(this.btnConsultaMedico_Click);
-            // 
-            // btnPesquisarTipo
-            // 
-            this.btnPesquisarTipo.Location = new System.Drawing.Point(533, 328);
-            this.btnPesquisarTipo.Name = "btnPesquisarTipo";
-            this.btnPesquisarTipo.Size = new System.Drawing.Size(75, 23);
-            this.btnPesquisarTipo.TabIndex = 33;
-            this.btnPesquisarTipo.Text = "pesquisar";
-            this.btnPesquisarTipo.UseVisualStyleBackColor = true;
-            this.btnPesquisarTipo.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
@@ -406,6 +373,78 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // lupa_consultaHospital
+            // 
+            this.lupa_consultaHospital.BackColor = System.Drawing.Color.Transparent;
+            this.lupa_consultaHospital.Image = global::LetsBlood_2.Properties.Resources.lupa;
+            this.lupa_consultaHospital.Location = new System.Drawing.Point(348, 240);
+            this.lupa_consultaHospital.Name = "lupa_consultaHospital";
+            this.lupa_consultaHospital.Size = new System.Drawing.Size(30, 31);
+            this.lupa_consultaHospital.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.lupa_consultaHospital.TabIndex = 35;
+            this.lupa_consultaHospital.TabStop = false;
+            this.lupa_consultaHospital.Click += new System.EventHandler(this.lupa_consultaHospital_Click);
+            // 
+            // lupa_consultaCPF
+            // 
+            this.lupa_consultaCPF.BackColor = System.Drawing.Color.Transparent;
+            this.lupa_consultaCPF.Image = global::LetsBlood_2.Properties.Resources.lupa;
+            this.lupa_consultaCPF.Location = new System.Drawing.Point(348, 173);
+            this.lupa_consultaCPF.Name = "lupa_consultaCPF";
+            this.lupa_consultaCPF.Size = new System.Drawing.Size(30, 31);
+            this.lupa_consultaCPF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.lupa_consultaCPF.TabIndex = 36;
+            this.lupa_consultaCPF.TabStop = false;
+            this.lupa_consultaCPF.Click += new System.EventHandler(this.lupa_consultaCPF_Click);
+            // 
+            // lupa_consultaMedico
+            // 
+            this.lupa_consultaMedico.BackColor = System.Drawing.Color.Transparent;
+            this.lupa_consultaMedico.Image = global::LetsBlood_2.Properties.Resources.lupa;
+            this.lupa_consultaMedico.Location = new System.Drawing.Point(348, 108);
+            this.lupa_consultaMedico.Name = "lupa_consultaMedico";
+            this.lupa_consultaMedico.Size = new System.Drawing.Size(30, 31);
+            this.lupa_consultaMedico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.lupa_consultaMedico.TabIndex = 37;
+            this.lupa_consultaMedico.TabStop = false;
+            this.lupa_consultaMedico.Click += new System.EventHandler(this.lupa_consultaMedico_Click);
+            // 
+            // lupa_consultaTipoSanguineo
+            // 
+            this.lupa_consultaTipoSanguineo.BackColor = System.Drawing.Color.Transparent;
+            this.lupa_consultaTipoSanguineo.Image = global::LetsBlood_2.Properties.Resources.lupa;
+            this.lupa_consultaTipoSanguineo.Location = new System.Drawing.Point(566, 322);
+            this.lupa_consultaTipoSanguineo.Name = "lupa_consultaTipoSanguineo";
+            this.lupa_consultaTipoSanguineo.Size = new System.Drawing.Size(30, 31);
+            this.lupa_consultaTipoSanguineo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.lupa_consultaTipoSanguineo.TabIndex = 38;
+            this.lupa_consultaTipoSanguineo.TabStop = false;
+            this.lupa_consultaTipoSanguineo.Click += new System.EventHandler(this.lupa_consultaTipoSanguineo_Click);
+            // 
+            // lb_sair
+            // 
+            this.lb_sair.AutoSize = true;
+            this.lb_sair.BackColor = System.Drawing.Color.Transparent;
+            this.lb_sair.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lb_sair.Location = new System.Drawing.Point(229, 447);
+            this.lb_sair.Name = "lb_sair";
+            this.lb_sair.Size = new System.Drawing.Size(43, 20);
+            this.lb_sair.TabIndex = 40;
+            this.lb_sair.Text = "SAIR";
+            this.lb_sair.Click += new System.EventHandler(this.lb_sair_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::LetsBlood_2.Properties.Resources.tl__1__removebg_preview;
+            this.pictureBox2.Location = new System.Drawing.Point(193, 384);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(125, 62);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 39;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // frm_cadastrarBolsa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 21F);
@@ -415,11 +454,13 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(959, 668);
             this.ControlBox = false;
+            this.Controls.Add(this.lb_sair);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.lupa_consultaTipoSanguineo);
+            this.Controls.Add(this.lupa_consultaMedico);
+            this.Controls.Add(this.lupa_consultaCPF);
+            this.Controls.Add(this.lupa_consultaHospital);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnPesquisarTipo);
-            this.Controls.Add(this.btnConsultaMedico);
-            this.Controls.Add(this.btnConsultaHospital);
-            this.Controls.Add(this.btnConsultaCPF);
             this.Controls.Add(this.ltbResultado);
             this.Controls.Add(this.bt_limpar);
             this.Controls.Add(this.btnExcluir);
@@ -447,6 +488,11 @@
             this.gb_TipoSanguineo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_resultado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lupa_consultaHospital)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lupa_consultaCPF)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lupa_consultaMedico)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lupa_consultaTipoSanguineo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -480,10 +526,12 @@
         private Button btnExcluir;
         private Button bt_cadastrar;
         private ListBox ltbResultado;
-        private Button btnConsultaCPF;
-        private Button btnConsultaHospital;
-        private Button btnConsultaMedico;
-        private Button btnPesquisarTipo;
         private Button button1;
+        private PictureBox lupa_consultaHospital;
+        private PictureBox lupa_consultaCPF;
+        private PictureBox lupa_consultaMedico;
+        private PictureBox lupa_consultaTipoSanguineo;
+        private Label lb_sair;
+        private PictureBox pictureBox2;
     }
 }

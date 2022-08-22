@@ -2,6 +2,7 @@ namespace LetsBloob_2
 {
     internal static class Program
     {
+
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
@@ -14,5 +15,7 @@ namespace LetsBloob_2
             Application.Run(new frm_Menu_Principal());
             //comentario
         }
+
+
     }
 }

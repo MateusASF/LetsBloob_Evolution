@@ -30,8 +30,7 @@ namespace LetsBlood_2.Cadastros_Forms
 
         private void frm_cadastrarBolsa_Load(object sender, EventArgs e)
         {
-
-            pb_resultado.Visible = true;            
+            pb_resultado.Visible = false;            
         }
 
         private void bt_cadastrar_Click(object sender, EventArgs e)
@@ -113,36 +112,6 @@ namespace LetsBlood_2.Cadastros_Forms
             }
         }
 
-
-        private void btnConsulta_Click(object sender, EventArgs e)
-        {
-            ltbResultado.Items.Clear();
-            var bolsas = Dados.listaBolsas.Where(bolsa => bolsa.CpfDoador == mTb_CpfDoador.Text);
-            ltbResultado.Items.AddRange(bolsas.ToArray());
-        }
-
-        private void btnConsultaMedico_Click(object sender, EventArgs e)
-        {
-            ltbResultado.Items.Clear();
-            var bolsas = Dados.listaBolsas.Where(bolsa => bolsa.NomeMedico == tb_NomeMedico.Text);
-            ltbResultado.Items.AddRange(bolsas.ToArray());
-        }
-
-        private void btnConsultaHospital_Click(object sender, EventArgs e)
-        {
-            ltbResultado.Items.Clear();
-            var bolsas = Dados.listaBolsas.Where(bolsa => bolsa.HospitalDestino == tb_HospitalDestino.Text);
-            ltbResultado.Items.AddRange(bolsas.ToArray());
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            ltbResultado.Items.Clear();
-            var checkedButton = gb_TipoSanguineo.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
-            var bolsas = Dados.listaBolsas.Where(bolsa => bolsa.TipoSanguineo == checkedButton.Text);
-            ltbResultado.Items.AddRange(bolsas.ToArray());
-        }
-
         private void ltbResultado_DoubleClick(object sender, EventArgs e)
         {           
             var index = ltbResultado.SelectedIndex;
@@ -177,6 +146,59 @@ namespace LetsBlood_2.Cadastros_Forms
             {
                 ltbResultado.Items.Add(p);
                 Console.WriteLine();
+            }
+        }
+
+        private void lupa_consultaMedico_Click(object sender, EventArgs e)
+        {
+            ltbResultado.Items.Clear();
+            var bolsas = Dados.listaBolsas.Where(bolsa => bolsa.NomeMedico == tb_NomeMedico.Text);
+            ltbResultado.Items.AddRange(bolsas.ToArray());
+        }
+
+        private void lupa_consultaCPF_Click(object sender, EventArgs e)
+        {
+            ltbResultado.Items.Clear();
+            var bolsas = Dados.listaBolsas.Where(bolsa => bolsa.CpfDoador == mTb_CpfDoador.Text);
+            ltbResultado.Items.AddRange(bolsas.ToArray());
+        }
+
+        private void lupa_consultaHospital_Click(object sender, EventArgs e)
+        {
+            ltbResultado.Items.Clear();
+            var bolsas = Dados.listaBolsas.Where(bolsa => bolsa.HospitalDestino == tb_HospitalDestino.Text);
+            ltbResultado.Items.AddRange(bolsas.ToArray());
+        }
+
+        private void lupa_consultaTipoSanguineo_Click(object sender, EventArgs e)
+        {
+            ltbResultado.Items.Clear();
+            var checkedButton = gb_TipoSanguineo.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
+            var bolsas = Dados.listaBolsas.Where(bolsa => bolsa.TipoSanguineo == checkedButton.Text);
+            ltbResultado.Items.AddRange(bolsas.ToArray());
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            ProtegerSaida();
+        }
+
+        private void lb_sair_Click(object sender, EventArgs e)
+        {
+            ProtegerSaida();
+        }
+
+        private void ProtegerSaida()
+        {
+            const string message = "Tem certeza que deseja fechar o programa?";
+            const string caption = "Fechar";
+            var result = MessageBox.Show(message, caption,
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
             }
         }
     }

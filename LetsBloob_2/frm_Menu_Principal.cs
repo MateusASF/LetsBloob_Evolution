@@ -47,7 +47,7 @@ namespace LetsBloob_2
             
         }
 
-        private void bt_consultas_Click(object sender, EventArgs e)
+        private void bt_Doador_Click(object sender, EventArgs e)
         {
             this.Hide();
             frm_cadastrarDoador form = new frm_cadastrarDoador();
@@ -61,6 +61,7 @@ namespace LetsBloob_2
                 ProtegerSaida();
             }
         }
+
 
         private void informaçõesDoProgramaToolStripMenuItem_Click(object sender, EventArgs e)
         {

@@ -133,6 +133,52 @@ namespace LetsBlood_2.Cadastros_Forms
             mTb_Telefone.Text = doador.Telefone;
             tb_Obs.Text = doador.Observacao;
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            ProtegerSaida();
+        }
+
+        private void lb_sair_Click(object sender, EventArgs e)
+        {
+            ProtegerSaida();
+        }
+
+        private void ProtegerSaida()
+        {
+            const string message = "Tem certeza que deseja fechar o programa?";
+            const string caption = "Fechar";
+            var result = MessageBox.Show(message, caption,
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void lupa_consultaCpf_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            var doa = Dados.listaDoadores.Where(doa => doa.CpfDoador == mTb_Cpf.Text);
+            listBox1.Items.AddRange(doa.ToArray());
+        }
+
+        private void lupa_consultaTelefone_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            var doa = Dados.listaDoadores.Where(doa => doa.Telefone == mTb_Telefone.Text);
+            listBox1.Items.AddRange(doa.ToArray());
+        }
+
+        private void lupa_consultaNome_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            var doa = Dados.listaDoadores.Where(doa => doa.NomeDoador == tb_Nome_Doador.Text);
+            listBox1.Items.AddRange(doa.ToArray());
+        }
+
     }
 
 
