@@ -52,13 +52,12 @@
             this.pb_resultado = new System.Windows.Forms.PictureBox();
             this.bt_limpar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.bt_cadastrar = new System.Windows.Forms.Button();
             this.ltbResultado = new System.Windows.Forms.ListBox();
-            this.btnConsulta = new System.Windows.Forms.Button();
+            this.btnConsultaCPF = new System.Windows.Forms.Button();
             this.btnConsultaHospital = new System.Windows.Forms.Button();
             this.btnConsultaMedico = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnPesquisarTipo = new System.Windows.Forms.Button();
             this.gb_TipoSanguineo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_resultado)).BeginInit();
@@ -67,9 +66,10 @@
             // dTp_DataColeta
             // 
             this.dTp_DataColeta.Font = new System.Drawing.Font("Sitka Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dTp_DataColeta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dTp_DataColeta.Location = new System.Drawing.Point(25, 39);
             this.dTp_DataColeta.Name = "dTp_DataColeta";
-            this.dTp_DataColeta.Size = new System.Drawing.Size(317, 26);
+            this.dTp_DataColeta.Size = new System.Drawing.Size(317, 23);
             this.dTp_DataColeta.TabIndex = 0;
             // 
             // label1
@@ -79,7 +79,7 @@
             this.label1.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(25, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 21);
+            this.label1.Size = new System.Drawing.Size(81, 18);
             this.label1.TabIndex = 5;
             this.label1.Text = "Data da Coleta";
             // 
@@ -99,7 +99,7 @@
             this.label2.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(26, 285);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 21);
+            this.label2.Size = new System.Drawing.Size(66, 18);
             this.label2.TabIndex = 7;
             this.label2.Text = "Observação";
             // 
@@ -127,7 +127,7 @@
             this.radioButton8.AutoSize = true;
             this.radioButton8.Location = new System.Drawing.Point(27, 246);
             this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(46, 25);
+            this.radioButton8.Size = new System.Drawing.Size(38, 22);
             this.radioButton8.TabIndex = 7;
             this.radioButton8.TabStop = true;
             this.radioButton8.Text = "O-";
@@ -138,7 +138,7 @@
             this.radioButton7.AutoSize = true;
             this.radioButton7.Location = new System.Drawing.Point(27, 212);
             this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(50, 25);
+            this.radioButton7.Size = new System.Drawing.Size(41, 22);
             this.radioButton7.TabIndex = 6;
             this.radioButton7.TabStop = true;
             this.radioButton7.Text = "O+";
@@ -149,7 +149,7 @@
             this.radioButton6.AutoSize = true;
             this.radioButton6.Location = new System.Drawing.Point(27, 181);
             this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(54, 25);
+            this.radioButton6.Size = new System.Drawing.Size(44, 22);
             this.radioButton6.TabIndex = 5;
             this.radioButton6.TabStop = true;
             this.radioButton6.Text = "AB-";
@@ -160,7 +160,7 @@
             this.radioButton5.AutoSize = true;
             this.radioButton5.Location = new System.Drawing.Point(27, 153);
             this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(58, 25);
+            this.radioButton5.Size = new System.Drawing.Size(47, 22);
             this.radioButton5.TabIndex = 4;
             this.radioButton5.TabStop = true;
             this.radioButton5.Text = "AB+";
@@ -171,7 +171,7 @@
             this.radioButton4.AutoSize = true;
             this.radioButton4.Location = new System.Drawing.Point(27, 122);
             this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(45, 25);
+            this.radioButton4.Size = new System.Drawing.Size(37, 22);
             this.radioButton4.TabIndex = 3;
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "B-";
@@ -182,7 +182,7 @@
             this.radioButton3.AutoSize = true;
             this.radioButton3.Location = new System.Drawing.Point(27, 90);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(49, 25);
+            this.radioButton3.Size = new System.Drawing.Size(40, 22);
             this.radioButton3.TabIndex = 2;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "B+";
@@ -193,7 +193,7 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(27, 59);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(45, 25);
+            this.radioButton2.Size = new System.Drawing.Size(37, 22);
             this.radioButton2.TabIndex = 1;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "A-";
@@ -204,7 +204,7 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(27, 27);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(49, 25);
+            this.radioButton1.Size = new System.Drawing.Size(40, 22);
             this.radioButton1.TabIndex = 0;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "A+";
@@ -217,7 +217,7 @@
             this.label3.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(25, 84);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 21);
+            this.label3.Size = new System.Drawing.Size(90, 18);
             this.label3.TabIndex = 9;
             this.label3.Text = "Nome do Médico";
             // 
@@ -226,7 +226,7 @@
             this.tb_NomeMedico.Font = new System.Drawing.Font("Sitka Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tb_NomeMedico.Location = new System.Drawing.Point(26, 108);
             this.tb_NomeMedico.Name = "tb_NomeMedico";
-            this.tb_NomeMedico.Size = new System.Drawing.Size(316, 26);
+            this.tb_NomeMedico.Size = new System.Drawing.Size(316, 23);
             this.tb_NomeMedico.TabIndex = 10;
             // 
             // mTb_CpfDoador
@@ -235,7 +235,7 @@
             this.mTb_CpfDoador.Location = new System.Drawing.Point(26, 173);
             this.mTb_CpfDoador.Mask = "000-000-000-00";
             this.mTb_CpfDoador.Name = "mTb_CpfDoador";
-            this.mTb_CpfDoador.Size = new System.Drawing.Size(316, 26);
+            this.mTb_CpfDoador.Size = new System.Drawing.Size(316, 23);
             this.mTb_CpfDoador.TabIndex = 12;
             // 
             // label4
@@ -245,7 +245,7 @@
             this.label4.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(26, 149);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 21);
+            this.label4.Size = new System.Drawing.Size(82, 18);
             this.label4.TabIndex = 11;
             this.label4.Text = "CPF do Doador";
             // 
@@ -254,7 +254,7 @@
             this.tb_HospitalDestino.Font = new System.Drawing.Font("Sitka Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tb_HospitalDestino.Location = new System.Drawing.Point(25, 240);
             this.tb_HospitalDestino.Name = "tb_HospitalDestino";
-            this.tb_HospitalDestino.Size = new System.Drawing.Size(317, 26);
+            this.tb_HospitalDestino.Size = new System.Drawing.Size(317, 23);
             this.tb_HospitalDestino.TabIndex = 14;
             // 
             // label5
@@ -264,7 +264,7 @@
             this.label5.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.Location = new System.Drawing.Point(24, 216);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(129, 21);
+            this.label5.Size = new System.Drawing.Size(104, 18);
             this.label5.TabIndex = 13;
             this.label5.Text = "Hospital de Destino";
             // 
@@ -275,7 +275,7 @@
             this.lb_voltar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lb_voltar.Location = new System.Drawing.Point(69, 452);
             this.lb_voltar.Name = "lb_voltar";
-            this.lb_voltar.Size = new System.Drawing.Size(66, 20);
+            this.lb_voltar.Size = new System.Drawing.Size(51, 15);
             this.lb_voltar.TabIndex = 18;
             this.lb_voltar.Text = "VOLTAR";
             this.lb_voltar.Click += new System.EventHandler(this.lb_voltar_Click);
@@ -319,24 +319,13 @@
             // 
             this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
             this.btnExcluir.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnExcluir.Location = new System.Drawing.Point(694, 197);
+            this.btnExcluir.Location = new System.Drawing.Point(694, 181);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(203, 49);
             this.btnExcluir.TabIndex = 27;
             this.btnExcluir.Text = "EXCLUIR";
             this.btnExcluir.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
-            this.button2.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(694, 128);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(203, 49);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "EDITAR";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // bt_cadastrar
             // 
@@ -344,9 +333,9 @@
             this.bt_cadastrar.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bt_cadastrar.Location = new System.Drawing.Point(694, 59);
             this.bt_cadastrar.Name = "bt_cadastrar";
-            this.bt_cadastrar.Size = new System.Drawing.Size(203, 47);
+            this.bt_cadastrar.Size = new System.Drawing.Size(203, 98);
             this.bt_cadastrar.TabIndex = 25;
-            this.bt_cadastrar.Text = "CADASTRAR";
+            this.bt_cadastrar.Text = "CADASTRAR / ALTERAR";
             this.bt_cadastrar.UseVisualStyleBackColor = false;
             this.bt_cadastrar.Click += new System.EventHandler(this.bt_cadastrar_Click);
             // 
@@ -354,22 +343,23 @@
             // 
             this.ltbResultado.Font = new System.Drawing.Font("Sitka Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ltbResultado.FormattingEnabled = true;
-            this.ltbResultado.ItemHeight = 21;
-            this.ltbResultado.Location = new System.Drawing.Point(38, 474);
+            this.ltbResultado.ItemHeight = 18;
+            this.ltbResultado.Location = new System.Drawing.Point(12, 474);
             this.ltbResultado.Name = "ltbResultado";
-            this.ltbResultado.Size = new System.Drawing.Size(899, 151);
+            this.ltbResultado.Size = new System.Drawing.Size(936, 148);
             this.ltbResultado.TabIndex = 29;
+            this.ltbResultado.SelectedIndexChanged += new System.EventHandler(this.ltbResultado_SelectedIndexChanged);
             this.ltbResultado.DoubleClick += new System.EventHandler(this.ltbResultado_DoubleClick);
             // 
-            // btnConsulta
+            // btnConsultaCPF
             // 
-            this.btnConsulta.Location = new System.Drawing.Point(348, 173);
-            this.btnConsulta.Name = "btnConsulta";
-            this.btnConsulta.Size = new System.Drawing.Size(75, 32);
-            this.btnConsulta.TabIndex = 30;
-            this.btnConsulta.Text = "button1";
-            this.btnConsulta.UseVisualStyleBackColor = true;
-            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
+            this.btnConsultaCPF.Location = new System.Drawing.Point(348, 173);
+            this.btnConsultaCPF.Name = "btnConsultaCPF";
+            this.btnConsultaCPF.Size = new System.Drawing.Size(75, 32);
+            this.btnConsultaCPF.TabIndex = 30;
+            this.btnConsultaCPF.Text = "pesquisar";
+            this.btnConsultaCPF.UseVisualStyleBackColor = true;
+            this.btnConsultaCPF.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
             // btnConsultaHospital
             // 
@@ -377,7 +367,7 @@
             this.btnConsultaHospital.Name = "btnConsultaHospital";
             this.btnConsultaHospital.Size = new System.Drawing.Size(75, 26);
             this.btnConsultaHospital.TabIndex = 31;
-            this.btnConsultaHospital.Text = "button1";
+            this.btnConsultaHospital.Text = "pesquisar";
             this.btnConsultaHospital.UseVisualStyleBackColor = true;
             this.btnConsultaHospital.Click += new System.EventHandler(this.btnConsultaHospital_Click);
             // 
@@ -387,37 +377,36 @@
             this.btnConsultaMedico.Name = "btnConsultaMedico";
             this.btnConsultaMedico.Size = new System.Drawing.Size(75, 38);
             this.btnConsultaMedico.TabIndex = 32;
-            this.btnConsultaMedico.Text = "button1";
+            this.btnConsultaMedico.Text = "pesquisar";
             this.btnConsultaMedico.UseVisualStyleBackColor = true;
             this.btnConsultaMedico.Click += new System.EventHandler(this.btnConsultaMedico_Click);
             // 
-            // button1
+            // btnPesquisarTipo
             // 
-            this.button1.Location = new System.Drawing.Point(533, 328);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnPesquisarTipo.Location = new System.Drawing.Point(533, 328);
+            this.btnPesquisarTipo.Name = "btnPesquisarTipo";
+            this.btnPesquisarTipo.Size = new System.Drawing.Size(75, 23);
+            this.btnPesquisarTipo.TabIndex = 33;
+            this.btnPesquisarTipo.Text = "pesquisar";
+            this.btnPesquisarTipo.UseVisualStyleBackColor = true;
+            this.btnPesquisarTipo.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // frm_cadastrarBolsa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::LetsBlood_2.Properties.Resources.istockphoto_1004961356_170667a;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(970, 668);
+            this.ClientSize = new System.Drawing.Size(959, 668);
             this.ControlBox = false;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnPesquisarTipo);
             this.Controls.Add(this.btnConsultaMedico);
             this.Controls.Add(this.btnConsultaHospital);
-            this.Controls.Add(this.btnConsulta);
+            this.Controls.Add(this.btnConsultaCPF);
             this.Controls.Add(this.ltbResultado);
             this.Controls.Add(this.bt_limpar);
             this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.bt_cadastrar);
             this.Controls.Add(this.pb_resultado);
             this.Controls.Add(this.lb_voltar);
@@ -473,12 +462,11 @@
         private PictureBox pb_resultado;
         private Button bt_limpar;
         private Button btnExcluir;
-        private Button button2;
         private Button bt_cadastrar;
         private ListBox ltbResultado;
-        private Button btnConsulta;
+        private Button btnConsultaCPF;
         private Button btnConsultaHospital;
         private Button btnConsultaMedico;
-        private Button button1;
+        private Button btnPesquisarTipo;
     }
 }
