@@ -70,12 +70,13 @@ namespace LetsBlood_2.Cadastros_Forms
             bolsa.HospitalDestino = tb_HospitalDestino.Text;
             bolsa.ObservacaoBolsa = tb_Observacao.Text;
             bolsa.TipoSanguineo = checkedButton.Text;
+            pb_resultado.Visible = true;
 
             Dados.listaBolsas.Add(bolsa);  
 
             Listar();
 
-            //limparCampos();
+            limparCampos();
         }
 
         private void bt_limpar_Click(object sender, EventArgs e)
@@ -86,21 +87,24 @@ namespace LetsBlood_2.Cadastros_Forms
 
         private void limparCampos()
         {
-            ltbResultado.Items.Clear();
+            Listar();
+
+            Task.Delay(600).Wait();
             dTp_DataColeta.Text = "";
             tb_NomeMedico.Clear();
             mTb_CpfDoador.Clear();
             tb_HospitalDestino.Clear();
             tb_Observacao.Clear();
-            pb_resultado.Visible = false;
             var checkedButton = gb_TipoSanguineo.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
             if (checkedButton != null)
             {
                 checkedButton.Checked = false;
             }
-            
-            Listar();
+
+            Task.Delay(2000).Wait();
+            pb_resultado.Visible = false;
         }
+
         private void Listar()
         {
             ltbResultado.Items.Clear();

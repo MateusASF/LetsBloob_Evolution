@@ -25,14 +25,6 @@ namespace LetsBlood_2.Cadastros_Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Doador doa = new Doador();
-            doa.NomeDoador = tb_Nome_Doador.Text;
-            doa.CpfDoador = mTb_Cpf.Text;
-            doa.Nascimento = dTp_Nascimento.Text;
-            doa.Telefone = mTb_Telefone.Text;
-            doa.Email = tb_Email.Text;
-            doa.Observacao = tb_Obs.Text;
-            pb_resultado.Visible = true;
 
             int index = -1;
             foreach (Doador item in Dados.listaDoadores)
@@ -56,12 +48,20 @@ namespace LetsBlood_2.Cadastros_Forms
                 mTb_Telefone.Focus();
                 return;
             }
+            Doador doa = new Doador();
+            doa.NomeDoador = tb_Nome_Doador.Text;
+            doa.CpfDoador = mTb_Cpf.Text;
+            doa.Nascimento = dTp_Nascimento.Text;
+            doa.Telefone = mTb_Telefone.Text;
+            doa.Email = tb_Email.Text;
+            doa.Observacao = tb_Obs.Text;
+            pb_resultado.Visible = true;
 
             Dados.listaDoadores.Add(doa);
 
             Listar();
 
-            //limparCampos();
+            limparCampos();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -77,12 +77,18 @@ namespace LetsBlood_2.Cadastros_Forms
 
         private void limparCampos()
         {
+            Listar();
+
+            Task.Delay(500).Wait();
             tb_Nome_Doador.Clear();
             mTb_Cpf.Clear();
             //dTp_Nascimento
             mTb_Telefone.Clear();
             tb_Email.Clear();
             tb_Obs.Clear();
+            pb_resultado.Visible = false;
+
+            Task.Delay(3000).Wait();
             pb_resultado.Visible = false;
         }
 
