@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_cadastrarBolsa));
             this.dTp_DataColeta = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.tb_Observacao = new System.Windows.Forms.TextBox();
@@ -88,7 +89,7 @@
             this.label1.Location = new System.Drawing.Point(25, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 21);
-            this.label1.TabIndex = 5;
+            this.label1.TabIndex = 12;
             this.label1.Text = "Data da Coleta";
             // 
             // tb_Observacao
@@ -98,7 +99,7 @@
             this.tb_Observacao.Multiline = true;
             this.tb_Observacao.Name = "tb_Observacao";
             this.tb_Observacao.Size = new System.Drawing.Size(316, 59);
-            this.tb_Observacao.TabIndex = 6;
+            this.tb_Observacao.TabIndex = 4;
             // 
             // label2
             // 
@@ -108,7 +109,7 @@
             this.label2.Location = new System.Drawing.Point(26, 285);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 21);
-            this.label2.TabIndex = 7;
+            this.label2.TabIndex = 16;
             this.label2.Text = "Observação";
             // 
             // gb_TipoSanguineo
@@ -123,10 +124,10 @@
             this.gb_TipoSanguineo.Controls.Add(this.radioButton2);
             this.gb_TipoSanguineo.Controls.Add(this.radioButton1);
             this.gb_TipoSanguineo.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.gb_TipoSanguineo.Location = new System.Drawing.Point(506, 45);
+            this.gb_TipoSanguineo.Location = new System.Drawing.Point(462, 42);
             this.gb_TipoSanguineo.Name = "gb_TipoSanguineo";
             this.gb_TipoSanguineo.Size = new System.Drawing.Size(144, 277);
-            this.gb_TipoSanguineo.TabIndex = 8;
+            this.gb_TipoSanguineo.TabIndex = 5;
             this.gb_TipoSanguineo.TabStop = false;
             this.gb_TipoSanguineo.Text = "Tipo Sanguíneo";
             // 
@@ -226,7 +227,7 @@
             this.label3.Location = new System.Drawing.Point(25, 84);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(111, 21);
-            this.label3.TabIndex = 9;
+            this.label3.TabIndex = 13;
             this.label3.Text = "Nome do Médico";
             // 
             // tb_NomeMedico
@@ -235,7 +236,7 @@
             this.tb_NomeMedico.Location = new System.Drawing.Point(26, 108);
             this.tb_NomeMedico.Name = "tb_NomeMedico";
             this.tb_NomeMedico.Size = new System.Drawing.Size(316, 26);
-            this.tb_NomeMedico.TabIndex = 10;
+            this.tb_NomeMedico.TabIndex = 1;
             // 
             // mTb_CpfDoador
             // 
@@ -244,7 +245,7 @@
             this.mTb_CpfDoador.Mask = "000-000-000-00";
             this.mTb_CpfDoador.Name = "mTb_CpfDoador";
             this.mTb_CpfDoador.Size = new System.Drawing.Size(316, 26);
-            this.mTb_CpfDoador.TabIndex = 12;
+            this.mTb_CpfDoador.TabIndex = 2;
             // 
             // label4
             // 
@@ -254,7 +255,7 @@
             this.label4.Location = new System.Drawing.Point(26, 149);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 21);
-            this.label4.TabIndex = 11;
+            this.label4.TabIndex = 14;
             this.label4.Text = "CPF do Doador";
             // 
             // tb_HospitalDestino
@@ -263,7 +264,7 @@
             this.tb_HospitalDestino.Location = new System.Drawing.Point(25, 240);
             this.tb_HospitalDestino.Name = "tb_HospitalDestino";
             this.tb_HospitalDestino.Size = new System.Drawing.Size(317, 26);
-            this.tb_HospitalDestino.TabIndex = 14;
+            this.tb_HospitalDestino.TabIndex = 3;
             // 
             // label5
             // 
@@ -273,7 +274,7 @@
             this.label5.Location = new System.Drawing.Point(24, 216);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(129, 21);
-            this.label5.TabIndex = 13;
+            this.label5.TabIndex = 15;
             this.label5.Text = "Hospital de Destino";
             // 
             // lb_voltar
@@ -284,7 +285,7 @@
             this.lb_voltar.Location = new System.Drawing.Point(69, 442);
             this.lb_voltar.Name = "lb_voltar";
             this.lb_voltar.Size = new System.Drawing.Size(66, 20);
-            this.lb_voltar.TabIndex = 18;
+            this.lb_voltar.TabIndex = 10;
             this.lb_voltar.Text = "VOLTAR";
             this.lb_voltar.Click += new System.EventHandler(this.lb_voltar_Click);
             // 
@@ -304,7 +305,7 @@
             // 
             this.pb_resultado.BackColor = System.Drawing.Color.Transparent;
             this.pb_resultado.Image = global::LetsBlood_2.Properties.Resources.bolsaCadastrada;
-            this.pb_resultado.Location = new System.Drawing.Point(566, 377);
+            this.pb_resultado.Location = new System.Drawing.Point(415, 380);
             this.pb_resultado.Name = "pb_resultado";
             this.pb_resultado.Size = new System.Drawing.Size(231, 82);
             this.pb_resultado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -314,11 +315,13 @@
             // bt_limpar
             // 
             this.bt_limpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.bt_limpar.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
+            this.bt_limpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bt_limpar.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bt_limpar.Location = new System.Drawing.Point(694, 216);
+            this.bt_limpar.Location = new System.Drawing.Point(696, 254);
             this.bt_limpar.Name = "bt_limpar";
             this.bt_limpar.Size = new System.Drawing.Size(203, 49);
-            this.bt_limpar.TabIndex = 28;
+            this.bt_limpar.TabIndex = 8;
             this.bt_limpar.Text = "LIMPAR";
             this.bt_limpar.UseVisualStyleBackColor = false;
             this.bt_limpar.Click += new System.EventHandler(this.bt_limpar_Click);
@@ -326,11 +329,13 @@
             // btnExcluir
             // 
             this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.btnExcluir.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
+            this.btnExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExcluir.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnExcluir.Location = new System.Drawing.Point(694, 151);
+            this.btnExcluir.Location = new System.Drawing.Point(696, 189);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(203, 49);
-            this.btnExcluir.TabIndex = 27;
+            this.btnExcluir.TabIndex = 7;
             this.btnExcluir.Text = "EXCLUIR";
             this.btnExcluir.UseVisualStyleBackColor = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
@@ -338,11 +343,13 @@
             // bt_cadastrar
             // 
             this.bt_cadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.bt_cadastrar.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
+            this.bt_cadastrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bt_cadastrar.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bt_cadastrar.Location = new System.Drawing.Point(694, 46);
+            this.bt_cadastrar.Location = new System.Drawing.Point(696, 84);
             this.bt_cadastrar.Name = "bt_cadastrar";
             this.bt_cadastrar.Size = new System.Drawing.Size(203, 98);
-            this.bt_cadastrar.TabIndex = 25;
+            this.bt_cadastrar.TabIndex = 6;
             this.bt_cadastrar.Text = "CADASTRAR / ALTERAR";
             this.bt_cadastrar.UseVisualStyleBackColor = false;
             this.bt_cadastrar.Click += new System.EventHandler(this.bt_cadastrar_Click);
@@ -357,17 +364,19 @@
             this.ltbResultado.Name = "ltbResultado";
             this.ltbResultado.ScrollAlwaysVisible = true;
             this.ltbResultado.Size = new System.Drawing.Size(936, 130);
-            this.ltbResultado.TabIndex = 29;
+            this.ltbResultado.TabIndex = 17;
             this.ltbResultado.DoubleClick += new System.EventHandler(this.ltbResultado_DoubleClick);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.button1.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(694, 275);
+            this.button1.Location = new System.Drawing.Point(696, 313);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(203, 93);
-            this.button1.TabIndex = 34;
+            this.button1.TabIndex = 9;
             this.button1.Text = "Mostrar \r\nBase de Dados";
             this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.UseVisualStyleBackColor = false;
@@ -413,7 +422,7 @@
             // 
             this.lupa_consultaTipoSanguineo.BackColor = System.Drawing.Color.Transparent;
             this.lupa_consultaTipoSanguineo.Image = global::LetsBlood_2.Properties.Resources.lupa;
-            this.lupa_consultaTipoSanguineo.Location = new System.Drawing.Point(566, 322);
+            this.lupa_consultaTipoSanguineo.Location = new System.Drawing.Point(522, 319);
             this.lupa_consultaTipoSanguineo.Name = "lupa_consultaTipoSanguineo";
             this.lupa_consultaTipoSanguineo.Size = new System.Drawing.Size(30, 31);
             this.lupa_consultaTipoSanguineo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -429,7 +438,7 @@
             this.lb_sair.Location = new System.Drawing.Point(229, 447);
             this.lb_sair.Name = "lb_sair";
             this.lb_sair.Size = new System.Drawing.Size(43, 20);
-            this.lb_sair.TabIndex = 40;
+            this.lb_sair.TabIndex = 11;
             this.lb_sair.Text = "SAIR";
             this.lb_sair.Click += new System.EventHandler(this.lb_sair_Click);
             // 
@@ -450,7 +459,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackgroundImage = global::LetsBlood_2.Properties.Resources.istockphoto_1004961356_170667a;
+            this.BackgroundImage = global::LetsBlood_2.Properties.Resources.ee18e8e53852cf399b3b52c022d31d6d;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(959, 668);
             this.ControlBox = false;
@@ -480,6 +489,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dTp_DataColeta);
             this.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_cadastrarBolsa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrar Bolsa";

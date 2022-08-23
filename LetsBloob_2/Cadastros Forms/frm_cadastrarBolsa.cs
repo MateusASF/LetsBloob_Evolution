@@ -46,14 +46,14 @@ namespace LetsBlood_2.Cadastros_Forms
                 }
             }                    
 
-            if (mTb_CpfDoador.Text == "   -   -   -")
+            if (mTb_CpfDoador.Text == null)
             {
                 MessageBox.Show("Preencha o campo CPF.");
                 mTb_CpfDoador.Focus();
                 return;
             }
 
-            if (tb_HospitalDestino.Text == "")
+            if (tb_HospitalDestino.Text == null)
             {
                 MessageBox.Show("Preencha o campo Hospital de Destino.");
                 tb_HospitalDestino.Focus();
@@ -66,13 +66,20 @@ namespace LetsBlood_2.Cadastros_Forms
 
             bolsa.DataColeta = dTp_DataColeta.Text;
             bolsa.NomeMedico = tb_NomeMedico.Text;
-            bolsa.CpfDoador = mTb_CpfDoador.Text;
+            bolsa.CpfDoador = mTb_CpfDoador.Text.Replace("-","").Replace(".","");
             bolsa.HospitalDestino = tb_HospitalDestino.Text;
             bolsa.ObservacaoBolsa = tb_Observacao.Text;
             bolsa.TipoSanguineo = checkedButton.Text;
             pb_resultado.Visible = true;
 
-            Dados.listaBolsas.Add(bolsa);  
+            if (Dados.listaBolsas.Any(l => l.CpfDoador == mTb_CpfDoador.Text))
+            {
+                //adicionar mensagem de erro se existir bosla?
+            }
+            else 
+            {
+                Dados.listaBolsas.Add(bolsa);
+            }
 
             Listar();
 

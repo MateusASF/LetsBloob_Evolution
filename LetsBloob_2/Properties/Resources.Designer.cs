@@ -103,6 +103,16 @@ namespace LetsBlood_2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap doacao_gif {
+            get {
+                object obj = ResourceManager.GetObject("doacao_gif", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap doadorCadastrado {
             get {
                 object obj = ResourceManager.GetObject("doadorCadastrado", resourceCulture);
@@ -176,6 +186,16 @@ namespace LetsBlood_2.Properties {
         internal static System.Drawing.Bitmap LOGO {
             get {
                 object obj = ResourceManager.GetObject("LOGO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LOGO2 {
+            get {
+                object obj = ResourceManager.GetObject("LOGO2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

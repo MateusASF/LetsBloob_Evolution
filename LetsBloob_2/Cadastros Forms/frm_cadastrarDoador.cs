@@ -35,29 +35,39 @@ namespace LetsBlood_2.Cadastros_Forms
                 }
             }
 
-            if (mTb_Cpf.Text == "   -   -   -")
+            if (mTb_Cpf.Text == null)
             {
                 MessageBox.Show("Preencha o campo CPF.");
                 mTb_Cpf.Focus();
                 return;
             }
 
-            if (mTb_Telefone.Text == "(  )      -")
+            if (mTb_Telefone.Text == null)
             {
                 MessageBox.Show("Preencha o campo telefone.");
                 mTb_Telefone.Focus();
                 return;
             }
+
             Doador doa = new Doador();
             doa.NomeDoador = tb_Nome_Doador.Text;
-            doa.CpfDoador = mTb_Cpf.Text;
+            doa.CpfDoador = mTb_Cpf.Text.Replace("-", "").Replace(".", "");
             doa.Nascimento = dTp_Nascimento.Text;
             doa.Telefone = mTb_Telefone.Text;
             doa.Email = tb_Email.Text;
             doa.Observacao = tb_Obs.Text;
             pb_resultado.Visible = true;
 
-            Dados.listaDoadores.Add(doa);
+
+            if (Dados.listaDoadores.Any(l => l.CpfDoador == mTb_Cpf.Text))
+            {
+                //adicionar mensagem de erro se existir doador?
+            }
+            else
+            {
+                Dados.listaDoadores.Add(doa);
+            }
+
 
             Listar();
 
@@ -132,6 +142,7 @@ namespace LetsBlood_2.Cadastros_Forms
             dTp_Nascimento.Text = doador.Nascimento;
             tb_Nome_Doador.Text = doador.NomeDoador;
             mTb_Cpf.Text = doador.CpfDoador;
+            tb_Email.Text = doador.Email;
             mTb_Telefone.Text = doador.Telefone;
             tb_Obs.Text = doador.Observacao;
         }

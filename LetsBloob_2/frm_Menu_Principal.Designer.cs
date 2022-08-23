@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Menu_Principal));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bt_cadastros = new System.Windows.Forms.Button();
             this.bt_doador = new System.Windows.Forms.Button();
@@ -38,18 +39,20 @@
             this.lb_sair = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::LetsBlood_2.Properties.Resources.LOGO;
-            this.pictureBox1.Location = new System.Drawing.Point(237, 43);
+            this.pictureBox1.Image = global::LetsBlood_2.Properties.Resources.LOGO2;
+            this.pictureBox1.Location = new System.Drawing.Point(315, 51);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(327, 165);
+            this.pictureBox1.Size = new System.Drawing.Size(314, 165);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -152,6 +155,17 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Menu Principal";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::LetsBlood_2.Properties.Resources.doacao_gif;
+            this.pictureBox3.Location = new System.Drawing.Point(171, 51);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(169, 173);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 42;
+            this.pictureBox3.TabStop = false;
+            // 
             // frm_Menu_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -160,6 +174,7 @@
             this.BackgroundImage = global::LetsBlood_2.Properties.Resources._964fa0ed6eb25f231069df340aa2d46b;
             this.ClientSize = new System.Drawing.Size(800, 516);
             this.ControlBox = false;
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lb_sair);
             this.Controls.Add(this.pictureBox2);
@@ -167,6 +182,7 @@
             this.Controls.Add(this.bt_cadastros);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frm_Menu_Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -176,6 +192,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,5 +210,6 @@
         private Label lb_sair;
         private PictureBox pictureBox2;
         private Label label1;
+        private PictureBox pictureBox3;
     }
 }

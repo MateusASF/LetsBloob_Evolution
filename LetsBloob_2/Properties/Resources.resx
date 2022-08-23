@@ -145,11 +145,14 @@
   <data name="doadorCadastrado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\doadorCadastrado1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bolsaCadastrada" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bolsaCadastrada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lupa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lupa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fundo-branco-abstrato_23-2148810353" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fundo-branco-abstrato_23-2148810353.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="doacao_gif" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\doacao_gif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sair" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sair.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,7 +166,10 @@
   <data name="doadorCadastrado1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\doadorCadastrado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="lupa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lupa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bolsaCadastrada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bolsaCadastrada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

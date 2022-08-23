@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_cadastrarDoador));
             this.tb_Nome_Doador = new System.Windows.Forms.TextBox();
             this.dTp_Nascimento = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
@@ -67,12 +68,13 @@
             this.tb_Nome_Doador.Font = new System.Drawing.Font("Sitka Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tb_Nome_Doador.Location = new System.Drawing.Point(43, 32);
             this.tb_Nome_Doador.Name = "tb_Nome_Doador";
-            this.tb_Nome_Doador.Size = new System.Drawing.Size(405, 26);
+            this.tb_Nome_Doador.Size = new System.Drawing.Size(416, 26);
             this.tb_Nome_Doador.TabIndex = 0;
             // 
             // dTp_Nascimento
             // 
             this.dTp_Nascimento.Font = new System.Drawing.Font("Sitka Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dTp_Nascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dTp_Nascimento.Location = new System.Drawing.Point(43, 165);
             this.dTp_Nascimento.Name = "dTp_Nascimento";
             this.dTp_Nascimento.Size = new System.Drawing.Size(452, 26);
@@ -86,7 +88,7 @@
             this.label1.Location = new System.Drawing.Point(43, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 21);
-            this.label1.TabIndex = 4;
+            this.label1.TabIndex = 12;
             this.label1.Text = "Nome";
             // 
             // label2
@@ -97,7 +99,7 @@
             this.label2.Location = new System.Drawing.Point(43, 72);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 21);
-            this.label2.TabIndex = 5;
+            this.label2.TabIndex = 13;
             this.label2.Text = "CPF";
             // 
             // mTb_Cpf
@@ -107,7 +109,7 @@
             this.mTb_Cpf.Mask = "000-000-000-00";
             this.mTb_Cpf.Name = "mTb_Cpf";
             this.mTb_Cpf.Size = new System.Drawing.Size(127, 26);
-            this.mTb_Cpf.TabIndex = 6;
+            this.mTb_Cpf.TabIndex = 1;
             // 
             // label4
             // 
@@ -117,27 +119,27 @@
             this.label4.Location = new System.Drawing.Point(43, 136);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 21);
-            this.label4.TabIndex = 8;
+            this.label4.TabIndex = 15;
             this.label4.Text = "Nascimento";
             // 
             // mTb_Telefone
             // 
             this.mTb_Telefone.Font = new System.Drawing.Font("Sitka Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.mTb_Telefone.Location = new System.Drawing.Point(312, 100);
+            this.mTb_Telefone.Location = new System.Drawing.Point(323, 100);
             this.mTb_Telefone.Mask = "(00) 00000-0000";
             this.mTb_Telefone.Name = "mTb_Telefone";
             this.mTb_Telefone.Size = new System.Drawing.Size(136, 26);
-            this.mTb_Telefone.TabIndex = 9;
+            this.mTb_Telefone.TabIndex = 2;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(312, 76);
+            this.label5.Location = new System.Drawing.Point(323, 76);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 21);
-            this.label5.TabIndex = 10;
+            this.label5.TabIndex = 14;
             this.label5.Text = "Telefone";
             // 
             // tb_Email
@@ -146,7 +148,7 @@
             this.tb_Email.Location = new System.Drawing.Point(43, 228);
             this.tb_Email.Name = "tb_Email";
             this.tb_Email.Size = new System.Drawing.Size(452, 26);
-            this.tb_Email.TabIndex = 11;
+            this.tb_Email.TabIndex = 4;
             // 
             // label6
             // 
@@ -156,7 +158,7 @@
             this.label6.Location = new System.Drawing.Point(43, 205);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(45, 21);
-            this.label6.TabIndex = 12;
+            this.label6.TabIndex = 16;
             this.label6.Text = "Email";
             // 
             // label3
@@ -167,7 +169,7 @@
             this.label3.Location = new System.Drawing.Point(43, 263);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 21);
-            this.label3.TabIndex = 14;
+            this.label3.TabIndex = 17;
             this.label3.Text = "Observação";
             // 
             // tb_Obs
@@ -177,16 +179,18 @@
             this.tb_Obs.Multiline = true;
             this.tb_Obs.Name = "tb_Obs";
             this.tb_Obs.Size = new System.Drawing.Size(452, 62);
-            this.tb_Obs.TabIndex = 13;
+            this.tb_Obs.TabIndex = 5;
             // 
             // bt_cadastrar
             // 
-            this.bt_cadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bt_cadastrar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bt_cadastrar.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
+            this.bt_cadastrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bt_cadastrar.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bt_cadastrar.Location = new System.Drawing.Point(569, 32);
             this.bt_cadastrar.Name = "bt_cadastrar";
             this.bt_cadastrar.Size = new System.Drawing.Size(203, 99);
-            this.bt_cadastrar.TabIndex = 15;
+            this.bt_cadastrar.TabIndex = 6;
             this.bt_cadastrar.Text = "CADASTRAR\r\nE EDITAR";
             this.bt_cadastrar.UseVisualStyleBackColor = false;
             this.bt_cadastrar.Click += new System.EventHandler(this.button1_Click);
@@ -198,7 +202,7 @@
             this.lb_Resultado.Location = new System.Drawing.Point(278, 425);
             this.lb_Resultado.Name = "lb_Resultado";
             this.lb_Resultado.Size = new System.Drawing.Size(0, 20);
-            this.lb_Resultado.TabIndex = 16;
+            this.lb_Resultado.TabIndex = 18;
             // 
             // lb_voltar
             // 
@@ -208,7 +212,7 @@
             this.lb_voltar.Location = new System.Drawing.Point(54, 446);
             this.lb_voltar.Name = "lb_voltar";
             this.lb_voltar.Size = new System.Drawing.Size(66, 20);
-            this.lb_voltar.TabIndex = 20;
+            this.lb_voltar.TabIndex = 10;
             this.lb_voltar.Text = "VOLTAR";
             this.lb_voltar.Click += new System.EventHandler(this.lb_voltar_Click);
             // 
@@ -237,36 +241,42 @@
             // 
             // bt_ListaCompleta
             // 
-            this.bt_ListaCompleta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bt_ListaCompleta.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bt_ListaCompleta.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
+            this.bt_ListaCompleta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bt_ListaCompleta.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bt_ListaCompleta.Location = new System.Drawing.Point(569, 328);
             this.bt_ListaCompleta.Name = "bt_ListaCompleta";
             this.bt_ListaCompleta.Size = new System.Drawing.Size(203, 138);
-            this.bt_ListaCompleta.TabIndex = 22;
+            this.bt_ListaCompleta.TabIndex = 9;
             this.bt_ListaCompleta.Text = "MOSTRAR TODOS\r\nOS DOADORES";
             this.bt_ListaCompleta.UseVisualStyleBackColor = false;
             this.bt_ListaCompleta.Click += new System.EventHandler(this.bt_ListaCompleta_Click);
             // 
             // bt_excluir
             // 
-            this.bt_excluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bt_excluir.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bt_excluir.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
+            this.bt_excluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bt_excluir.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bt_excluir.Location = new System.Drawing.Point(569, 165);
             this.bt_excluir.Name = "bt_excluir";
             this.bt_excluir.Size = new System.Drawing.Size(203, 47);
-            this.bt_excluir.TabIndex = 23;
+            this.bt_excluir.TabIndex = 7;
             this.bt_excluir.Text = "EXCLUIR";
             this.bt_excluir.UseVisualStyleBackColor = false;
             this.bt_excluir.Click += new System.EventHandler(this.bt_excluir_Click);
             // 
             // bt_limpar
             // 
-            this.bt_limpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bt_limpar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bt_limpar.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
+            this.bt_limpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bt_limpar.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bt_limpar.Location = new System.Drawing.Point(569, 246);
             this.bt_limpar.Name = "bt_limpar";
             this.bt_limpar.Size = new System.Drawing.Size(203, 47);
-            this.bt_limpar.TabIndex = 24;
+            this.bt_limpar.TabIndex = 8;
             this.bt_limpar.Text = "LIMPAR";
             this.bt_limpar.UseVisualStyleBackColor = false;
             this.bt_limpar.Click += new System.EventHandler(this.bt_limpar_Click);
@@ -281,7 +291,7 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.ScrollAlwaysVisible = true;
             this.listBox1.Size = new System.Drawing.Size(736, 130);
-            this.listBox1.TabIndex = 30;
+            this.listBox1.TabIndex = 19;
             this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
             // 
             // lb_sair
@@ -292,7 +302,7 @@
             this.lb_sair.Location = new System.Drawing.Point(199, 446);
             this.lb_sair.Name = "lb_sair";
             this.lb_sair.Size = new System.Drawing.Size(43, 20);
-            this.lb_sair.TabIndex = 35;
+            this.lb_sair.TabIndex = 11;
             this.lb_sair.Text = "SAIR";
             this.lb_sair.Click += new System.EventHandler(this.lb_sair_Click);
             // 
@@ -349,7 +359,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackgroundImage = global::LetsBlood_2.Properties.Resources.istockphoto_1004961356_170667a;
+            this.BackgroundImage = global::LetsBlood_2.Properties.Resources.ee18e8e53852cf399b3b52c022d31d6d;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(821, 631);
             this.ControlBox = false;
@@ -379,6 +389,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dTp_Nascimento);
             this.Controls.Add(this.tb_Nome_Doador);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_cadastrarDoador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrar Doador";
