@@ -85,7 +85,8 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.menuStrip1.BackColor = System.Drawing.Color.IndianRed;
+            this.menuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.menuStrip1.Font = new System.Drawing.Font("Sitka Banner", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -93,7 +94,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(800, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 34);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -102,21 +103,23 @@
             this.sobreToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.informaçõesDeDoaçãoToolStripMenuItem,
             this.informaçõesDoProgramaToolStripMenuItem});
+            this.sobreToolStripMenuItem.Font = new System.Drawing.Font("Sitka Banner", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.sobreToolStripMenuItem.ForeColor = System.Drawing.Color.Cornsilk;
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(62, 27);
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(65, 28);
             this.sobreToolStripMenuItem.Text = "Sobre";
             // 
             // informaçõesDeDoaçãoToolStripMenuItem
             // 
             this.informaçõesDeDoaçãoToolStripMenuItem.Name = "informaçõesDeDoaçãoToolStripMenuItem";
-            this.informaçõesDeDoaçãoToolStripMenuItem.Size = new System.Drawing.Size(265, 28);
+            this.informaçõesDeDoaçãoToolStripMenuItem.Size = new System.Drawing.Size(274, 28);
             this.informaçõesDeDoaçãoToolStripMenuItem.Text = "Informações de Doação";
             this.informaçõesDeDoaçãoToolStripMenuItem.Click += new System.EventHandler(this.informaçõesDeDoaçãoToolStripMenuItem_Click);
             // 
             // informaçõesDoProgramaToolStripMenuItem
             // 
             this.informaçõesDoProgramaToolStripMenuItem.Name = "informaçõesDoProgramaToolStripMenuItem";
-            this.informaçõesDoProgramaToolStripMenuItem.Size = new System.Drawing.Size(265, 28);
+            this.informaçõesDoProgramaToolStripMenuItem.Size = new System.Drawing.Size(274, 28);
             this.informaçõesDoProgramaToolStripMenuItem.Text = "Informações do Programa";
             this.informaçõesDoProgramaToolStripMenuItem.Click += new System.EventHandler(this.informaçõesDoProgramaToolStripMenuItem_Click);
             // 
@@ -171,7 +174,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackgroundImage = global::LetsBlood_2.Properties.Resources._964fa0ed6eb25f231069df340aa2d46b;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(157)))), ((int)(((byte)(148)))));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 516);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox3);
