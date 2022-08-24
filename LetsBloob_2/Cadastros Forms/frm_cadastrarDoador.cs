@@ -35,14 +35,21 @@ namespace LetsBlood_2.Cadastros_Forms
                 }
             }
 
-            if (mTb_Cpf.Text == null)
+            if (tb_Nome_Doador.Text == "")
+            {
+                MessageBox.Show("Preencha o campo Nome do Doador.");
+                tb_Nome_Doador.Focus();
+                return;
+            }
+
+            if (mTb_Cpf.Text == "   -   -   -")
             {
                 MessageBox.Show("Preencha o campo CPF.");
                 mTb_Cpf.Focus();
                 return;
             }
 
-            if (mTb_Telefone.Text == null)
+            if (mTb_Telefone.Text == "(  )      -")
             {
                 MessageBox.Show("Preencha o campo telefone.");
                 mTb_Telefone.Focus();
@@ -59,15 +66,16 @@ namespace LetsBlood_2.Cadastros_Forms
             pb_resultado.Visible = true;
 
 
-            if (Dados.listaDoadores.Any(l => l.CpfDoador == mTb_Cpf.Text))
+            if (Dados.listaDoadores.Any(l => l.CpfDoador == doa.CpfDoador))
             {
-                //adicionar mensagem de erro se existir doador?
+                MessageBox.Show($"O CPF {mTb_Cpf.Text} já está cadastrado.");
+                mTb_Cpf.Focus();
+                return;
             }
             else
             {
                 Dados.listaDoadores.Add(doa);
             }
-
 
             Listar();
 

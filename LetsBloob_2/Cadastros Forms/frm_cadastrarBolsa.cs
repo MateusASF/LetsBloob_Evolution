@@ -15,7 +15,7 @@ namespace LetsBlood_2.Cadastros_Forms
     {
         public frm_cadastrarBolsa()
         {
-            InitializeComponent();                     
+            InitializeComponent();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -30,13 +30,11 @@ namespace LetsBlood_2.Cadastros_Forms
 
         private void frm_cadastrarBolsa_Load(object sender, EventArgs e)
         {
-            pb_resultado.Visible = false;            
+            pb_resultado.Visible = false;
         }
 
         private void bt_cadastrar_Click(object sender, EventArgs e)
         {
-            //BOTAO CADASTRAR/ALTERAR
-
             int index = -1;
             foreach (Bolsa item in Dados.listaBolsas)
             {
@@ -44,39 +42,54 @@ namespace LetsBlood_2.Cadastros_Forms
                 {
                     index = Dados.listaBolsas.IndexOf(item);
                 }
-            }                    
+            }
 
-            if (mTb_CpfDoador.Text == null)
+            if (tb_NomeMedico.Text == "")
+            {
+                MessageBox.Show("Preencha o campo Nome do Médico.");
+                tb_NomeMedico.Focus();
+                return;
+            }
+
+            if (mTb_CpfDoador.Text == "   -   -   -")
             {
                 MessageBox.Show("Preencha o campo CPF.");
                 mTb_CpfDoador.Focus();
                 return;
             }
 
-            if (tb_HospitalDestino.Text == null)
+            if (tb_HospitalDestino.Text == "")
             {
                 MessageBox.Show("Preencha o campo Hospital de Destino.");
                 tb_HospitalDestino.Focus();
                 return;
             }
-            
+
             var checkedButton = gb_TipoSanguineo.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
+
+            if (checkedButton == null)
+            {
+                MessageBox.Show("Selecione o Tipo Sanguíneo.");
+                return;
+            }
 
             Bolsa bolsa = new Bolsa();
 
             bolsa.DataColeta = dTp_DataColeta.Text;
             bolsa.NomeMedico = tb_NomeMedico.Text;
-            bolsa.CpfDoador = mTb_CpfDoador.Text.Replace("-","").Replace(".","");
+            bolsa.CpfDoador = mTb_CpfDoador.Text.Replace("-", "").Replace(".", "");
             bolsa.HospitalDestino = tb_HospitalDestino.Text;
             bolsa.ObservacaoBolsa = tb_Observacao.Text;
             bolsa.TipoSanguineo = checkedButton.Text;
             pb_resultado.Visible = true;
 
-            if (Dados.listaBolsas.Any(l => l.CpfDoador == mTb_CpfDoador.Text))
+            if (Dados.listaBolsas.Any(l => l.CpfDoador == bolsa.CpfDoador) && Dados.listaBolsas.Any(l => l.DataColeta == bolsa.DataColeta))
             {
-                //adicionar mensagem de erro se existir bosla?
+                MessageBox.Show($"O CPF {mTb_CpfDoador.Text} já possui uma doação cadastrada na data {dTp_DataColeta.Text}.");
+                dTp_DataColeta.Focus();
+                return;
             }
-            else 
+            else
             {
                 Dados.listaBolsas.Add(bolsa);
             }
@@ -123,14 +136,14 @@ namespace LetsBlood_2.Cadastros_Forms
         }
 
         private void ltbResultado_DoubleClick(object sender, EventArgs e)
-        {           
+        {
             var index = ltbResultado.SelectedIndex;
             Bolsa bolsa = Dados.listaBolsas[index];
             dTp_DataColeta.Text = bolsa.DataColeta;
             tb_NomeMedico.Text = bolsa.NomeMedico;
             mTb_CpfDoador.Text = bolsa.CpfDoador;
             tb_HospitalDestino.Text = bolsa.HospitalDestino;
-            tb_Observacao.Text = bolsa.ObservacaoBolsa;           
+            tb_Observacao.Text = bolsa.ObservacaoBolsa;
             var checkedButton = gb_TipoSanguineo.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Text == bolsa.TipoSanguineo);
             if (checkedButton != null)
             {
@@ -142,12 +155,12 @@ namespace LetsBlood_2.Cadastros_Forms
         {
             int index = ltbResultado.SelectedIndex;
             DialogResult resp = MessageBox.Show("Você deseja mesmo excluir a bolsa?", "Exluir", MessageBoxButtons.YesNo);
-            if(resp == DialogResult.Yes)
+            if (resp == DialogResult.Yes)
             {
                 Dados.listaBolsas.RemoveAt(index);
                 Console.WriteLine("Bolsa excluida com sucesso!");
                 Listar();
-            }                        
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
