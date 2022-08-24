@@ -167,6 +167,7 @@ namespace LetsBlood_2.Cadastros_Forms
                     {
                         checkedButton.Checked = true;
                     }
+                    break;
                 }
             }
         }
