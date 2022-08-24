@@ -12,3 +12,8 @@ os conceitos passados em aula <br/>
 <p align="center">
   <img src= "LetsBloob_2/Resources/LOGO.png"/>
 </p>
+
+## Como executar
+- Clone este repositório em uma pasta local.
+- Abra a solução do projeto com o Visual Studio: arquivo `LetsBlood_2.sln`
+- Execute o projeto com `CTRL + F5`
