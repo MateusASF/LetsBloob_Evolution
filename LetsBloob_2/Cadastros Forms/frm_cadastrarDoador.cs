@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+// ? espera um nulo
+// ! confirma que não será nulo
+
 
 namespace LetsBlood_2.Cadastros_Forms
 {
@@ -81,7 +84,7 @@ namespace LetsBlood_2.Cadastros_Forms
             if (resp == DialogResult.Yes)
             {
                 var doador = Dados.listaDoadores.Find(doador => doador.CpfDoador == mTb_Cpf.Text.Replace("-", "").Replace(".", ""));
-                Dados.listaDoadores.Remove(doador);
+                Dados.listaDoadores.Remove(doador!);
                 pb_exc.Visible = true;
                 Listar();
                 await limparCampos();
@@ -104,11 +107,11 @@ namespace LetsBlood_2.Cadastros_Forms
             bt_alterar.Enabled = true;
             bt_cadastrar.Enabled = false;
 
-            string linhaSelecionada = listBox1.SelectedItem.ToString();
+            string ? linhaSelecionada = listBox1.SelectedItem.ToString();
 
             foreach (var doador in Dados.listaDoadores)
             {
-                if (linhaSelecionada.Contains(doador.CpfDoador))
+                if (linhaSelecionada!.Contains(doador.CpfDoador))
                 {
                     dTp_Nascimento.Text = doador.Nascimento;
                     tb_Nome_Doador.Text = doador.NomeDoador;
@@ -190,7 +193,7 @@ namespace LetsBlood_2.Cadastros_Forms
             }
             var doa = Dados.listaDoadores.Find(doa => doa.CpfDoador == mTb_Cpf.Text.Replace("-", "").Replace(".", ""));
 
-            doa.NomeDoador = tb_Nome_Doador.Text;
+            doa!.NomeDoador = tb_Nome_Doador.Text;
             doa.CpfDoador = mTb_Cpf.Text.Replace("-", "").Replace(".", "");
             doa.Nascimento = dTp_Nascimento.Text;
             doa.Telefone = mTb_Telefone.Text.Replace(" ", "").Replace("(", "").Replace(")", "").Replace("-", "");

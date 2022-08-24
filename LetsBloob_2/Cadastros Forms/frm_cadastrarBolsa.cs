@@ -158,11 +158,11 @@ namespace LetsBlood_2.Cadastros_Forms
             btnExcluir.Enabled = true;
             bt_cadastrar.Enabled = false;
 
-            string linhaSelecionada = ltbResultado.SelectedItem.ToString();
+            string ? linhaSelecionada = ltbResultado.SelectedItem.ToString();
 
             foreach (var bolsa in Dados.listaBolsas)
             {
-                if (linhaSelecionada.Contains(bolsa.CpfDoador))
+                if (linhaSelecionada!.Contains(bolsa.CpfDoador))
                 {
                     dTp_DataColeta.Text = bolsa.DataColeta;
                     tb_NomeMedico.Text = bolsa.NomeMedico;
@@ -186,7 +186,7 @@ namespace LetsBlood_2.Cadastros_Forms
             if (resp == DialogResult.Yes)
             {
                 var bolsa = Dados.listaBolsas.Find(bolsa => bolsa.CpfDoador == mTb_CpfDoador.Text.Replace("-", "").Replace(".", ""));
-                Dados.listaBolsas.Remove(bolsa);
+                Dados.listaBolsas.Remove(bolsa!);
                 pb_exc.Visible = true;
                 Listar();
                 await limparCampos();
@@ -227,7 +227,7 @@ namespace LetsBlood_2.Cadastros_Forms
         {
             ltbResultado.Items.Clear();
             var checkedButton = gb_TipoSanguineo.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
-            var bolsas = Dados.listaBolsas.Where(bolsa => bolsa.TipoSanguineo == checkedButton.Text);
+            var bolsas = Dados.listaBolsas.Where(bolsa => bolsa.TipoSanguineo == checkedButton!.Text);
             ltbResultado.Items.AddRange(bolsas.ToArray());
         }
 
@@ -281,7 +281,7 @@ namespace LetsBlood_2.Cadastros_Forms
 
             var bolsa = Dados.listaBolsas.Find(bolsa => bolsa.CpfDoador == mTb_CpfDoador.Text.Replace("-", "").Replace(".", ""));
 
-            bolsa.DataColeta = dTp_DataColeta.Text;
+            bolsa!.DataColeta = dTp_DataColeta.Text;
             bolsa.NomeMedico = tb_NomeMedico.Text;
             bolsa.HospitalDestino = tb_HospitalDestino.Text;
             bolsa.ObservacaoBolsa = tb_Observacao.Text;
