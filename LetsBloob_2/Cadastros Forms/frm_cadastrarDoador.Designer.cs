@@ -55,7 +55,7 @@
             this.lupa_consultaCpf = new System.Windows.Forms.PictureBox();
             this.lupa_consultaTelefone = new System.Windows.Forms.PictureBox();
             this.lupa_consultaNome = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bt_alterar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_resultado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -67,20 +67,18 @@
             // tb_Nome_Doador
             // 
             this.tb_Nome_Doador.Font = new System.Drawing.Font("Sitka Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tb_Nome_Doador.Location = new System.Drawing.Point(38, 24);
-            this.tb_Nome_Doador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_Nome_Doador.Location = new System.Drawing.Point(43, 32);
             this.tb_Nome_Doador.Name = "tb_Nome_Doador";
-            this.tb_Nome_Doador.Size = new System.Drawing.Size(364, 23);
+            this.tb_Nome_Doador.Size = new System.Drawing.Size(415, 26);
             this.tb_Nome_Doador.TabIndex = 0;
             // 
             // dTp_Nascimento
             // 
             this.dTp_Nascimento.Font = new System.Drawing.Font("Sitka Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dTp_Nascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dTp_Nascimento.Location = new System.Drawing.Point(38, 124);
-            this.dTp_Nascimento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dTp_Nascimento.Location = new System.Drawing.Point(43, 165);
             this.dTp_Nascimento.Name = "dTp_Nascimento";
-            this.dTp_Nascimento.Size = new System.Drawing.Size(396, 23);
+            this.dTp_Nascimento.Size = new System.Drawing.Size(452, 26);
             this.dTp_Nascimento.TabIndex = 3;
             // 
             // label1
@@ -88,9 +86,9 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(38, 7);
+            this.label1.Location = new System.Drawing.Point(43, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 18);
+            this.label1.Size = new System.Drawing.Size(46, 21);
             this.label1.TabIndex = 12;
             this.label1.Text = "Nome";
             // 
@@ -99,20 +97,19 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(38, 54);
+            this.label2.Location = new System.Drawing.Point(43, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 18);
+            this.label2.Size = new System.Drawing.Size(34, 21);
             this.label2.TabIndex = 13;
             this.label2.Text = "CPF";
             // 
             // mTb_Cpf
             // 
             this.mTb_Cpf.Font = new System.Drawing.Font("Sitka Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.mTb_Cpf.Location = new System.Drawing.Point(38, 71);
-            this.mTb_Cpf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.mTb_Cpf.Location = new System.Drawing.Point(43, 95);
             this.mTb_Cpf.Mask = "000-000-000-00";
             this.mTb_Cpf.Name = "mTb_Cpf";
-            this.mTb_Cpf.Size = new System.Drawing.Size(112, 23);
+            this.mTb_Cpf.Size = new System.Drawing.Size(127, 26);
             this.mTb_Cpf.TabIndex = 1;
             // 
             // label4
@@ -120,20 +117,19 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(38, 102);
+            this.label4.Location = new System.Drawing.Point(43, 136);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 18);
+            this.label4.Size = new System.Drawing.Size(82, 21);
             this.label4.TabIndex = 15;
             this.label4.Text = "Nascimento";
             // 
             // mTb_Telefone
             // 
             this.mTb_Telefone.Font = new System.Drawing.Font("Sitka Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.mTb_Telefone.Location = new System.Drawing.Point(283, 75);
-            this.mTb_Telefone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.mTb_Telefone.Location = new System.Drawing.Point(323, 100);
             this.mTb_Telefone.Mask = "(00) 00000-0000";
             this.mTb_Telefone.Name = "mTb_Telefone";
-            this.mTb_Telefone.Size = new System.Drawing.Size(120, 23);
+            this.mTb_Telefone.Size = new System.Drawing.Size(137, 26);
             this.mTb_Telefone.TabIndex = 2;
             // 
             // label5
@@ -141,19 +137,18 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(283, 57);
+            this.label5.Location = new System.Drawing.Point(323, 76);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 18);
+            this.label5.Size = new System.Drawing.Size(63, 21);
             this.label5.TabIndex = 14;
             this.label5.Text = "Telefone";
             // 
             // tb_Email
             // 
             this.tb_Email.Font = new System.Drawing.Font("Sitka Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tb_Email.Location = new System.Drawing.Point(38, 171);
-            this.tb_Email.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_Email.Location = new System.Drawing.Point(43, 228);
             this.tb_Email.Name = "tb_Email";
-            this.tb_Email.Size = new System.Drawing.Size(396, 23);
+            this.tb_Email.Size = new System.Drawing.Size(452, 26);
             this.tb_Email.TabIndex = 4;
             // 
             // label6
@@ -161,9 +156,9 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(38, 154);
+            this.label6.Location = new System.Drawing.Point(43, 205);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 18);
+            this.label6.Size = new System.Drawing.Size(45, 21);
             this.label6.TabIndex = 16;
             this.label6.Text = "Email";
             // 
@@ -172,20 +167,19 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(38, 197);
+            this.label3.Location = new System.Drawing.Point(43, 263);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 18);
+            this.label3.Size = new System.Drawing.Size(81, 21);
             this.label3.TabIndex = 17;
             this.label3.Text = "Observação";
             // 
             // tb_Obs
             // 
             this.tb_Obs.Font = new System.Drawing.Font("Sitka Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tb_Obs.Location = new System.Drawing.Point(38, 214);
-            this.tb_Obs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_Obs.Location = new System.Drawing.Point(43, 285);
             this.tb_Obs.Multiline = true;
             this.tb_Obs.Name = "tb_Obs";
-            this.tb_Obs.Size = new System.Drawing.Size(396, 48);
+            this.tb_Obs.Size = new System.Drawing.Size(452, 63);
             this.tb_Obs.TabIndex = 5;
             // 
             // bt_cadastrar
@@ -194,22 +188,21 @@
             this.bt_cadastrar.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
             this.bt_cadastrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bt_cadastrar.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bt_cadastrar.Location = new System.Drawing.Point(498, 25);
-            this.bt_cadastrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_cadastrar.Location = new System.Drawing.Point(569, 33);
             this.bt_cadastrar.Name = "bt_cadastrar";
-            this.bt_cadastrar.Size = new System.Drawing.Size(178, 35);
+            this.bt_cadastrar.Size = new System.Drawing.Size(203, 47);
             this.bt_cadastrar.TabIndex = 6;
             this.bt_cadastrar.Text = "CADASTRAR\r";
             this.bt_cadastrar.UseVisualStyleBackColor = false;
-            this.bt_cadastrar.Click += new System.EventHandler(this.button1_Click);
+            this.bt_cadastrar.Click += new System.EventHandler(this.bt_cadastrar_Click);
             // 
             // lb_Resultado
             // 
             this.lb_Resultado.AutoSize = true;
             this.lb_Resultado.BackColor = System.Drawing.Color.Transparent;
-            this.lb_Resultado.Location = new System.Drawing.Point(243, 319);
+            this.lb_Resultado.Location = new System.Drawing.Point(278, 425);
             this.lb_Resultado.Name = "lb_Resultado";
-            this.lb_Resultado.Size = new System.Drawing.Size(0, 15);
+            this.lb_Resultado.Size = new System.Drawing.Size(0, 20);
             this.lb_Resultado.TabIndex = 18;
             // 
             // lb_voltar
@@ -217,9 +210,9 @@
             this.lb_voltar.AutoSize = true;
             this.lb_voltar.BackColor = System.Drawing.Color.Transparent;
             this.lb_voltar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb_voltar.Location = new System.Drawing.Point(47, 334);
+            this.lb_voltar.Location = new System.Drawing.Point(54, 445);
             this.lb_voltar.Name = "lb_voltar";
-            this.lb_voltar.Size = new System.Drawing.Size(51, 15);
+            this.lb_voltar.Size = new System.Drawing.Size(66, 20);
             this.lb_voltar.TabIndex = 10;
             this.lb_voltar.Text = "VOLTAR";
             this.lb_voltar.Click += new System.EventHandler(this.lb_voltar_Click);
@@ -228,10 +221,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::LetsBlood_2.Properties.Resources.voltar;
-            this.pictureBox1.Location = new System.Drawing.Point(20, 290);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(23, 387);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(109, 46);
+            this.pictureBox1.Size = new System.Drawing.Size(125, 61);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
@@ -241,10 +233,9 @@
             // 
             this.pb_resultado.BackColor = System.Drawing.Color.Transparent;
             this.pb_resultado.Image = global::LetsBlood_2.Properties.Resources.Let_s_Bl_od__1__removebg_preview__1_;
-            this.pb_resultado.Location = new System.Drawing.Point(257, 287);
-            this.pb_resultado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pb_resultado.Location = new System.Drawing.Point(294, 383);
             this.pb_resultado.Name = "pb_resultado";
-            this.pb_resultado.Size = new System.Drawing.Size(176, 49);
+            this.pb_resultado.Size = new System.Drawing.Size(201, 65);
             this.pb_resultado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_resultado.TabIndex = 21;
             this.pb_resultado.TabStop = false;
@@ -255,10 +246,9 @@
             this.bt_ListaCompleta.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
             this.bt_ListaCompleta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bt_ListaCompleta.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bt_ListaCompleta.Location = new System.Drawing.Point(498, 246);
-            this.bt_ListaCompleta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_ListaCompleta.Location = new System.Drawing.Point(569, 328);
             this.bt_ListaCompleta.Name = "bt_ListaCompleta";
-            this.bt_ListaCompleta.Size = new System.Drawing.Size(178, 104);
+            this.bt_ListaCompleta.Size = new System.Drawing.Size(203, 139);
             this.bt_ListaCompleta.TabIndex = 9;
             this.bt_ListaCompleta.Text = "MOSTRAR TODOS\r\nOS DOADORES";
             this.bt_ListaCompleta.UseVisualStyleBackColor = false;
@@ -270,10 +260,9 @@
             this.bt_excluir.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
             this.bt_excluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bt_excluir.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bt_excluir.Location = new System.Drawing.Point(498, 124);
-            this.bt_excluir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_excluir.Location = new System.Drawing.Point(569, 165);
             this.bt_excluir.Name = "bt_excluir";
-            this.bt_excluir.Size = new System.Drawing.Size(178, 35);
+            this.bt_excluir.Size = new System.Drawing.Size(203, 47);
             this.bt_excluir.TabIndex = 7;
             this.bt_excluir.Text = "EXCLUIR";
             this.bt_excluir.UseVisualStyleBackColor = false;
@@ -285,10 +274,9 @@
             this.bt_limpar.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
             this.bt_limpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bt_limpar.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bt_limpar.Location = new System.Drawing.Point(498, 184);
-            this.bt_limpar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_limpar.Location = new System.Drawing.Point(569, 245);
             this.bt_limpar.Name = "bt_limpar";
-            this.bt_limpar.Size = new System.Drawing.Size(178, 35);
+            this.bt_limpar.Size = new System.Drawing.Size(203, 47);
             this.bt_limpar.TabIndex = 8;
             this.bt_limpar.Text = "LIMPAR";
             this.bt_limpar.UseVisualStyleBackColor = false;
@@ -299,12 +287,11 @@
             this.listBox1.Font = new System.Drawing.Font("Sitka Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listBox1.FormattingEnabled = true;
             this.listBox1.HorizontalScrollbar = true;
-            this.listBox1.ItemHeight = 18;
-            this.listBox1.Location = new System.Drawing.Point(40, 362);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listBox1.ItemHeight = 21;
+            this.listBox1.Location = new System.Drawing.Point(46, 483);
             this.listBox1.Name = "listBox1";
             this.listBox1.ScrollAlwaysVisible = true;
-            this.listBox1.Size = new System.Drawing.Size(644, 94);
+            this.listBox1.Size = new System.Drawing.Size(735, 109);
             this.listBox1.TabIndex = 19;
             this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
             // 
@@ -313,9 +300,9 @@
             this.lb_sair.AutoSize = true;
             this.lb_sair.BackColor = System.Drawing.Color.Transparent;
             this.lb_sair.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb_sair.Location = new System.Drawing.Point(174, 334);
+            this.lb_sair.Location = new System.Drawing.Point(199, 445);
             this.lb_sair.Name = "lb_sair";
-            this.lb_sair.Size = new System.Drawing.Size(34, 15);
+            this.lb_sair.Size = new System.Drawing.Size(43, 20);
             this.lb_sair.TabIndex = 11;
             this.lb_sair.Text = "SAIR";
             this.lb_sair.Click += new System.EventHandler(this.lb_sair_Click);
@@ -324,10 +311,9 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::LetsBlood_2.Properties.Resources.tl__1__removebg_preview;
-            this.pictureBox2.Location = new System.Drawing.Point(143, 287);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(163, 383);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(109, 46);
+            this.pictureBox2.Size = new System.Drawing.Size(125, 61);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 34;
             this.pictureBox2.TabStop = false;
@@ -337,10 +323,9 @@
             // 
             this.lupa_consultaCpf.BackColor = System.Drawing.Color.Transparent;
             this.lupa_consultaCpf.Image = global::LetsBlood_2.Properties.Resources.lupa;
-            this.lupa_consultaCpf.Location = new System.Drawing.Point(154, 71);
-            this.lupa_consultaCpf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lupa_consultaCpf.Location = new System.Drawing.Point(176, 95);
             this.lupa_consultaCpf.Name = "lupa_consultaCpf";
-            this.lupa_consultaCpf.Size = new System.Drawing.Size(26, 23);
+            this.lupa_consultaCpf.Size = new System.Drawing.Size(30, 31);
             this.lupa_consultaCpf.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.lupa_consultaCpf.TabIndex = 38;
             this.lupa_consultaCpf.TabStop = false;
@@ -350,10 +335,9 @@
             // 
             this.lupa_consultaTelefone.BackColor = System.Drawing.Color.Transparent;
             this.lupa_consultaTelefone.Image = global::LetsBlood_2.Properties.Resources.lupa;
-            this.lupa_consultaTelefone.Location = new System.Drawing.Point(407, 75);
-            this.lupa_consultaTelefone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lupa_consultaTelefone.Location = new System.Drawing.Point(465, 100);
             this.lupa_consultaTelefone.Name = "lupa_consultaTelefone";
-            this.lupa_consultaTelefone.Size = new System.Drawing.Size(26, 23);
+            this.lupa_consultaTelefone.Size = new System.Drawing.Size(30, 31);
             this.lupa_consultaTelefone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.lupa_consultaTelefone.TabIndex = 39;
             this.lupa_consultaTelefone.TabStop = false;
@@ -363,39 +347,38 @@
             // 
             this.lupa_consultaNome.BackColor = System.Drawing.Color.Transparent;
             this.lupa_consultaNome.Image = global::LetsBlood_2.Properties.Resources.lupa;
-            this.lupa_consultaNome.Location = new System.Drawing.Point(407, 24);
-            this.lupa_consultaNome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lupa_consultaNome.Location = new System.Drawing.Point(465, 32);
             this.lupa_consultaNome.Name = "lupa_consultaNome";
-            this.lupa_consultaNome.Size = new System.Drawing.Size(26, 23);
+            this.lupa_consultaNome.Size = new System.Drawing.Size(30, 31);
             this.lupa_consultaNome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.lupa_consultaNome.TabIndex = 40;
             this.lupa_consultaNome.TabStop = false;
             this.lupa_consultaNome.Click += new System.EventHandler(this.lupa_consultaNome_Click);
             // 
-            // button1
+            // bt_alterar
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button1.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(498, 71);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(178, 35);
-            this.button1.TabIndex = 41;
-            this.button1.Text = "ALTERAR";
-            this.button1.UseVisualStyleBackColor = false;
+            this.bt_alterar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bt_alterar.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
+            this.bt_alterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bt_alterar.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bt_alterar.Location = new System.Drawing.Point(569, 95);
+            this.bt_alterar.Name = "bt_alterar";
+            this.bt_alterar.Size = new System.Drawing.Size(203, 47);
+            this.bt_alterar.TabIndex = 41;
+            this.bt_alterar.Text = "ALTERAR";
+            this.bt_alterar.UseVisualStyleBackColor = false;
+            this.bt_alterar.Click += new System.EventHandler(this.bt_alterar_Click);
             // 
             // frm_cadastrarDoador
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::LetsBlood_2.Properties.Resources.ee18e8e53852cf399b3b52c022d31d6d;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(718, 473);
+            this.ClientSize = new System.Drawing.Size(821, 631);
             this.ControlBox = false;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bt_alterar);
             this.Controls.Add(this.lupa_consultaNome);
             this.Controls.Add(this.lupa_consultaTelefone);
             this.Controls.Add(this.lupa_consultaCpf);
@@ -423,7 +406,6 @@
             this.Controls.Add(this.dTp_Nascimento);
             this.Controls.Add(this.tb_Nome_Doador);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frm_cadastrarDoador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrar Doador";
@@ -467,6 +449,6 @@
         private PictureBox lupa_consultaCpf;
         private PictureBox lupa_consultaTelefone;
         private PictureBox lupa_consultaNome;
-        private Button button1;
+        private Button bt_alterar;
     }
 }

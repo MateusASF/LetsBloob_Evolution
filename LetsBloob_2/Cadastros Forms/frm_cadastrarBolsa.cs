@@ -35,7 +35,7 @@ namespace LetsBlood_2.Cadastros_Forms
             btnExcluir.Enabled = false;
         }
 
-        private void bt_cadastrar_Click(object sender, EventArgs e)
+        private async void bt_cadastrar_Click(object sender, EventArgs e)
         {
             int index = -1;
             foreach (Bolsa item in Dados.listaBolsas)
@@ -48,21 +48,21 @@ namespace LetsBlood_2.Cadastros_Forms
 
             if (tb_NomeMedico.Text == "")
             {
-                MessageBox.Show("Preencha o campo Nome do Médico.");
+                MessageBox.Show("Preencha o campo Nome do Médico.","Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 tb_NomeMedico.Focus();
                 return;
             }
 
             if (mTb_CpfDoador.Text == "   -   -   -")
             {
-                MessageBox.Show("Preencha o campo CPF.");
+                MessageBox.Show("Preencha o campo CPF.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 mTb_CpfDoador.Focus();
                 return;
             }
 
             if (tb_HospitalDestino.Text == "")
             {
-                MessageBox.Show("Preencha o campo Hospital de Destino.");
+                MessageBox.Show("Preencha o campo Hospital de Destino.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 tb_HospitalDestino.Focus();
                 return;
             }
@@ -71,7 +71,7 @@ namespace LetsBlood_2.Cadastros_Forms
 
             if (checkedButton == null)
             {
-                MessageBox.Show("Selecione o Tipo Sanguíneo.");
+                MessageBox.Show("Selecione o Tipo Sanguíneo.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -86,7 +86,7 @@ namespace LetsBlood_2.Cadastros_Forms
 
             if (Dados.listaBolsas.Any(l => l.CpfDoador == bolsa.CpfDoador) && Dados.listaBolsas.Any(l => l.DataColeta == bolsa.DataColeta))
             {
-                MessageBox.Show($"O CPF {mTb_CpfDoador.Text} já possui uma doação cadastrada na data {dTp_DataColeta.Text}.");
+                MessageBox.Show($"O CPF {mTb_CpfDoador.Text} já possui uma doação cadastrada na data {dTp_DataColeta.Text}.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 dTp_DataColeta.Focus();
                 return;
             }
@@ -98,12 +98,12 @@ namespace LetsBlood_2.Cadastros_Forms
 
             Listar();
 
-            limparCampos();
+            await limparCampos();
         }
 
-        private void bt_limpar_Click(object sender, EventArgs e)
+        private async void bt_limpar_Click(object sender, EventArgs e)
         {
-            limparCampos();
+            await limparCampos();
             tb_NomeMedico.Focus();
         }
 
@@ -129,6 +129,7 @@ namespace LetsBlood_2.Cadastros_Forms
             {
                 btnAlterar.Enabled = false;
                 btnExcluir.Enabled = false;
+                bt_cadastrar.Enabled = true;
             }
 
             await Task.Delay(800);
@@ -150,8 +151,10 @@ namespace LetsBlood_2.Cadastros_Forms
         {
             btnAlterar.Enabled = true;
             btnExcluir.Enabled = true;
+            bt_cadastrar.Enabled = false;
 
             string linhaSelecionada = ltbResultado.SelectedItem.ToString();
+
             foreach (var bolsa in Dados.listaBolsas)
             {
                 if (linhaSelecionada.Contains(bolsa.CpfDoador))
@@ -172,16 +175,16 @@ namespace LetsBlood_2.Cadastros_Forms
             }
         }
 
-        private void btnExcluir_Click(object sender, EventArgs e)
+        private async void btnExcluir_Click(object sender, EventArgs e)
         {
-            DialogResult resp = MessageBox.Show("Você deseja mesmo excluir a bolsa?", "Exluir", MessageBoxButtons.YesNo);
+            DialogResult resp = MessageBox.Show("Você deseja mesmo excluir a bolsa?", "Exluir", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (resp == DialogResult.Yes)
             {
                 var bolsa = Dados.listaBolsas.Find(bolsa => bolsa.CpfDoador == mTb_CpfDoador.Text.Replace("-", "").Replace(".", ""));
                 Dados.listaBolsas.Remove(bolsa);
                 Console.WriteLine("Bolsa excluida com sucesso!");//criar mensagem
                 Listar();
-                limparCampos();
+                await limparCampos();
             }
         }
 
@@ -204,7 +207,7 @@ namespace LetsBlood_2.Cadastros_Forms
         private void lupa_consultaCPF_Click(object sender, EventArgs e)
         {
             ltbResultado.Items.Clear();
-            var bolsas = Dados.listaBolsas.Where(bolsa => bolsa.CpfDoador == mTb_CpfDoador.Text);
+            var bolsas = Dados.listaBolsas.Where(bolsa => bolsa.CpfDoador == mTb_CpfDoador.Text.Replace("-", "").Replace(".", ""));
             ltbResultado.Items.AddRange(bolsas.ToArray());
         }
 
@@ -247,18 +250,18 @@ namespace LetsBlood_2.Cadastros_Forms
             }
         }
 
-        private void btnAlterar_Click(object sender, EventArgs e)
+        private async void btnAlterar_Click(object sender, EventArgs e)
         {
             if (tb_NomeMedico.Text == "")
             {
-                MessageBox.Show("Preencha o campo Nome do Médico.");
+                MessageBox.Show("Preencha o campo Nome do Médico.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 tb_NomeMedico.Focus();
                 return;
             }
 
             if (tb_HospitalDestino.Text == "")
             {
-                MessageBox.Show("Preencha o campo Hospital de Destino.");
+                MessageBox.Show("Preencha o campo Hospital de Destino.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 tb_HospitalDestino.Focus();
                 return;
             }
@@ -282,7 +285,7 @@ namespace LetsBlood_2.Cadastros_Forms
 
             Listar();
 
-            limparCampos(); //precisa de await?
+            await limparCampos(); //precisa de await?
         }
 
     }

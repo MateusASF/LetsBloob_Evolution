@@ -20,65 +20,11 @@ namespace LetsBlood_2.Cadastros_Forms
         }
         private void frm_cadastrarDoador_Load(object sender, EventArgs e)
         {
+            bt_excluir.ForeColor = Color.Red;
+            bt_alterar.ForeColor = Color.Red;
             pb_resultado.Visible = false;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-            int index = -1;
-            foreach (Doador item in Dados.listaDoadores)
-            {
-                if (item.NomeDoador == tb_Nome_Doador.Text)
-                {
-                    index = Dados.listaDoadores.IndexOf(item);
-                }
-            }
-
-            if (tb_Nome_Doador.Text == "")
-            {
-                MessageBox.Show("Preencha o campo Nome do Doador.");
-                tb_Nome_Doador.Focus();
-                return;
-            }
-
-            if (mTb_Cpf.Text == "   -   -   -")
-            {
-                MessageBox.Show("Preencha o campo CPF.");
-                mTb_Cpf.Focus();
-                return;
-            }
-
-            if (mTb_Telefone.Text == "(  )      -")
-            {
-                MessageBox.Show("Preencha o campo telefone.");
-                mTb_Telefone.Focus();
-                return;
-            }
-
-            Doador doa = new Doador();
-            doa.NomeDoador = tb_Nome_Doador.Text;
-            doa.CpfDoador = mTb_Cpf.Text.Replace("-", "").Replace(".", "");
-            doa.Nascimento = dTp_Nascimento.Text;
-            doa.Telefone = mTb_Telefone.Text;
-            doa.Email = tb_Email.Text;
-            doa.Observacao = tb_Obs.Text;
-
-            if (Dados.listaDoadores.Any(l => l.CpfDoador == doa.CpfDoador))
-            {
-                MessageBox.Show($"O CPF {mTb_Cpf.Text} já está cadastrado.");
-                mTb_Cpf.Focus();
-                return;
-            }
-            else
-            {
-                Dados.listaDoadores.Add(doa);
-                pb_resultado.Visible = true;
-            }
-
-            Listar();
-
-            limparCampos();
+            bt_excluir.Enabled = false;
+            bt_alterar.Enabled = false;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -97,17 +43,25 @@ namespace LetsBlood_2.Cadastros_Forms
             Listar();
             tb_Nome_Doador.Clear();
             mTb_Cpf.Clear();
-            //dTp_Nascimento
             mTb_Telefone.Clear();
             tb_Email.Clear();
             tb_Obs.Clear();
             await Task.Delay(800);
             pb_resultado.Visible = false;
+            if (bt_alterar.Enabled == true)
+            {
+                bt_alterar.Enabled = false;
+                bt_excluir.Enabled = false;
+                bt_excluir.ForeColor = Color.Red;
+                bt_alterar.ForeColor = Color.Red;
+                bt_cadastrar.Enabled = true;
+                mTb_Cpf.Enabled = true;
+            }
         }
 
-        private void bt_limpar_Click(object sender, EventArgs e)
+        private async void bt_limpar_Click(object sender, EventArgs e)
         {
-            limparCampos();
+            await limparCampos();
         }
 
         private void Listar()
@@ -121,15 +75,16 @@ namespace LetsBlood_2.Cadastros_Forms
             }
         }
 
-        private void bt_excluir_Click(object sender, EventArgs e)
+        private async void bt_excluir_Click(object sender, EventArgs e)
         {
-            int index = listBox1.SelectedIndex;
-            DialogResult resp = MessageBox.Show("Você deseja mesmo excluir o doador?", "Exluir", MessageBoxButtons.YesNo);
+            DialogResult resp = MessageBox.Show("Você deseja mesmo excluir o doador(a)?", "Exluir", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (resp == DialogResult.Yes)
             {
-                Dados.listaDoadores.RemoveAt(index);
-                Console.WriteLine("Doador excluido com sucesso!");
+                var doador = Dados.listaDoadores.Find(doador => doador.CpfDoador == mTb_Cpf.Text.Replace("-", "").Replace(".", ""));
+                Dados.listaDoadores.Remove(doador);
+                Console.WriteLine("Doador excluido(a) com sucesso!");//criar mensagem
                 Listar();
+                await limparCampos();
             }
         }
 
@@ -144,14 +99,28 @@ namespace LetsBlood_2.Cadastros_Forms
 
         private void listBox1_DoubleClick(object sender, EventArgs e)
         {
-            var index = listBox1.SelectedIndex;
-            Doador doador = Dados.listaDoadores[index];
-            dTp_Nascimento.Text = doador.Nascimento;
-            tb_Nome_Doador.Text = doador.NomeDoador;
-            mTb_Cpf.Text = doador.CpfDoador;
-            tb_Email.Text = doador.Email;
-            mTb_Telefone.Text = doador.Telefone;
-            tb_Obs.Text = doador.Observacao;
+            mTb_Cpf.Enabled = false;
+            bt_excluir.Enabled = true;
+            bt_alterar.Enabled = true;
+            bt_excluir.ForeColor = Color.Black;
+            bt_alterar.ForeColor = Color.Black;
+            bt_cadastrar.Enabled = false;
+
+            string linhaSelecionada = listBox1.SelectedItem.ToString();
+
+            foreach (var doador in Dados.listaDoadores)
+            {
+                if (linhaSelecionada.Contains(doador.CpfDoador))
+                {
+                    dTp_Nascimento.Text = doador.Nascimento;
+                    tb_Nome_Doador.Text = doador.NomeDoador;
+                    mTb_Cpf.Text = doador.CpfDoador;
+                    tb_Email.Text = doador.Email;
+                    mTb_Telefone.Text = doador.Telefone;
+                    tb_Obs.Text = doador.Observacao;
+                    break;
+                }
+            }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -181,14 +150,14 @@ namespace LetsBlood_2.Cadastros_Forms
         private void lupa_consultaCpf_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
-            var doa = Dados.listaDoadores.Where(doa => doa.CpfDoador == mTb_Cpf.Text);
+            var doa = Dados.listaDoadores.Where(doa => doa.CpfDoador == mTb_Cpf.Text.Replace("-", "").Replace(".", ""));
             listBox1.Items.AddRange(doa.ToArray());
         }
 
         private void lupa_consultaTelefone_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
-            var doa = Dados.listaDoadores.Where(doa => doa.Telefone == mTb_Telefone.Text);
+            var doa = Dados.listaDoadores.Where(doa => doa.Telefone == mTb_Telefone.Text.Replace(" ","").Replace("(", "").Replace(")", "").Replace("-", ""));
             listBox1.Items.AddRange(doa.ToArray());
         }
 
@@ -198,6 +167,91 @@ namespace LetsBlood_2.Cadastros_Forms
             var doa = Dados.listaDoadores.Where(doa => doa.NomeDoador == tb_Nome_Doador.Text);
             listBox1.Items.AddRange(doa.ToArray());
         }
+
+        private async void bt_alterar_Click(object sender, EventArgs e)
+        {
+            if (tb_Nome_Doador.Text == "")
+            {
+                MessageBox.Show("Preencha o campo Nome do Doador.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                tb_Nome_Doador.Focus();
+                return;
+            }
+
+            if (mTb_Cpf.Text == "   -   -   -")
+            {
+                MessageBox.Show("Preencha o campo CPF.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                mTb_Cpf.Focus();
+                return;
+            }
+
+            if (mTb_Telefone.Text == "(  )      -")
+            {
+                MessageBox.Show("Preencha o campo telefone.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                mTb_Telefone.Focus();
+                return;
+            }
+            var doa = Dados.listaDoadores.Find(doa => doa.CpfDoador == mTb_Cpf.Text.Replace("-", "").Replace(".", ""));
+
+            doa.NomeDoador = tb_Nome_Doador.Text;
+            doa.CpfDoador = mTb_Cpf.Text.Replace("-", "").Replace(".", "");
+            doa.Nascimento = dTp_Nascimento.Text;
+            doa.Telefone = mTb_Telefone.Text.Replace(" ", "").Replace("(", "").Replace(")", "").Replace("-", "");
+            doa.Email = tb_Email.Text;
+            doa.Observacao = tb_Obs.Text;
+
+            Listar();
+
+            await limparCampos();
+        }
+
+        private async void bt_cadastrar_Click(object sender, EventArgs e)
+        {
+            if (tb_Nome_Doador.Text == "")
+            {
+                MessageBox.Show("Preencha o campo Nome do Doador.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                tb_Nome_Doador.Focus();
+                return;
+            }
+
+            if (mTb_Cpf.Text == "   -   -   -")
+            {
+                MessageBox.Show("Preencha o campo CPF.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                mTb_Cpf.Focus();
+                return;
+            }
+
+            if (mTb_Telefone.Text == "(  )      -")
+            {
+                MessageBox.Show("Preencha o campo telefone." ,"Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                mTb_Telefone.Focus();
+                return;
+            }
+
+            Doador doa = new Doador();
+            doa.NomeDoador = tb_Nome_Doador.Text;
+            doa.CpfDoador = mTb_Cpf.Text.Replace("-", "").Replace(".", "");
+            doa.Nascimento = dTp_Nascimento.Text;
+            doa.Telefone = mTb_Telefone.Text.Replace(" ", "").Replace("(", "").Replace(")", "").Replace("-", "");
+            doa.Email = tb_Email.Text;
+            doa.Observacao = tb_Obs.Text;
+
+            if (Dados.listaDoadores.Any(l => l.CpfDoador == doa.CpfDoador))
+            {
+                MessageBox.Show($"O CPF {mTb_Cpf.Text} já está cadastrado.","Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                mTb_Cpf.Focus();
+                return;
+            }
+            else
+            {
+                Dados.listaDoadores.Add(doa);
+                pb_resultado.Visible = true;
+            }
+
+            Listar();
+
+            await limparCampos();
+        }
+
 
     }
 
