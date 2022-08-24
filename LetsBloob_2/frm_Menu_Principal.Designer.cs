@@ -50,7 +50,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::LetsBlood_2.Properties.Resources.LOGO2;
-            this.pictureBox1.Location = new System.Drawing.Point(315, 51);
+            this.pictureBox1.Location = new System.Drawing.Point(392, 87);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(314, 165);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -62,7 +62,7 @@
             this.bt_cadastros.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bt_cadastros.Font = new System.Drawing.Font("Sitka Text", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bt_cadastros.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bt_cadastros.Location = new System.Drawing.Point(282, 277);
+            this.bt_cadastros.Location = new System.Drawing.Point(413, 313);
             this.bt_cadastros.Name = "bt_cadastros";
             this.bt_cadastros.Size = new System.Drawing.Size(235, 52);
             this.bt_cadastros.TabIndex = 1;
@@ -75,7 +75,7 @@
             this.bt_doador.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bt_doador.Font = new System.Drawing.Font("Sitka Text", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bt_doador.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bt_doador.Location = new System.Drawing.Point(283, 351);
+            this.bt_doador.Location = new System.Drawing.Point(414, 387);
             this.bt_doador.Name = "bt_doador";
             this.bt_doador.Size = new System.Drawing.Size(235, 52);
             this.bt_doador.TabIndex = 2;
@@ -128,7 +128,7 @@
             this.lb_sair.AutoSize = true;
             this.lb_sair.BackColor = System.Drawing.Color.Transparent;
             this.lb_sair.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb_sair.Location = new System.Drawing.Point(374, 487);
+            this.lb_sair.Location = new System.Drawing.Point(726, 487);
             this.lb_sair.Name = "lb_sair";
             this.lb_sair.Size = new System.Drawing.Size(43, 20);
             this.lb_sair.TabIndex = 17;
@@ -139,9 +139,9 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::LetsBlood_2.Properties.Resources.tl__1__removebg_preview;
-            this.pictureBox2.Location = new System.Drawing.Point(338, 424);
+            this.pictureBox2.Location = new System.Drawing.Point(706, 441);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(125, 61);
+            this.pictureBox2.Size = new System.Drawing.Size(83, 44);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 16;
             this.pictureBox2.TabStop = false;
@@ -152,7 +152,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Sitka Banner", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(283, 219);
+            this.label1.Location = new System.Drawing.Point(414, 255);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(234, 49);
             this.label1.TabIndex = 18;
@@ -162,9 +162,9 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::LetsBlood_2.Properties.Resources.doacao_gif;
-            this.pictureBox3.Location = new System.Drawing.Point(171, 51);
+            this.pictureBox3.Location = new System.Drawing.Point(22, 87);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(169, 173);
+            this.pictureBox3.Size = new System.Drawing.Size(364, 360);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 42;
             this.pictureBox3.TabStop = false;

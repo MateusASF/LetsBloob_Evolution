@@ -31,6 +31,9 @@ namespace LetsBlood_2.Cadastros_Forms
         private void frm_cadastrarBolsa_Load(object sender, EventArgs e)
         {
             pb_resultado.Visible = false;
+            pb_alt.Visible = false;
+            pb_exc.Visible = false;
+            pb_resultado.Visible = false;
             btnAlterar.Enabled = false;
             btnExcluir.Enabled = false;
         }
@@ -132,8 +135,10 @@ namespace LetsBlood_2.Cadastros_Forms
                 bt_cadastrar.Enabled = true;
             }
 
-            await Task.Delay(800);
+            await Task.Delay(1200);
             pb_resultado.Visible = false;
+            pb_alt.Visible = false;
+            pb_exc.Visible = false;
         }
 
         private void Listar()
@@ -182,7 +187,7 @@ namespace LetsBlood_2.Cadastros_Forms
             {
                 var bolsa = Dados.listaBolsas.Find(bolsa => bolsa.CpfDoador == mTb_CpfDoador.Text.Replace("-", "").Replace(".", ""));
                 Dados.listaBolsas.Remove(bolsa);
-                Console.WriteLine("Bolsa excluida com sucesso!");//criar mensagem
+                pb_exc.Visible = true;
                 Listar();
                 await limparCampos();
             }
@@ -281,11 +286,11 @@ namespace LetsBlood_2.Cadastros_Forms
             bolsa.HospitalDestino = tb_HospitalDestino.Text;
             bolsa.ObservacaoBolsa = tb_Observacao.Text;
             bolsa.TipoSanguineo = checkedButton.Text;
-            pb_resultado.Visible = true;//Trocar para bolsa alterada com sucesso
+            pb_alt.Visible = true;
 
             Listar();
 
-            await limparCampos(); //precisa de await?
+            await limparCampos();
         }
 
     }

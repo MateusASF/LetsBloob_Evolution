@@ -20,9 +20,9 @@ namespace LetsBlood_2.Cadastros_Forms
         }
         private void frm_cadastrarDoador_Load(object sender, EventArgs e)
         {
-            bt_excluir.ForeColor = Color.Red;
-            bt_alterar.ForeColor = Color.Red;
             pb_resultado.Visible = false;
+            pb_exc.Visible = false;
+            pb_alt.Visible = false;
             bt_excluir.Enabled = false;
             bt_alterar.Enabled = false;
         }
@@ -46,14 +46,14 @@ namespace LetsBlood_2.Cadastros_Forms
             mTb_Telefone.Clear();
             tb_Email.Clear();
             tb_Obs.Clear();
-            await Task.Delay(800);
+            await Task.Delay(1200);
+            pb_exc.Visible = false;
+            pb_alt.Visible = false;
             pb_resultado.Visible = false;
             if (bt_alterar.Enabled == true)
             {
                 bt_alterar.Enabled = false;
                 bt_excluir.Enabled = false;
-                bt_excluir.ForeColor = Color.Red;
-                bt_alterar.ForeColor = Color.Red;
                 bt_cadastrar.Enabled = true;
                 mTb_Cpf.Enabled = true;
             }
@@ -82,7 +82,7 @@ namespace LetsBlood_2.Cadastros_Forms
             {
                 var doador = Dados.listaDoadores.Find(doador => doador.CpfDoador == mTb_Cpf.Text.Replace("-", "").Replace(".", ""));
                 Dados.listaDoadores.Remove(doador);
-                Console.WriteLine("Doador excluido(a) com sucesso!");//criar mensagem
+                pb_exc.Visible = true;
                 Listar();
                 await limparCampos();
             }
@@ -102,8 +102,6 @@ namespace LetsBlood_2.Cadastros_Forms
             mTb_Cpf.Enabled = false;
             bt_excluir.Enabled = true;
             bt_alterar.Enabled = true;
-            bt_excluir.ForeColor = Color.Black;
-            bt_alterar.ForeColor = Color.Black;
             bt_cadastrar.Enabled = false;
 
             string linhaSelecionada = listBox1.SelectedItem.ToString();
@@ -198,6 +196,7 @@ namespace LetsBlood_2.Cadastros_Forms
             doa.Telefone = mTb_Telefone.Text.Replace(" ", "").Replace("(", "").Replace(")", "").Replace("-", "");
             doa.Email = tb_Email.Text;
             doa.Observacao = tb_Obs.Text;
+            pb_alt.Visible = true;
 
             Listar();
 

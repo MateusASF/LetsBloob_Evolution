@@ -56,12 +56,16 @@
             this.lupa_consultaTelefone = new System.Windows.Forms.PictureBox();
             this.lupa_consultaNome = new System.Windows.Forms.PictureBox();
             this.bt_alterar = new System.Windows.Forms.Button();
+            this.pb_alt = new System.Windows.Forms.PictureBox();
+            this.pb_exc = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_resultado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lupa_consultaCpf)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lupa_consultaTelefone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lupa_consultaNome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_alt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_exc)).BeginInit();
             this.SuspendLayout();
             // 
             // tb_Nome_Doador
@@ -184,7 +188,7 @@
             // 
             // bt_cadastrar
             // 
-            this.bt_cadastrar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bt_cadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
             this.bt_cadastrar.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
             this.bt_cadastrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bt_cadastrar.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -256,7 +260,7 @@
             // 
             // bt_excluir
             // 
-            this.bt_excluir.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bt_excluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
             this.bt_excluir.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
             this.bt_excluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bt_excluir.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -357,7 +361,7 @@
             // 
             // bt_alterar
             // 
-            this.bt_alterar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bt_alterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
             this.bt_alterar.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
             this.bt_alterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bt_alterar.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -369,6 +373,28 @@
             this.bt_alterar.UseVisualStyleBackColor = false;
             this.bt_alterar.Click += new System.EventHandler(this.bt_alterar_Click);
             // 
+            // pb_alt
+            // 
+            this.pb_alt.BackColor = System.Drawing.Color.Transparent;
+            this.pb_alt.Image = global::LetsBlood_2.Properties.Resources.doa_alt_removebg_preview;
+            this.pb_alt.Location = new System.Drawing.Point(295, 383);
+            this.pb_alt.Name = "pb_alt";
+            this.pb_alt.Size = new System.Drawing.Size(200, 61);
+            this.pb_alt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_alt.TabIndex = 43;
+            this.pb_alt.TabStop = false;
+            // 
+            // pb_exc
+            // 
+            this.pb_exc.BackColor = System.Drawing.Color.Transparent;
+            this.pb_exc.Image = global::LetsBlood_2.Properties.Resources.doa_exc_removebg_preview;
+            this.pb_exc.Location = new System.Drawing.Point(295, 383);
+            this.pb_exc.Name = "pb_exc";
+            this.pb_exc.Size = new System.Drawing.Size(200, 65);
+            this.pb_exc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_exc.TabIndex = 44;
+            this.pb_exc.TabStop = false;
+            // 
             // frm_cadastrarDoador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -378,6 +404,8 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(821, 631);
             this.ControlBox = false;
+            this.Controls.Add(this.pb_exc);
+            this.Controls.Add(this.pb_alt);
             this.Controls.Add(this.bt_alterar);
             this.Controls.Add(this.lupa_consultaNome);
             this.Controls.Add(this.lupa_consultaTelefone);
@@ -416,6 +444,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.lupa_consultaCpf)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lupa_consultaTelefone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lupa_consultaNome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_alt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_exc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -450,5 +480,7 @@
         private PictureBox lupa_consultaTelefone;
         private PictureBox lupa_consultaNome;
         private Button bt_alterar;
+        private PictureBox pb_alt;
+        private PictureBox pb_exc;
     }
 }
