@@ -62,7 +62,7 @@
             this.lupa_consultaTipoSanguineo = new System.Windows.Forms.PictureBox();
             this.lb_sair = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
             this.gb_TipoSanguineo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_resultado)).BeginInit();
@@ -455,18 +455,19 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // button2
+            // btnAlterar
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
-            this.button2.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(696, 118);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(203, 49);
-            this.button2.TabIndex = 40;
-            this.button2.Text = "ALTERAR";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnAlterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(215)))));
+            this.btnAlterar.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
+            this.btnAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAlterar.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAlterar.Location = new System.Drawing.Point(696, 118);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(203, 49);
+            this.btnAlterar.TabIndex = 40;
+            this.btnAlterar.Text = "ALTERAR";
+            this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // frm_cadastrarBolsa
             // 
@@ -477,7 +478,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(959, 668);
             this.ControlBox = false;
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.lb_sair);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lupa_consultaTipoSanguineo);
@@ -558,6 +559,6 @@
         private PictureBox lupa_consultaTipoSanguineo;
         private Label lb_sair;
         private PictureBox pictureBox2;
-        private Button button2;
+        private Button btnAlterar;
     }
 }

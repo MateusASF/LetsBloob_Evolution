@@ -31,6 +31,8 @@ namespace LetsBlood_2.Cadastros_Forms
         private void frm_cadastrarBolsa_Load(object sender, EventArgs e)
         {
             pb_resultado.Visible = false;
+            btnAlterar.Enabled = false;
+            btnExcluir.Enabled = false;
         }
 
         private void bt_cadastrar_Click(object sender, EventArgs e)
@@ -81,7 +83,6 @@ namespace LetsBlood_2.Cadastros_Forms
             bolsa.HospitalDestino = tb_HospitalDestino.Text;
             bolsa.ObservacaoBolsa = tb_Observacao.Text;
             bolsa.TipoSanguineo = checkedButton.Text;
-            pb_resultado.Visible = true;
 
             if (Dados.listaBolsas.Any(l => l.CpfDoador == bolsa.CpfDoador) && Dados.listaBolsas.Any(l => l.DataColeta == bolsa.DataColeta))
             {
@@ -92,6 +93,7 @@ namespace LetsBlood_2.Cadastros_Forms
             else
             {
                 Dados.listaBolsas.Add(bolsa);
+                pb_resultado.Visible = true;
             }
 
             Listar();
@@ -112,12 +114,21 @@ namespace LetsBlood_2.Cadastros_Forms
             dTp_DataColeta.Text = "";
             tb_NomeMedico.Clear();
             mTb_CpfDoador.Clear();
+            if (mTb_CpfDoador.Enabled == false)
+            {
+                mTb_CpfDoador.Enabled = true;
+            }
             tb_HospitalDestino.Clear();
             tb_Observacao.Clear();
             var checkedButton = gb_TipoSanguineo.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
             if (checkedButton != null)
             {
                 checkedButton.Checked = false;
+            }
+            if (btnAlterar.Enabled == true)
+            {
+                btnAlterar.Enabled = false;
+                btnExcluir.Enabled = false;
             }
 
             await Task.Delay(800);
@@ -137,11 +148,15 @@ namespace LetsBlood_2.Cadastros_Forms
 
         private void ltbResultado_DoubleClick(object sender, EventArgs e)
         {
+            btnAlterar.Enabled = true;
+            btnExcluir.Enabled = true;
+
             var index = ltbResultado.SelectedIndex;
             Bolsa bolsa = Dados.listaBolsas[index];
             dTp_DataColeta.Text = bolsa.DataColeta;
             tb_NomeMedico.Text = bolsa.NomeMedico;
             mTb_CpfDoador.Text = bolsa.CpfDoador;
+            mTb_CpfDoador.Enabled = false;
             tb_HospitalDestino.Text = bolsa.HospitalDestino;
             tb_Observacao.Text = bolsa.ObservacaoBolsa;
             var checkedButton = gb_TipoSanguineo.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Text == bolsa.TipoSanguineo);
@@ -158,8 +173,9 @@ namespace LetsBlood_2.Cadastros_Forms
             if (resp == DialogResult.Yes)
             {
                 Dados.listaBolsas.RemoveAt(index);
-                Console.WriteLine("Bolsa excluida com sucesso!");
+                Console.WriteLine("Bolsa excluida com sucesso!");//criar mensagem
                 Listar();
+                limparCampos();
             }
         }
 
@@ -224,5 +240,45 @@ namespace LetsBlood_2.Cadastros_Forms
                 Application.Exit();
             }
         }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            if (tb_NomeMedico.Text == "")
+            {
+                MessageBox.Show("Preencha o campo Nome do Médico.");
+                tb_NomeMedico.Focus();
+                return;
+            }
+
+            if (tb_HospitalDestino.Text == "")
+            {
+                MessageBox.Show("Preencha o campo Hospital de Destino.");
+                tb_HospitalDestino.Focus();
+                return;
+            }
+
+            var checkedButton = gb_TipoSanguineo.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
+
+            if (checkedButton == null)
+            {
+                MessageBox.Show("Selecione o Tipo Sanguíneo.");
+                return;
+            }
+
+            var bolsa = Dados.listaBolsas.Find(bolsa => bolsa.CpfDoador == mTb_CpfDoador.Text.Replace("-", "").Replace(".", ""));
+
+            bolsa.DataColeta = dTp_DataColeta.Text;
+            bolsa.NomeMedico = tb_NomeMedico.Text;
+            bolsa.HospitalDestino = tb_HospitalDestino.Text;
+            bolsa.ObservacaoBolsa = tb_Observacao.Text;
+            bolsa.TipoSanguineo = checkedButton.Text;
+            pb_resultado.Visible = true;//Trocar para bolsa alterada com sucesso
+
+            Listar();
+
+            limparCampos();
+        }
+
     }
 }
+
