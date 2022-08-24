@@ -63,8 +63,6 @@ namespace LetsBlood_2.Cadastros_Forms
             doa.Telefone = mTb_Telefone.Text;
             doa.Email = tb_Email.Text;
             doa.Observacao = tb_Obs.Text;
-            pb_resultado.Visible = true;
-
 
             if (Dados.listaDoadores.Any(l => l.CpfDoador == doa.CpfDoador))
             {
@@ -75,6 +73,7 @@ namespace LetsBlood_2.Cadastros_Forms
             else
             {
                 Dados.listaDoadores.Add(doa);
+                pb_resultado.Visible = true;
             }
 
             Listar();
