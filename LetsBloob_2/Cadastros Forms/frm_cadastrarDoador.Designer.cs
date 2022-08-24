@@ -58,6 +58,7 @@
             this.bt_alterar = new System.Windows.Forms.Button();
             this.pb_alt = new System.Windows.Forms.PictureBox();
             this.pb_exc = new System.Windows.Forms.PictureBox();
+            this.bt_info = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_resultado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -192,7 +193,7 @@
             this.bt_cadastrar.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
             this.bt_cadastrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bt_cadastrar.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bt_cadastrar.Location = new System.Drawing.Point(569, 33);
+            this.bt_cadastrar.Location = new System.Drawing.Point(569, 106);
             this.bt_cadastrar.Name = "bt_cadastrar";
             this.bt_cadastrar.Size = new System.Drawing.Size(203, 47);
             this.bt_cadastrar.TabIndex = 6;
@@ -250,11 +251,11 @@
             this.bt_ListaCompleta.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
             this.bt_ListaCompleta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bt_ListaCompleta.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bt_ListaCompleta.Location = new System.Drawing.Point(569, 328);
+            this.bt_ListaCompleta.Location = new System.Drawing.Point(569, 347);
             this.bt_ListaCompleta.Name = "bt_ListaCompleta";
-            this.bt_ListaCompleta.Size = new System.Drawing.Size(203, 139);
+            this.bt_ListaCompleta.Size = new System.Drawing.Size(203, 82);
             this.bt_ListaCompleta.TabIndex = 9;
-            this.bt_ListaCompleta.Text = "MOSTRAR TODOS\r\nOS DOADORES";
+            this.bt_ListaCompleta.Text = "MOSTRAR \r\nBASE DE DADOS";
             this.bt_ListaCompleta.UseVisualStyleBackColor = false;
             this.bt_ListaCompleta.Click += new System.EventHandler(this.bt_ListaCompleta_Click);
             // 
@@ -264,7 +265,7 @@
             this.bt_excluir.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
             this.bt_excluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bt_excluir.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bt_excluir.Location = new System.Drawing.Point(569, 165);
+            this.bt_excluir.Location = new System.Drawing.Point(569, 224);
             this.bt_excluir.Name = "bt_excluir";
             this.bt_excluir.Size = new System.Drawing.Size(203, 47);
             this.bt_excluir.TabIndex = 7;
@@ -278,7 +279,7 @@
             this.bt_limpar.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
             this.bt_limpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bt_limpar.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bt_limpar.Location = new System.Drawing.Point(569, 245);
+            this.bt_limpar.Location = new System.Drawing.Point(569, 282);
             this.bt_limpar.Name = "bt_limpar";
             this.bt_limpar.Size = new System.Drawing.Size(203, 47);
             this.bt_limpar.TabIndex = 8;
@@ -365,7 +366,7 @@
             this.bt_alterar.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
             this.bt_alterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bt_alterar.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bt_alterar.Location = new System.Drawing.Point(569, 95);
+            this.bt_alterar.Location = new System.Drawing.Point(569, 166);
             this.bt_alterar.Name = "bt_alterar";
             this.bt_alterar.Size = new System.Drawing.Size(203, 47);
             this.bt_alterar.TabIndex = 41;
@@ -395,6 +396,19 @@
             this.pb_exc.TabIndex = 44;
             this.pb_exc.TabStop = false;
             // 
+            // bt_info
+            // 
+            this.bt_info.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.bt_info.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bt_info.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bt_info.Location = new System.Drawing.Point(569, 32);
+            this.bt_info.Name = "bt_info";
+            this.bt_info.Size = new System.Drawing.Size(203, 43);
+            this.bt_info.TabIndex = 45;
+            this.bt_info.Text = "Instruções de Uso";
+            this.bt_info.UseVisualStyleBackColor = false;
+            this.bt_info.Click += new System.EventHandler(this.bt_info_Click);
+            // 
             // frm_cadastrarDoador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -404,6 +418,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(821, 631);
             this.ControlBox = false;
+            this.Controls.Add(this.bt_info);
             this.Controls.Add(this.pb_exc);
             this.Controls.Add(this.pb_alt);
             this.Controls.Add(this.bt_alterar);
@@ -482,5 +497,6 @@
         private Button bt_alterar;
         private PictureBox pb_alt;
         private PictureBox pb_exc;
+        private Button bt_info;
     }
 }

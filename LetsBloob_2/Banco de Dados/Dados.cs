@@ -10,15 +10,15 @@ namespace LetsBlood_2.Banco_de_Dados
     {
         public static List<Doador> listaDoadores = new List<Doador>()
         {
-            new Doador ("Juriscreudo Lima", "12345678900","1960-10-25", "11978451236", "juriscreudolima@gmail.com", "Diabetes"),
-            new Doador("Marcela Soares", "98765432100","2002-10-30","11978453213","marcelasoares@gmail.com","Saudável"),
-            new Doador("Cristian Lima","11932124578","1962-12-07","11974457841","cristianlima@gmail.com","Colesterol"),
-            new Doador("Bruno Venancio","84043292066","1989-12-07","11975165541","brunovenancio@gmail.com","Colesterol"),
-            new Doador("João de Menezes","82522790072","1959-11-16","11987231564","joaodemenezes@gmail.com","Saudável"),
-            new Doador("Marcelino Abrantes","31779827083","1943-12-02","11978846543","marcelinoabrantes@gmail.com","Diabetes"),
-            new Doador("Edna Felipe","63262031046","1943-12-02","11975646532","soniafelipe@gmail.com","Saudável"),
-            new Doador("Sónia Monteiro","85278227095","1981-07-22","11938788751","soniamonteiro@gmail.com","Colesterol"),
-            new Doador("Valéria Noronha","29902202080","1982-04-12","11916546521","sonianoronha@gmail.com","Saudável"),
+            new Doador ("Juriscreudo Lima", "12345678900","25/10/1960", "11978451236", "juriscreudolima@gmail.com", "Diabetes"),
+            new Doador("Marcela Soares","98765432100","30/10/2002","11978453213","marcelasoares@gmail.com","Saudável"),
+            new Doador("Cristian Lima","11932124578","07/12/1962","11974457841","cristianlima@gmail.com","Colesterol"),
+            new Doador("Bruno Venancio","84043292066","07/12/1989","11975165541","brunovenancio@gmail.com","Colesterol"),
+            new Doador("João de Menezes","82522790072","16/11/1959","11987231564","joaodemenezes@gmail.com","Saudável"),
+            new Doador("Marcelino Abrantes","31779827083","02/12/1943","11978846543","marcelinoabrantes@gmail.com","Diabetes"),
+            new Doador("Edna Felipe","63262031046","02/12/1943","11975646532","soniafelipe@gmail.com","Saudável"),
+            new Doador("Sónia Monteiro","85278227095","22/07/1981","11938788751","soniamonteiro@gmail.com","Colesterol"),
+            new Doador("Valéria Noronha","29902202080","12/04/1982","11916546521","sonianoronha@gmail.com","Saudável"),
         };
 
         public static List<Bolsa> listaBolsas = new List<Bolsa>()

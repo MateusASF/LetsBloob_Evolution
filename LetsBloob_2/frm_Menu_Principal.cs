@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using LetsBloob_2.Banco_de_Dados;
 using LetsBlood_2.Cadastros_Forms;
 
 namespace LetsBloob_2

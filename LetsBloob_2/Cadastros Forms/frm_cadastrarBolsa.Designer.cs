@@ -65,6 +65,7 @@
             this.btnAlterar = new System.Windows.Forms.Button();
             this.pb_exc = new System.Windows.Forms.PictureBox();
             this.pb_alt = new System.Windows.Forms.PictureBox();
+            this.bt_info = new System.Windows.Forms.Button();
             this.gb_TipoSanguineo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_resultado)).BeginInit();
@@ -323,7 +324,7 @@
             this.bt_limpar.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
             this.bt_limpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bt_limpar.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bt_limpar.Location = new System.Drawing.Point(696, 254);
+            this.bt_limpar.Location = new System.Drawing.Point(693, 294);
             this.bt_limpar.Name = "bt_limpar";
             this.bt_limpar.Size = new System.Drawing.Size(203, 49);
             this.bt_limpar.TabIndex = 8;
@@ -337,7 +338,7 @@
             this.btnExcluir.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
             this.btnExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExcluir.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnExcluir.Location = new System.Drawing.Point(696, 189);
+            this.btnExcluir.Location = new System.Drawing.Point(693, 224);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(203, 49);
             this.btnExcluir.TabIndex = 7;
@@ -351,7 +352,7 @@
             this.bt_cadastrar.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
             this.bt_cadastrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bt_cadastrar.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bt_cadastrar.Location = new System.Drawing.Point(696, 52);
+            this.bt_cadastrar.Location = new System.Drawing.Point(693, 85);
             this.bt_cadastrar.Name = "bt_cadastrar";
             this.bt_cadastrar.Size = new System.Drawing.Size(203, 49);
             this.bt_cadastrar.TabIndex = 6;
@@ -378,7 +379,7 @@
             this.button1.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(696, 313);
+            this.button1.Location = new System.Drawing.Point(693, 353);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(203, 93);
             this.button1.TabIndex = 9;
@@ -465,7 +466,7 @@
             this.btnAlterar.BackgroundImage = global::LetsBlood_2.Properties.Resources.fundo_branco_abstrato_23_2148810353;
             this.btnAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAlterar.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAlterar.Location = new System.Drawing.Point(696, 118);
+            this.btnAlterar.Location = new System.Drawing.Point(693, 158);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(203, 49);
             this.btnAlterar.TabIndex = 40;
@@ -495,6 +496,19 @@
             this.pb_alt.TabIndex = 42;
             this.pb_alt.TabStop = false;
             // 
+            // bt_info
+            // 
+            this.bt_info.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.bt_info.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bt_info.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bt_info.Location = new System.Drawing.Point(693, 15);
+            this.bt_info.Name = "bt_info";
+            this.bt_info.Size = new System.Drawing.Size(203, 43);
+            this.bt_info.TabIndex = 43;
+            this.bt_info.Text = "Instruções de Uso";
+            this.bt_info.UseVisualStyleBackColor = false;
+            this.bt_info.Click += new System.EventHandler(this.bt_info_Click);
+            // 
             // frm_cadastrarBolsa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 21F);
@@ -504,6 +518,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(959, 668);
             this.ControlBox = false;
+            this.Controls.Add(this.bt_info);
             this.Controls.Add(this.pb_alt);
             this.Controls.Add(this.pb_exc);
             this.Controls.Add(this.btnAlterar);
@@ -592,5 +607,6 @@
         private Button btnAlterar;
         private PictureBox pb_exc;
         private PictureBox pb_alt;
+        private Button bt_info;
     }
 }

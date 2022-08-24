@@ -293,6 +293,25 @@ namespace LetsBlood_2.Cadastros_Forms
             await limparCampos();
         }
 
+        private void bt_info_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(@"
+Guia para uso do Programa:
+
+* Para cadastrar uma nova informação, será necessário preeencher todos os campos obrigatórios, mas não se preocupe pois caso esqueça algum o programa vai lhe avisar.
+
+* Ao abrir o programa os botões 'Editar' e 'Excluir' são desabilitados, para que possa habilitá-los é necessário dar um duplo clique no item desejado dentro da box de resultados.
+
+* Quando os botões 'Editar' e 'Excluir' são habilitados o botão 'Cadastrar' é desabilitado por segurança.
+
+* O CPF não pode ser editado, caso haja um erro ao cadastrar deverá excluir e recadastrar a informação desajada, por isso o campo sempre é bloqueado para edições.
+
+* Para realiar uma pesquisa basta preencher algum dos campos que possuem uma lupa ao lado, e em seguida clicar na lupa para pesquisar.
+
+* O botão 'Limpar' limpa somente os campos para digitação.
+
+", "Instruções", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
 
