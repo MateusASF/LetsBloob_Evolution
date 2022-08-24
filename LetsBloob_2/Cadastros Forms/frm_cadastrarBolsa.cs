@@ -151,28 +151,33 @@ namespace LetsBlood_2.Cadastros_Forms
             btnAlterar.Enabled = true;
             btnExcluir.Enabled = true;
 
-            var index = ltbResultado.SelectedIndex;
-            Bolsa bolsa = Dados.listaBolsas[index];
-            dTp_DataColeta.Text = bolsa.DataColeta;
-            tb_NomeMedico.Text = bolsa.NomeMedico;
-            mTb_CpfDoador.Text = bolsa.CpfDoador;
-            mTb_CpfDoador.Enabled = false;
-            tb_HospitalDestino.Text = bolsa.HospitalDestino;
-            tb_Observacao.Text = bolsa.ObservacaoBolsa;
-            var checkedButton = gb_TipoSanguineo.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Text == bolsa.TipoSanguineo);
-            if (checkedButton != null)
+            string linhaSelecionada = ltbResultado.SelectedItem.ToString();
+            foreach (var bolsa in Dados.listaBolsas)
             {
-                checkedButton.Checked = true;
+                if (linhaSelecionada.Contains(bolsa.CpfDoador))
+                {
+                    dTp_DataColeta.Text = bolsa.DataColeta;
+                    tb_NomeMedico.Text = bolsa.NomeMedico;
+                    mTb_CpfDoador.Text = bolsa.CpfDoador;
+                    mTb_CpfDoador.Enabled = false;
+                    tb_HospitalDestino.Text = bolsa.HospitalDestino;
+                    tb_Observacao.Text = bolsa.ObservacaoBolsa;
+                    var checkedButton = gb_TipoSanguineo.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Text == bolsa.TipoSanguineo);
+                    if (checkedButton != null)
+                    {
+                        checkedButton.Checked = true;
+                    }
+                }
             }
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            int index = ltbResultado.SelectedIndex;
             DialogResult resp = MessageBox.Show("Você deseja mesmo excluir a bolsa?", "Exluir", MessageBoxButtons.YesNo);
             if (resp == DialogResult.Yes)
             {
-                Dados.listaBolsas.RemoveAt(index);
+                var bolsa = Dados.listaBolsas.Find(bolsa => bolsa.CpfDoador == mTb_CpfDoador.Text.Replace("-", "").Replace(".", ""));
+                Dados.listaBolsas.Remove(bolsa);
                 Console.WriteLine("Bolsa excluida com sucesso!");//criar mensagem
                 Listar();
                 limparCampos();
@@ -276,7 +281,7 @@ namespace LetsBlood_2.Cadastros_Forms
 
             Listar();
 
-            limparCampos();
+            limparCampos(); //precisa de await?
         }
 
     }
