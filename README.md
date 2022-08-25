@@ -17,3 +17,7 @@ os conceitos passados em aula <br/>
 - Clone este repositório em uma pasta local.
 - Abra a solução do projeto com o Visual Studio: arquivo `LetsBlood_2.sln`
 - Execute o projeto com `CTRL + F5`
+
+## Instruções ao executar
+- O programa possui uma interface inicial para cadastro de bolsas de sangue ou doadores.
+- Após escolher a interface desejada caso tenha dúvidas clique no botão amarelo para que possa ter orientações detalhadas do programa.
