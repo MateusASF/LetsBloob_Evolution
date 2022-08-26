@@ -306,7 +306,7 @@ Guia para uso do Programa:
 
 * O CPF não pode ser editado, caso haja um erro ao cadastrar deverá excluir e recadastrar a informação desajada, por isso o campo sempre é bloqueado para edições.
 
-* Para realiar uma pesquisa basta preencher algum dos campos que possuem uma lupa ao lado, e em seguida clicar na lupa para pesquisar.
+* Para realizar uma pesquisa basta preencher algum dos campos que possuem uma lupa ao lado, e em seguida clicar na lupa para pesquisar.
 
 * O botão 'Limpar' limpa somente os campos para digitação.
 
